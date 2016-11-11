@@ -12,6 +12,7 @@ namespace tutorCognitivo1.Models.logicaDeNegocios
         {
             Traductor traductor = new Traductor();
             System.Console.WriteLine(traductor.traducirTexto("hola"));
+            
 
         }
 
