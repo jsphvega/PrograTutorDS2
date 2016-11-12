@@ -14,6 +14,10 @@ namespace TutorCognitivo.accesoADatos
     private string conection;
     private MySqlConnection conectar;
 
+        public ConexionBD()
+        {
+        
+        }
         public void conectarBD()
         {
             try

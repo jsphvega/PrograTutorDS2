@@ -206,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoADatos\ConexionBD.cs" />
+    <Compile Include="accesoADatos\ConsultaUsuariocs.cs" />
+    <Compile Include="accesoADatos\RegistroBitacora.cs" />
+    <Compile Include="accesoADatos\RegistroUsuario.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
