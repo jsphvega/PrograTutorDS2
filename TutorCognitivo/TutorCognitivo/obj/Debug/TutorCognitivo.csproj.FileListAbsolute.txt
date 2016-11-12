@@ -96,3 +96,5 @@ C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCog
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\obj\Debug\TutorCognitivo.csprojResolveAssemblyReference.cache
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\obj\Debug\TutorCognitivo.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\obj\Debug\TutorCognitivo.pdb
+C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\MySql.Data.dll
+C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\MySql.Data.xml
