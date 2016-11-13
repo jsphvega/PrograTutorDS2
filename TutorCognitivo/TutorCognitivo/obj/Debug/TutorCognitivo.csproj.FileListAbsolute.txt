@@ -65,7 +65,6 @@ C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCog
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Antlr3.Runtime.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\IKVM.OpenJDK.Core.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -81,7 +80,6 @@ C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCog
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Newtonsoft.Json.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\System.Web.Optimization.dll
-C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\tutor.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\WebGrease.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivo\TutorCognitivo\bin\Microsoft.AI.ServerTelemetryChannel.xml
