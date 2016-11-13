@@ -249,53 +249,51 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Vista\assets\css\font-awesome.min.css" />
-    <Content Include="Vista\assets\css\ie8.css" />
-    <Content Include="Vista\assets\css\images\highlight.png" />
-    <Content Include="Vista\assets\css\images\overlay.png" />
-    <Content Include="Vista\assets\css\main.css" />
-    <Content Include="Vista\assets\fonts\fontawesome-webfont.svg" />
-    <Content Include="Vista\assets\js\ie\backgroundsize.min.htc" />
-    <Content Include="Vista\assets\js\ie\html5shiv.js" />
-    <Content Include="Vista\assets\js\ie\PIE.htc" />
-    <Content Include="Vista\assets\js\ie\respond.min.js" />
-    <Content Include="Vista\assets\js\jquery.dropotron.min.js" />
-    <Content Include="Vista\assets\js\jquery.min.js" />
-    <Content Include="Vista\assets\js\main.js" />
-    <Content Include="Vista\assets\js\skel-viewport.min.js" />
-    <Content Include="Vista\assets\js\skel.min.js" />
-    <Content Include="Vista\assets\js\util.js" />
-    <Content Include="Vista\images\banner.jpg" />
-    <Content Include="Vista\images\pic01.jpg" />
-    <Content Include="Vista\images\pic02.jpg" />
-    <Content Include="Vista\images\pic03.jpg" />
-    <Content Include="Vista\images\pic04.jpg" />
-    <Content Include="Vista\images\pic05.jpg" />
-    <Content Include="Vista\interfaz.js" />
-    <Content Include="Vista\js\init.js" />
-    <Content Include="Vista\js\jquery.dropotron.min.js" />
-    <Content Include="Vista\js\jquery.min.js" />
-    <Content Include="Vista\js\skel-layers.min.js" />
-    <Content Include="Vista\js\skel.min.js" />
-    <Content Include="Vista\login.aspx" />
-    <Content Include="Vista\registro.aspx" />
+    <Content Include="vista\assets\css\font-awesome.min.css" />
+    <Content Include="vista\assets\css\ie8.css" />
+    <Content Include="vista\assets\css\images\highlight.png" />
+    <Content Include="vista\assets\css\images\overlay.png" />
+    <Content Include="vista\assets\css\main.css" />
+    <Content Include="vista\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="vista\assets\js\ie\backgroundsize.min.htc" />
+    <Content Include="vista\assets\js\ie\html5shiv.js" />
+    <Content Include="vista\assets\js\ie\PIE.htc" />
+    <Content Include="vista\assets\js\ie\respond.min.js" />
+    <Content Include="vista\assets\js\jquery.dropotron.min.js" />
+    <Content Include="vista\assets\js\jquery.min.js" />
+    <Content Include="vista\assets\js\main.js" />
+    <Content Include="vista\assets\js\skel-viewport.min.js" />
+    <Content Include="vista\assets\js\skel.min.js" />
+    <Content Include="vista\assets\js\util.js" />
+    <Content Include="vista\images\banner.jpg" />
+    <Content Include="vista\images\pic01.jpg" />
+    <Content Include="vista\images\pic02.jpg" />
+    <Content Include="vista\images\pic03.jpg" />
+    <Content Include="vista\images\pic04.jpg" />
+    <Content Include="vista\images\pic05.jpg" />
+    <Content Include="vista\js\init.js" />
+    <Content Include="vista\js\jquery.dropotron.min.js" />
+    <Content Include="vista\js\jquery.min.js" />
+    <Content Include="vista\js\skel-layers.min.js" />
+    <Content Include="vista\js\skel.min.js" />
+    <Content Include="vista\login.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="Vista\assets\fonts\fontawesome-webfont.eot" />
-    <Content Include="Vista\assets\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Vista\assets\fonts\fontawesome-webfont.woff" />
-    <Content Include="Vista\assets\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Vista\assets\fonts\FontAwesome.otf" />
-    <Content Include="Vista\assets\sass\ie8.scss" />
-    <Content Include="Vista\assets\sass\libs\_functions.scss" />
-    <Content Include="Vista\assets\sass\libs\_mixins.scss" />
-    <Content Include="Vista\assets\sass\libs\_skel.scss" />
-    <Content Include="Vista\assets\sass\libs\_vars.scss" />
-    <Content Include="Vista\assets\sass\main.scss" />
+    <Content Include="vista\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="vista\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vista\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="vista\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vista\assets\fonts\FontAwesome.otf" />
+    <Content Include="vista\assets\sass\ie8.scss" />
+    <Content Include="vista\assets\sass\libs\_functions.scss" />
+    <Content Include="vista\assets\sass\libs\_mixins.scss" />
+    <Content Include="vista\assets\sass\libs\_skel.scss" />
+    <Content Include="vista\assets\sass\libs\_vars.scss" />
+    <Content Include="vista\assets\sass\main.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -304,10 +302,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accesoADatos\ConexionBD.cs" />
     <Compile Include="accesoADatos\ConsultaCarrera.cs" />
-    <Compile Include="accesoADatos\ConsultaUsuario.cs" />
-    <Compile Include="accesoADatos\RegistroUsuario.cs" />
+    <Compile Include="accesoADatos\DatoCategoria.cs" />
+    <Compile Include="accesoADatos\DatoUsuario.cs" />
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -474,23 +471,19 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Vista\login.aspx.cs">
+    <Compile Include="vista\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista\login.aspx.designer.cs">
+    <Compile Include="vista\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\registro.aspx.cs">
-      <DependentUpon>registro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vista\registro.aspx.designer.cs">
-      <DependentUpon>registro.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="controlador\" />
+    <Folder Include="logicaDeNegocios\" />
+    <Folder Include="validaciones\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

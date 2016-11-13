@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class ConsultaUsuario
+    public class DatoBitacora
     {
     }
 }
