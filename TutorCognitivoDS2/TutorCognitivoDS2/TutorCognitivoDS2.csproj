@@ -271,6 +271,7 @@
     <Content Include="Vista\images\pic03.jpg" />
     <Content Include="Vista\images\pic04.jpg" />
     <Content Include="Vista\images\pic05.jpg" />
+    <Content Include="Vista\interfaz.js" />
     <Content Include="Vista\js\init.js" />
     <Content Include="Vista\js\jquery.dropotron.min.js" />
     <Content Include="Vista\js\jquery.min.js" />
