@@ -7,7 +7,7 @@
     <title>Inicio</title>
 
     <!--Configuraciones de la página-->
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--Archivos .js responsive-->
@@ -18,7 +18,7 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body>
-    <form id="formID" runat="server">
+    <form id="formLogin" runat="server">
         <!--Contenedor principal-->
         <div id="page-wrapper">
 
@@ -26,7 +26,7 @@
             <nav id="nav">
                 <ul>
                     <li><a href="">Registro por Facebook</a></li>
-                    <li class="current"><a href="registro.html">Registro</a></li>
+                    <li class="current"><a href="registro.aspx">Registro</a></li>
                     <li><a href="">Registro por google</a></li>
                 </ul>
             </nav>
@@ -55,13 +55,13 @@
                         <!--Tipo-->
                         <div class="radioGroup">
                             <label for="markAdmin">
-                                <input name="rdnTipo" type="radio" value="tutor"> Tutor</input>
+                                <asp:RadioButton ID="rdnTutor" Text="Tutor" runat="server" />
                             </label>
                             <label for="markStudent">
-                                <input name="rdnTipo" type="radio" value="admin"> Administrador</input>
+                                <asp:RadioButton ID="rdnAdmin" Text="Administrador" runat="server" />
                             </label>
                             <label for="markService">
-                                <input name="rdnTipo" type="radio" value="final"> Final</input>
+                                <asp:RadioButton ID="rdnFinal" Text="Final" runat="server" />
                             </label>
                         </div>
 
