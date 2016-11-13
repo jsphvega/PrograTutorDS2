@@ -466,6 +466,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="accesoADatos\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
