@@ -34,12 +34,15 @@ namespace TutorCognitivo
             conectar.Open();
             MySqlCommand comando = new MySqlCommand();
             comando.Connection = conectar;
-            comando.CommandText = "INSERT INTO carrera(ID,Nombre) VALUES(1,ATI)";
-           //comando.Parameters.AddWithValue("@ID", "1");
-           //comando.Parameters.AddWithValue("@Nombre", "ATI");
-                // comando.CommandText = "INSERT INTO tutor(nombre) VALUES(@nombre)";
-                // comando.Parameters.AddWithValue("@nombre", "Maria Jose");
-            comando.ExecuteNonQuery();
+           comando.CommandText = "INSERT INTO carrera(ID,Nombre) VALUES(@ID,@Nombre)";
+                comando.Parameters.AddWithValue("@ID", "1");
+                comando.Parameters.AddWithValue( "@Nombre", "ATI");
+
+
+
+                //comando.CommandText = "INSERT INTO tutor(nombre) VALUES(@nombre)";
+                //comando.Parameters.AddWithValue("@nombre", "Maria Jose");
+                comando.ExecuteNonQuery();
 
 
                // string tutores= "SELECT nombre FROM tutor Limit 0";
@@ -53,7 +56,7 @@ namespace TutorCognitivo
 
                // }
                
-                //Response.Write("'conexion exitosa' ");
+                Response.Write("'conexion exitosa' ");
                 conectar.Close();
             }
             catch (Exception)
