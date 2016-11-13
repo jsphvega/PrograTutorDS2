@@ -304,6 +304,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoADatos\ConexionBD.cs" />
+    <Compile Include="accesoADatos\ConsultaCarrera.cs" />
     <Compile Include="accesoADatos\ConsultaUsuario.cs" />
     <Compile Include="accesoADatos\RegistroUsuario.cs" />
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
