@@ -6,8 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using MySql.Data;
-using frameworkJava.logicaDeIntegracion;
-using frameworkJava.logicaDeNegocio;
+
 
 
 
