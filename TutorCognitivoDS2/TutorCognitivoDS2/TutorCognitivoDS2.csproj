@@ -277,7 +277,6 @@
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
     <Content Include="vista\login.aspx" />
-    <Content Include="vista\registro.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -478,13 +477,6 @@
     </Compile>
     <Compile Include="vista\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="vista\registro.aspx.cs">
-      <DependentUpon>registro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="vista\registro.aspx.designer.cs">
-      <DependentUpon>registro.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
