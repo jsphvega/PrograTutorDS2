@@ -8,7 +8,7 @@ namespace logicaDeNegocios{
     /**
      * 
      */
-    public abstract abstract class Bitacora {
+    public abstract class Bitacora {
 
         /**
          * 

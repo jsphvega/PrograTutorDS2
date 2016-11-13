@@ -8,7 +8,7 @@ namespace logicaDeNegocios{
     /**
      * 
      */
-    public abstract abstract class Registro {
+    public abstract class Registro {
 
         /**
          * 
@@ -19,12 +19,12 @@ namespace logicaDeNegocios{
         /**
          * 
          */
-        private Date fecha;
+        private DateTime fecha;
 
         /**
          * 
          */
-        private Date hora;
+        private DateTime hora;
 
         /**
          * 
@@ -53,18 +53,16 @@ namespace logicaDeNegocios{
          * @param pFecha 
          * @return
          */
-        public void setFecha(Date pFecha) {
+        public void setFecha(DateTime pFecha) {
             // TODO implement here
-            return null;
         }
 
         /**
          * @param pHora 
          * @return
          */
-        public void setHora(Date pHora) {
+        public void setHora(DateTime pHora) {
             // TODO implement here
-            return null;
         }
 
         /**
@@ -73,7 +71,6 @@ namespace logicaDeNegocios{
          */
         public void setTipoAccion(String pTipo) {
             // TODO implement here
-            return null;
         }
 
         /**
@@ -82,23 +79,22 @@ namespace logicaDeNegocios{
          */
         public void setAccion(String pAccion) {
             // TODO implement here
-            return null;
         }
 
         /**
          * @return
          */
-        public Date getFecha() {
+        public DateTime getFecha() {
             // TODO implement here
-            return null;
+            return new DateTime();
         }
 
         /**
          * @return
          */
-        public Date getHora() {
+        public DateTime getHora() {
             // TODO implement here
-            return null;
+            return new DateTime();
         }
 
         /**
@@ -122,7 +118,6 @@ namespace logicaDeNegocios{
          */
         protected void notificarATodos() {
             // TODO implement here
-            return null;
         }
 
         /**

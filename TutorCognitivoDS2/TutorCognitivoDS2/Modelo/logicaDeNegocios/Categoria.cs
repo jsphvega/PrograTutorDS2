@@ -13,19 +13,13 @@ namespace logicaDeNegocios{
         /**
          * 
          */
-        public Categoria() {
-        }
-
-        /**
-         * 
-         */
         private String nombre;
 
 
         /**
          * @param pNombre
          */
-        public void Categoria(String pNombre) {
+        public Categoria(String pNombre) {
             // TODO implement here
         }
 
@@ -33,9 +27,8 @@ namespace logicaDeNegocios{
          * @param pNombre 
          * @return
          */
-        public void setCategoria(void pNombre) {
+        public void setCategoria(String pNombre) {
             // TODO implement here
-            return null;
         }
 
         /**

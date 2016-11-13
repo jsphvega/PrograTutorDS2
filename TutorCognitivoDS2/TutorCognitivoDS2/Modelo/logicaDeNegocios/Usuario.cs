@@ -8,13 +8,8 @@ namespace logicaDeNegocios{
     /**
      * 
      */
-    public abstract abstract class Usuario {
+    public abstract class Usuario {
 
-        /**
-         * 
-         */
-        public Usuario() {
-        }
 
         /**
          * 
@@ -42,7 +37,7 @@ namespace logicaDeNegocios{
          * @param pContraseña 
          * @param pCarrera
          */
-        public void Usuario(String pNombre, String pCorreo, String pContraseña, String pCarrera) {
+        public Usuario(String pNombre, String pCorreo, String pContraseña, String pCarrera) {
             // TODO implement here
         }
 

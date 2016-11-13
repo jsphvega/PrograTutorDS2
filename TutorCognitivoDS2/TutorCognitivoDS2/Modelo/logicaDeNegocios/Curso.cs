@@ -13,12 +13,6 @@ namespace logicaDeNegocios{
         /**
          * 
          */
-        public Curso() {
-        }
-
-        /**
-         * 
-         */
         private String codigo;
 
         /**
@@ -35,7 +29,7 @@ namespace logicaDeNegocios{
          * @param pCodigo 
          * @param pNombre
          */
-        public void Curso(int pCodigo, String pNombre) {
+        public Curso(int pCodigo, String pNombre) {
             // TODO implement here
         }
 
@@ -45,7 +39,6 @@ namespace logicaDeNegocios{
          */
         public void setCodigo(String pCodigo) {
             // TODO implement here
-            return null;
         }
 
         /**
@@ -60,9 +53,8 @@ namespace logicaDeNegocios{
          * @param pNombre 
          * @return
          */
-        public void setNombre(void pNombre) {
+        public void setNombre(String pNombre) {
             // TODO implement here
-            return null;
         }
 
         /**
