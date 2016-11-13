@@ -18,8 +18,8 @@ namespace TutorCognitivo
     public partial class conexion : System.Web.UI.Page
     {
 
-       private string conection;
-        private MySqlConnection conectar;
+        private static string conection;
+        private static MySqlConnection conectar;
        
         
          
