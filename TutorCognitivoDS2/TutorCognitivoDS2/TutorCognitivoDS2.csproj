@@ -199,6 +199,93 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\es\EntityFramework.resources.dll" />
+    <Content Include="bin\es\EntityFramework.SqlServer.resources.dll" />
+    <Content Include="bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll" />
+    <Content Include="bin\es\Microsoft.AspNet.Identity.Core.resources.dll" />
+    <Content Include="bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll" />
+    <Content Include="bin\es\Microsoft.AspNet.Identity.Owin.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.Security.Facebook.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.Security.Google.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.Security.resources.dll" />
+    <Content Include="bin\es\Microsoft.Owin.Security.Twitter.resources.dll" />
+    <Content Include="bin\es\System.Web.Optimization.resources.dll" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\System.Web.Providers.xml" />
+    <Content Include="bin\TutorCognitivoDS2.dll" />
+    <Content Include="bin\TutorCognitivoDS2.pdb" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -211,7 +298,18 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\TutorCognitivoDS2.dll.config" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\TutorCognitivoDS2.csprojResolveAssemblyReference.cache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="obj\Debug\TutorCognitivoDS2.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TutorCognitivoDS2.dll" />
+    <Content Include="obj\Debug\TutorCognitivoDS2.pdb" />
     <Content Include="prueba.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -271,12 +369,14 @@
     <Content Include="vista\images\pic03.jpg" />
     <Content Include="vista\images\pic04.jpg" />
     <Content Include="vista\images\pic05.jpg" />
+    <Content Include="vista\interfaz.js" />
     <Content Include="vista\js\init.js" />
     <Content Include="vista\js\jquery.dropotron.min.js" />
     <Content Include="vista\js\jquery.min.js" />
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
     <Content Include="vista\login.aspx" />
+    <Content Include="vista\registro.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -302,7 +402,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accesoADatos\ConsultaCarrera.cs" />
+    <Compile Include="accesoADatos\DatoBitacora.cs" />
+    <Compile Include="accesoADatos\DatoCarrera.cs" />
     <Compile Include="accesoADatos\DatoCategoria.cs" />
     <Compile Include="accesoADatos\DatoUsuario.cs" />
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -428,6 +529,9 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="controlador\AdapterJava.cs" />
+    <Compile Include="controlador\Controlador.cs" />
+    <Compile Include="controlador\frameworkJava.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -435,12 +539,34 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DTOUsuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IdentityModels.cs" />
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
+    <Compile Include="Modelo\logicaDatos\ConexionBaseDeDatos.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\AdapterAdministrador.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Administrador.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Autenticacion.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Bitacora.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Categoria.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\CSV.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Curso.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Excel.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\fabricaBitacora.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\fabricaUsuario.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Final.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Registro.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\RegistroBitacora.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Tutor.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\Usuario.cs" />
+    <Compile Include="Modelo\logicaIntegracion\Correo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prueba.aspx.cs">
       <DependentUpon>prueba.aspx</DependentUpon>
@@ -478,12 +604,17 @@
     <Compile Include="vista\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vista\registro.aspx.cs">
+      <DependentUpon>registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\registro.aspx.designer.cs">
+      <DependentUpon>registro.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="controlador\" />
-    <Folder Include="logicaDeNegocios\" />
-    <Folder Include="validaciones\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
