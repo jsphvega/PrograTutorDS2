@@ -5,10 +5,11 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using MySql.Data;
 using dto;
+using TutorCognitivoDS2.modelo.logicaAccesoDatos;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoUsuario
+    public class DatoUsuario:ConexionBD
 
     {
 

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using MySql.Data.MySqlClient;
 using TutorCognitivoDS2.DTO;
+using TutorCognitivoDS2.modelo.logicaAccesoDatos;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoCategoria
+    public class DatoCategoria:ConexionBD
     {
         private MySqlCommand comandoCategoria;
         private string coneccion;

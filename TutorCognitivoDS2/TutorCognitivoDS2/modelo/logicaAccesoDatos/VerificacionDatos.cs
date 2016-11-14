@@ -5,11 +5,12 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using TutorCognitivoDS2.DTO;
 using dto;
+using TutorCognitivoDS2.modelo.logicaAccesoDatos;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
     //esta clase verfica los datos que ingresa el usuario
-    public class VerificacionDatos
+    public class VerificacionDatos:ConexionBD
     {
         private MySqlCommand comando;
         private string conection;

@@ -5,10 +5,11 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TutorCognitivoDS2.modelo.logicaAccesoDatos;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoCarrera
+    public class DatoCarrera:ConexionBD
     {
         private MySqlCommand comando2;
         private string conection;

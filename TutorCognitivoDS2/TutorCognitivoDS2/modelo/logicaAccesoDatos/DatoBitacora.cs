@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using MySql.Data.MySqlClient;
 using TutorCognitivoDS2.DTO;
+using TutorCognitivoDS2.modelo.logicaAccesoDatos;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoBitacora
+    public class DatoBitacora: ConexionBD
     {
         private MySqlCommand comandoBitacora;
         private string conection;
@@ -52,7 +53,7 @@ namespace TutorCognitivoDS2.accesoADatos
 
         }
 
-        public void consultarBitacora()
+        public void consultarBitacora(DTOBitacora bitacora)
         {
             try
             {
