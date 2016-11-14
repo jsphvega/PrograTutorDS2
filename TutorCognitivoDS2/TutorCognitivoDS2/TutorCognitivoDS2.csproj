@@ -547,10 +547,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityModels.cs" />
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
-    <Compile Include="Modelo\logicaDatos\ConexionBaseDeDatos.cs" />
     <Compile Include="Modelo\logicaDeNegocios\AdapterAdministrador.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Administrador.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Autenticacion.cs" />
@@ -618,6 +616,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Modelo\logicaDatos\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
