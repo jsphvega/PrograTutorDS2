@@ -1,12 +1,19 @@
 using System.Collections.Generic;
+using System;
+
 
 namespace logicaDeNegocios
 {
     public class CSV : Bitacora
     {
         StringWriter sw = new StringWriter();
+        List<object> listaRegistro = new List<object>();
 
-
+        public CSV(List<object> pRegistro)
+        {
+            listaRegistro = pRegistro;
+            crearArchivo();
+        }
         public void crearArchivo()
         {
             string attachment = "attachment; filename=BitacoraTutorCognitivo.csv";
@@ -21,13 +28,15 @@ namespace logicaDeNegocios
         }
 
 
-        public void escribir(List<object> pRegistro)
+        public void escribir()
         {
             sw.WriteLine("\"Usuario\";\"Accion\";\"Fecha y Hora\"");
-            for (int i = 0; pRegistro.Count>i; i++)
+
+            for (int i = 0; listaRegistro.Count>i; i++)
             {
                 sw.WriteLine(string.Format("\"{0}\";\"{1}\";\"{2}\"",
-                                     "Juanito", "Consulta a tutor", "HORA"));
+                                    //listaRegistro.getUsuario(), listaRegistro.getAccion(), DateTime.Now));
+                "Juanito", "Consulta a tutor", "HORA"));
             }
             System.Web.HttpContext.Current.Response.Write(sw.ToString());
             System.Web.HttpContext.Current.Response.Flush();
