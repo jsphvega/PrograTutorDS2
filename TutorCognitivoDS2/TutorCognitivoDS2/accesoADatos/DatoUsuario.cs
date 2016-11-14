@@ -30,7 +30,7 @@ namespace TutorCognitivoDS2.accesoADatos
         }
 
 
-        public void registrarUsuario()
+        public void registrarUsuario(dto.DTOUsuario usuario)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace TutorCognitivoDS2.accesoADatos
                 conectar.Open();
                 comando = new MySqlCommand();
                 comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
-                comando.Parameters.AddWithValue("@Nombre", "Mante");
+                comando.Parameters.AddWithValue("@Nombre", "");
                 comando.Parameters.AddWithValue("@Apellido1", "Mante");
                 comando.Parameters.AddWithValue("@Apellido2", "Mante");
                 comando.Parameters.AddWithValue("@Correo", "Mante");
