@@ -551,7 +551,6 @@
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Administrador.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Autenticacion.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Bitacora.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Categoria.cs" />
     <Compile Include="Modelo\logicaDeNegocios\CSV.cs" />

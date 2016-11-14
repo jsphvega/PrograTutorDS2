@@ -13,8 +13,8 @@ namespace TutorCognitivoDS2.accesoADatos
     {
         private MySqlCommand comando;
         private string conection;
-        private MySqlConnection conectar;
-        MySqlDataReader lectura;
+        private MySqlConnection conectado;
+        private MySqlDataReader lectura;
 
 
         //metodo que permite la conexion con la base remota
@@ -23,7 +23,7 @@ namespace TutorCognitivoDS2.accesoADatos
             try
             {
                 conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                conectar = new MySqlConnection(conection);
+                conectado = new MySqlConnection(conection);
             }
             catch (Exception)
             {
@@ -35,9 +35,9 @@ namespace TutorCognitivoDS2.accesoADatos
         public bool verificarInicioSesion(DTOInicioSesion inicioSesion ,String pTipo)
         {
             conectarBD();
-            conectar.Open();
+            conectado.Open();
             comando = new MySqlCommand();
-            comando.Connection = conectar;
+            comando.Connection = conectado;
             comando.CommandText = "Select Correo,Contraseña,Tipo from usuario";
             lectura = comando.ExecuteReader();
             lectura.Read();
@@ -61,7 +61,7 @@ namespace TutorCognitivoDS2.accesoADatos
 
            }
           
-            conectar.Close();
+            conectado.Close();
             return false;
         }
 
@@ -69,9 +69,9 @@ namespace TutorCognitivoDS2.accesoADatos
         public bool verificarUsuarioExistente(DTOUsuario usuario)
         {
             conectarBD();
-            conectar.Open();
+            conectado.Open();
             comando = new MySqlCommand();
-            comando.Connection = conectar;
+            comando.Connection = conectado;
             comando.CommandText = "Select Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo from usuario";
             lectura = comando.ExecuteReader();
             lectura.Read();
@@ -100,13 +100,36 @@ namespace TutorCognitivoDS2.accesoADatos
 
             }
 
-            conectar.Close();
+            conectado.Close();
             return false;
         }
 
+        
+        //verifica el correo del usuario en la BD 
+        public bool verificarCorreo(String pCorreo)
+        {
 
+            conectarBD();
+            conectado.Open();
+            comando = new MySqlCommand();
+            comando.Connection = conectado;
+            comando.CommandText = "Select Correo from usuario";
+            lectura = comando.ExecuteReader();
+            while (lectura.Read())
+            {
 
+            string correo = "";
+            correo = lectura.ToString();
 
+            if ( pCorreo== correo)
+            {
+                return true;
+            }
+            }
 
+            conectado.Close();
+            return false;
+        }
     }
-}
+    }
+

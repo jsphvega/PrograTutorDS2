@@ -9,19 +9,17 @@ namespace TutorCognitivoDS2.accesoADatos
 {
     public class DatoCategoria
     {
-        private MySqlCommand comando;
-        private MySqlCommand comando2;
-        private string conection;
-        private MySqlConnection conectar;
-        private String consulta;
-        MySqlDataReader lectura;
+        private MySqlCommand comandoCategoria;
+        private string coneccion;
+        private MySqlConnection comandoConectar;
+        private MySqlDataReader consultaCategoria;
 
         public void conectarBD()
         {
             try
             {
-                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                conectar = new MySqlConnection(conection);
+                coneccion = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
+                comandoConectar = new MySqlConnection(coneccion);
             }
             catch (Exception)
             {
@@ -29,18 +27,18 @@ namespace TutorCognitivoDS2.accesoADatos
             }
         }
 
-        public void registrarUsuario(DTOCategoria categoria)
+        public void registrarCategoria(DTOCategoria categoria)
         {
             try
             {
                 conectarBD();
-                conectar.Open();
-                comando = new MySqlCommand();
-                comando.Connection = conectar;
-                comando.CommandText = "INSERT INTO categoria(Nombre) VALUES(@Nombre)";
-                comando.Parameters.AddWithValue("@Nombre", categoria.Nombre); 
-                comando.ExecuteNonQuery();
-                conectar.Close();
+                comandoConectar.Open();
+                comandoCategoria = new MySqlCommand();
+                comandoCategoria.Connection = comandoConectar;
+                comandoCategoria.CommandText = "INSERT INTO categoria(Nombre) VALUES(@Nombre)";
+                comandoCategoria.Parameters.AddWithValue("@Nombre", categoria.Nombre);
+                comandoCategoria.ExecuteNonQuery();
+                comandoConectar.Close();
 
 
             }
@@ -51,5 +49,11 @@ namespace TutorCognitivoDS2.accesoADatos
 
         }
 
-    }
+
+        public void consultarCategoria(DTOCategoria categoria)
+        {
+
+
+        }
+}
 }

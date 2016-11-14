@@ -15,7 +15,6 @@ namespace TutorCognitivoDS2.accesoADatos
         private MySqlCommand comando2;
         private string conection;
         private MySqlConnection conectar;
-        private String consulta;
         MySqlDataReader lectura;
 
         public void conectarBD()
