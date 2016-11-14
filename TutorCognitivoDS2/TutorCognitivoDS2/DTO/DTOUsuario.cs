@@ -5,13 +5,20 @@ namespace dto
     public class DTOUsuario
     {
         private String nombre;
+        private String apellido1;
+        private String apellido2;
         private String correo;
         private String contraseña;
         private String carrera;
 
-        public DTOUsuario(String pNombre, String pCorreo, String pContraseña, String pCarrera)
+        public DTOUsuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, String pCarrera)
         {
-
+            nombre = pNombre;
+            Apellido1 = pApellido1;
+            Apellido2 = pApellido2;
+            correo = pCorreo;
+            contraseña = pContraseña;
+            carrera = pCarrera;
         }
 
         public string Nombre
@@ -36,6 +43,18 @@ namespace dto
         {
             get { return carrera; }
             set { carrera = value; }
+        }
+
+        public string Apellido2
+        {
+            get { return apellido2; }
+            set { apellido2 = value; }
+        }
+
+        public string Apellido1
+        {
+            get { return apellido1; }
+            set { apellido1 = value; }
         }
     }
 }

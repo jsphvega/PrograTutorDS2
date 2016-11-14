@@ -1,4 +1,5 @@
-﻿using System;
+﻿using controlador;
+using System;
 
 namespace TutorCognitivoDS2.Vista
 {
@@ -6,15 +7,26 @@ namespace TutorCognitivoDS2.Vista
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
+            }
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            Response.BufferOutput = true;
-            Response.Redirect("http://www.microsoft.com/gohere/look.htm");
+            Controlador controlador = new Controlador();
+            controlador.insertarUsuarioFinal();
+        }
 
-            //Response.Write("<script>window.alert('Imposible generar medios');</script>");
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Page.Validate();
+            if (Page.IsValid)
+            {
+                Response.BufferOutput = true;
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }

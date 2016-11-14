@@ -12,6 +12,7 @@
 
     <!--Archivos .js responsive-->
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <script src="interfaz.js"></script>
 
     <!--Archivos .css responsive-->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -38,7 +39,7 @@
             <!--Menú principal-->
             <nav id="nav">
                 <ul>
-                    <li class="current" onclick="return ConfirmarSalidaRegistro();"><a>Volver</a></li>
+                    <li class="current" onclick="return confirmarSalida();"><a>Volver</a></li>
                 </ul>
             </nav>
 
@@ -105,7 +106,7 @@
                                     <div class="row">
                                         <div class="12u" style="text-align:center">
                                             <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
-                                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClientClick="ConfirmarSalidaRegistro(); return false"/>
+                                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CausesValidation="true"/>
                                         </div>
                                     </div>
                                 </div>

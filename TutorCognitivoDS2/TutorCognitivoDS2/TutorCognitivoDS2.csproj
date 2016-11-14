@@ -549,14 +549,13 @@
     </Compile>
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\AdapterAdministrador.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Administrador.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Autenticacion.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Bitacora.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Categoria.cs" />
     <Compile Include="Modelo\logicaDeNegocios\CSV.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Curso.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Excel.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\DecoradorAdministrador.cs" />
     <Compile Include="Modelo\logicaDeNegocios\fabricaBitacora.cs" />
     <Compile Include="Modelo\logicaDeNegocios\fabricaUsuario.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Final.cs" />
@@ -564,6 +563,7 @@
     <Compile Include="Modelo\logicaDeNegocios\RegistroBitacora.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Tutor.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Usuario.cs" />
+    <Compile Include="Modelo\logicaDeNegocios\XLS.cs" />
     <Compile Include="Modelo\logicaIntegracion\Correo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />

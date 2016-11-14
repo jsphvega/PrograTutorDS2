@@ -1,7 +1,9 @@
-﻿function ConfirmarSalidaRegistro() {
-    var seleccion = confirm("¿Está seguro? Se perderán los datos");
+﻿function confirmarSalida() {
+    var ask = window.confirm("¿Está seguro? Se perderán los datos");
 
-    if (seleccion) {
-        Response.Redirect("login.aspx");
+    if (ask) {
+        document.location.href = "login.aspx";
     }
+
+    return !ask;
 }
