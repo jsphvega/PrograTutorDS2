@@ -1,13 +1,14 @@
+using dto;
+
 namespace logicaDeNegocios
 {
     public class Administrador : DecoradorAdministrador
     {
-
         private DecoradorAdministrador decorador;
 
-        public Administrador()
+        public Administrador(DTOUsuario pUsuario)
         {
-            // TODO implement here
+            decorador = new DecoradorAdministrador(DTOUsuario pUsuario);
         }
 
         public void registrarCurso(Curso pCurso)
