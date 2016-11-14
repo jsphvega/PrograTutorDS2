@@ -546,13 +546,13 @@
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
     <Compile Include="modelo\logicaDatos\ConexionBaseDeDatos.cs" />
-    <Compile Include="modelo\logicaDeNegocios\AdapterAdministrador.cs" />
     <Compile Include="modelo\logicaDeNegocios\Administrador.cs" />
     <Compile Include="modelo\logicaDeNegocios\Autenticacion.cs" />
     <Compile Include="modelo\logicaDeNegocios\Bitacora.cs" />
     <Compile Include="modelo\logicaDeNegocios\Categoria.cs" />
     <Compile Include="modelo\logicaDeNegocios\CSV.cs" />
     <Compile Include="modelo\logicaDeNegocios\Curso.cs" />
+    <Compile Include="modelo\logicaDeNegocios\DecoradorAdministrador.cs" />
     <Compile Include="modelo\logicaDeNegocios\XLS.cs" />
     <Compile Include="modelo\logicaDeNegocios\FabricaBitacora.cs" />
     <Compile Include="modelo\logicaDeNegocios\FabricaUsuario.cs" />

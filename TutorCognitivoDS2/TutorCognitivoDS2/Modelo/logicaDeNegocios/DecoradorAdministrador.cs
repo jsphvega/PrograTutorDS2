@@ -1,42 +1,25 @@
-
+using dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class DecoradorAdministrador : Usuario {
-
-        /**
-         * 
-         */
-        public DecoradorAdministrador() {
+namespace logicaDeNegocios
+{
+    public class DecoradorAdministrador : Usuario
+    {
+        public DecoradorAdministrador(DTOUsuario pUsuario) : base(pUsuario.Nombre, pUsuario.Correo, pUsuario.Contraseña, pUsuario.Carrera)
+        {
         }
 
-
-
-        /**
-         * 
-         */
-        public void AdapterAdministrador() {
+        public void AdapterAdministrador()
+        {
+            // TODO implement here
+        }
+        public override void registrarUsuario()
+        {
             // TODO implement here
         }
 
-        /**
-         * @return
-         */
-        public void registrarUsuario() {
-            // TODO implement here
-            return null;
-        }
-
-        /**
-         * @return
-         */
-        public String toString() {
+        public override String toString()
+        {
             // TODO implement here
             return null;
         }

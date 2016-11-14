@@ -11,7 +11,10 @@ namespace TutorCognitivoDS2.Vista
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>window.alert('Imposible generar medios');</script>");
+            Response.BufferOutput = true;
+            Response.Redirect("http://www.microsoft.com/gohere/look.htm");
+
+            //Response.Write("<script>window.alert('Imposible generar medios');</script>");
         }
     }
 }
