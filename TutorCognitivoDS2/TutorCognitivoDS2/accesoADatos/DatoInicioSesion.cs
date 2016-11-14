@@ -7,7 +7,7 @@ using TutorCognitivoDS2.DTO;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoCategoria
+    public class DatoInicioSesion
     {
         private MySqlCommand comando;
         private MySqlCommand comando2;
@@ -15,6 +15,7 @@ namespace TutorCognitivoDS2.accesoADatos
         private MySqlConnection conectar;
         private String consulta;
         MySqlDataReader lectura;
+
 
         public void conectarBD()
         {
@@ -29,27 +30,28 @@ namespace TutorCognitivoDS2.accesoADatos
             }
         }
 
-        public void registrarUsuario(DTOCategoria categoria)
+        public bool verificarInicioSesion (DTOInicioSesion inicioSesion)
         {
-            try
+            conectarBD();
+            conectar.Open();
+            comando = new MySqlCommand();
+            comando.Connection = conectar;
+            comando.CommandText = "Select correo, contraseña from usuario";
+            lectura = comando.ExecuteReader();
+            lectura.Read();
+            if(lectura.Read())
             {
-                conectarBD();
-                conectar.Open();
-                comando = new MySqlCommand();
-                comando.Connection = conectar;
-                comando.CommandText = "INSERT INTO categoria(Nombre) VALUES(@Nombre)";
-                comando.Parameters.AddWithValue("@Nombre", categoria.Nombre); 
-                comando.ExecuteNonQuery();
-                conectar.Close();
-
+                string correo = lectura.GetString(4);
+                string contraseña = lectura.GetString(5);
+                if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña)
+                {
+                 return true;  
+                }
 
             }
-            catch (Exception)
-            {
-
-            }
-
+          
+            conectar.Close();
+            return false;
         }
-
-    }
+}
 }
