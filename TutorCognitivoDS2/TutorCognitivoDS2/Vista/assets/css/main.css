@@ -1826,11 +1826,9 @@ Copyright
     }
 
         .login p input[type="text"],
-        .login p input[type="email"]
-        .login p input[type="password"],
+        .login p input[type="email"] .login p input[type="password"],
         .login p .inputText,
-        .login p .inputEmail
-        .login p .inputPassword {
+        .login p .inputEmail .login p .inputPassword {
             width: 400px;
         }
 
@@ -1840,6 +1838,7 @@ Copyright
     .inputText,
     .inputEmail,
     .inputPassword,
+    .txtUsuario,
     select {
         width: 100%;
         height: 40px;

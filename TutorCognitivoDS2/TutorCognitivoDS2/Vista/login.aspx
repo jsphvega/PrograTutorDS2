@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="TutorCognitivoDS2.Vista.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TutorCognitivoDS2.Vista.login" %>
 
 <!DOCTYPE html>
 
@@ -43,13 +43,13 @@
                         <!--Usuario-->
                         <h3>Usuario</h3>
                         <p>
-                            <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="input inputEmail"></asp:TextBox>
+                            <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="input inputEmail" Width="400px"></asp:TextBox>
                         </p>
 
                         <!--Contraseña-->
                         <h3>Contraseña</h3>
                         <p>
-                            <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server"  CssClass="input inputPassword"></asp:TextBox>
+                            <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server"  CssClass="input inputPassword" Width="400px"></asp:TextBox>
                         </p>
 
                         <!--Tipo-->

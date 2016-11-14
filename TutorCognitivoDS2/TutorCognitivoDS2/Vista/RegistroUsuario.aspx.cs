@@ -31,6 +31,7 @@ namespace TutorCognitivoDS2.vista
             {
                 Controlador controlador = new Controlador();
                 controlador.insertarUsuarioFinal(sUsuario);
+                Response.Redirect("Login.aspx");
             }
         }
 
@@ -40,7 +41,7 @@ namespace TutorCognitivoDS2.vista
             if (Page.IsValid)
             {
                 Response.BufferOutput = true;
-                Response.Redirect("login.aspx");
+                Response.Redirect("Login.aspx");
             }
         }
     }
