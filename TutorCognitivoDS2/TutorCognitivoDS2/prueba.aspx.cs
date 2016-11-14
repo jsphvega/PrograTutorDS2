@@ -43,7 +43,7 @@ namespace TutorCognitivoDS2
                 //comando.ExecuteNonQuery();
                 //conectar.Close();
 
-                DatoInicioSesion dato = new DatoInicioSesion();
+                VerificacionDatos dato = new VerificacionDatos();
 
                 if (dato.verificarInicioSesion("hola", "maria", "3") == true)
                 {

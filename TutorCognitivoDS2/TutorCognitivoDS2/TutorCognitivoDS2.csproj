@@ -405,7 +405,7 @@
     <Compile Include="accesoADatos\DatoBitacora.cs" />
     <Compile Include="accesoADatos\DatoCarrera.cs" />
     <Compile Include="accesoADatos\DatoCategoria.cs" />
-    <Compile Include="accesoADatos\DatoInicioSesion.cs" />
+    <Compile Include="accesoADatos\VerificacionDatos.cs" />
     <Compile Include="accesoADatos\DatoUsuario.cs" />
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>

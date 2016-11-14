@@ -5,6 +5,7 @@ using System.Web;
 
 namespace TutorCognitivoDS2.DTO
 {
+    //clase que corresponde al DTO de Inicio de Sesion
     public class DTOInicioSesion
     {
         private String correo;

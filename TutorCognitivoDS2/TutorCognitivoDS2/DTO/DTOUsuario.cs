@@ -2,6 +2,7 @@ using System;
 
 namespace dto
 {
+    //clase que corresponde al DTO de Inicio de usuario
     public class DTOUsuario
     {
         private String nombre;

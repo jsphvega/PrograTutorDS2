@@ -5,6 +5,7 @@ using System.Web;
 
 namespace TutorCognitivoDS2.DTO
 {
+    //clase que corresponde al DTO de bitacora
     public class DTOBitacora
     {
         private DateTime fechaHora;

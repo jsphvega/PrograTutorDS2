@@ -5,6 +5,7 @@ using System.Web;
 
 namespace TutorCognitivoDS2.DTO
 {
+    //clase que corresponde al DTO de Categoria
     public class DTOCategoria
     {
         private String nombre;
