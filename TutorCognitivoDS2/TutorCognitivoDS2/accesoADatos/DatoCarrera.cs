@@ -30,29 +30,27 @@ namespace TutorCognitivoDS2.accesoADatos
 
             }
         }
-         
+
         public DropDownList cargarListBox()
         {
             conectarBD();
             conectar.Open();
             comando2 = new MySqlCommand();
             comando2.Connection = conectar;
-            comando2.CommandText = "SELECT * From carrera";
+            comando2.CommandText = "SELECT IDCarrera,Nombre From carrera";
             lectura = comando2.ExecuteReader();
 
             DropDownList sCarrera = new DropDownList();
 
             sCarrera.DataSource = lectura;
-            sCarrera.Items.Clear();
-            sCarrera.Items.Add("Seleccione un Cliente");
-            sCarrera.DataTextField = "NOMBRE_CLIENTE";
-            sCarrera.DataValueField = "NOMBRE_CLIENTE";
+            sCarrera.DataTextField = "Nombre";
+            sCarrera.DataValueField = "IDCarrera";
             sCarrera.DataBind();
 
             conectar.Close();
 
-            return sCarrera; 
+            return sCarrera;
         }
 
-}
+    }
 }
