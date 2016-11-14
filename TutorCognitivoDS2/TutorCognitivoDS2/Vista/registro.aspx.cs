@@ -8,5 +8,10 @@ namespace TutorCognitivoDS2.Vista
         {
 
         }
+
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script>window.alert('Imposible generar medios');</script>");
+        }
     }
 }

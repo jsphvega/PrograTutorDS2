@@ -104,8 +104,8 @@
 
                                     <div class="row">
                                         <div class="12u" style="text-align:center">
-                                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar"/>
-                                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClientClick="return ConfirmarSalidaRegistro();"/>
+                                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
+                                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClientClick="ConfirmarSalidaRegistro(); return false"/>
                                         </div>
                                     </div>
                                 </div>
