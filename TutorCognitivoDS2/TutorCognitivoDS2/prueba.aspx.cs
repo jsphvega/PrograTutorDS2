@@ -43,16 +43,16 @@ namespace TutorCognitivoDS2
                 //comando.ExecuteNonQuery();
                 //conectar.Close();
 
-                VerificacionDatos dato = new VerificacionDatos();
+               // VerificacionDatos dato = new VerificacionDatos();
 
-                if (dato.verificarInicioSesion("hola", "maria", "3") == true)
-                {
-                    Response.Write("se encuentra en la base");
-                }
-                else
-                {
-                    Response.Write("no se encuentra en la base");
-                }
+                //if (dato.verificarInicioSesion("hola", "maria", "3") == true)
+               /// {
+                   // Response.Write("se encuentra en la base");
+               // }
+                //else
+                //{
+                   // Response.Write("no se encuentra en la base");
+                //}
 
 
                 // string tutores= "SELECT nombre FROM tutor Limit 0";
