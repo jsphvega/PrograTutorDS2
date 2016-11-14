@@ -3,7 +3,7 @@ using dto;
 using System;
 using System.Web.UI.WebControls;
 using TutorCognitivoDS2.accesoADatos;
-using TutorCognitivoDS2.validacion;
+//using TutorCognitivoDS2.validacion;
 
 namespace TutorCognitivoDS2.Vista
 {
@@ -27,7 +27,7 @@ namespace TutorCognitivoDS2.Vista
             DTOUsuario sUsuario = new DTOUsuario(txtNombre.Text, txtApellido1.Text, txtApellido2.Text,
                 txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.DataValueField));
 
-            lblError.Text = Validacion.validarUsuario(sUsuario);
+            //lblError.Text = Validacion.validarUsuario(sUsuario);
 
             if (lblError.Text != String.Empty)
             {
