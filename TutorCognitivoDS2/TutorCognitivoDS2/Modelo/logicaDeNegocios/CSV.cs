@@ -1,8 +1,12 @@
+using System.Collections.Generic;
+
 namespace logicaDeNegocios
 {
     public class CSV : Bitacora
     {
         StringWriter sw = new StringWriter();
+
+
         public void crearArchivo()
         {
             string attachment = "attachment; filename=BitacoraTutorCognitivo.csv";
@@ -17,21 +21,18 @@ namespace logicaDeNegocios
         }
 
 
-        public void escribir()
+        public void escribir(List<object> pRegistro)
         {
-
             sw.WriteLine("\"Usuario\";\"Accion\";\"Fecha y Hora\"");
-
-            sw.WriteLine(string.Format("\"{0}\";\"{1}\";\"{2}\"",
+            for (int i = 0; pRegistro.Count>i; i++)
+            {
+                sw.WriteLine(string.Format("\"{0}\";\"{1}\";\"{2}\"",
                                      "Juanito", "Consulta a tutor", "HORA"));
-
+            }
             System.Web.HttpContext.Current.Response.Write(sw.ToString());
             System.Web.HttpContext.Current.Response.Flush();
             System.Web.HttpContext.Current.Response.End();
 
-        }
-        public CSV()
-        {
         }
 
         public override void actualizar()
