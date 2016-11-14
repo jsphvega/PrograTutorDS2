@@ -375,7 +375,7 @@
     <Content Include="vista\js\jquery.min.js" />
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
-    <Content Include="vista\login.aspx" />
+    <Content Include="vista\Login.aspx" />
     <Content Include="vista\RegistroUsuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -600,12 +600,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="vista\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="vista\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vista\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="vista\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>

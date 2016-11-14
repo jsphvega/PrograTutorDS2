@@ -7,8 +7,10 @@ namespace logicaDeNegocios
     {
         private DateTime vencimiento;
 
-        public Tutor(DTOUsuario pUsuario, DateTime pVencimiento) {
-
+        public Tutor(DTOUsuario pUsuario, DateTime pVencimiento)
+        : base(pUsuario.Nombre, pUsuario.Apellido1, pUsuario.Apellido2, pUsuario.Correo,
+                  pUsuario.Contraseña1, pUsuario.Carrera)
+        {
             Nombre = pUsuario.Nombre;
             Apellido1 = pUsuario.Apellido1;
             Apellido2 = pUsuario.Apellido2;
