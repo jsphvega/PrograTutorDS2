@@ -549,22 +549,22 @@
     </Compile>
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Administrador.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Autenticacion.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Bitacora.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Categoria.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\CSV.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Curso.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\DecoradorAdministrador.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\fabricaBitacora.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\fabricaUsuario.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Final.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Registro.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\RegistroBitacora.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Tutor.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Usuario.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\XLS.cs" />
-    <Compile Include="Modelo\logicaIntegracion\Correo.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Administrador.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Autenticacion.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Bitacora.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Categoria.cs" />
+    <Compile Include="modelo\logicaDeNegocios\CSV.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Curso.cs" />
+    <Compile Include="modelo\logicaDeNegocios\DecoradorAdministrador.cs" />
+    <Compile Include="modelo\logicaDeNegocios\fabricaBitacora.cs" />
+    <Compile Include="modelo\logicaDeNegocios\fabricaUsuario.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Final.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Registro.cs" />
+    <Compile Include="modelo\logicaDeNegocios\RegistroBitacora.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Tutor.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Usuario.cs" />
+    <Compile Include="modelo\logicaDeNegocios\XLS.cs" />
+    <Compile Include="modelo\logicaIntegracion\Correo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -592,6 +592,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="validacion\Validacion.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -616,7 +617,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Modelo\logicaDatos\" />
+    <Folder Include="modelo\logicaDatos\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>

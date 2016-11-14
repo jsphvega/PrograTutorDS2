@@ -99,14 +99,20 @@
                                         <!--Carrera-->
                                         <div class="4u 12u(mobile)">
                                             <h3>Carrera</h3>
-                                            <asp:ListBox ID="listCarrera" runat="server" ></asp:ListBox>
+                                            <asp:DropDownList ID="ddlCarrera" runat="server"></asp:DropDownList>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="12u" style="text-align:center">
-                                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>
-                                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CausesValidation="true"/>
+                                        <div class="12u" style="text-align: center">
+                                            <asp:Label ID="lblError" runat="server" s></asp:Label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="12u" style="text-align: center">
+                                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
+                                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CausesValidation="true" />
                                         </div>
                                     </div>
                                 </div>

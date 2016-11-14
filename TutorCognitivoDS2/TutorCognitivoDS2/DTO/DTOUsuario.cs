@@ -8,16 +8,18 @@ namespace dto
         private String apellido1;
         private String apellido2;
         private String correo;
-        private String contraseña;
-        private String carrera;
+        private String contraseña1;
+        private String contraseña2;
+        private int carrera;
 
-        public DTOUsuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, String pCarrera)
+        public DTOUsuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña1, String pContraseña2, int pCarrera)
         {
             nombre = pNombre;
             Apellido1 = pApellido1;
             Apellido2 = pApellido2;
             correo = pCorreo;
-            contraseña = pContraseña;
+            contraseña1 = pContraseña1;
+            contraseña2 = pContraseña2;
             carrera = pCarrera;
         }
 
@@ -33,13 +35,19 @@ namespace dto
             set { correo = value; }
         }
 
-        public string Contraseña
+        public string Contraseña1
         {
-            get { return contraseña; }
-            set { contraseña = value; }
+            get { return contraseña1; }
+            set { contraseña1 = value; }
         }
 
-        public string Carrera
+        public string Contraseña2
+        {
+            get { return contraseña2; }
+            set { contraseña2 = value; }
+        }
+
+        public int Carrera
         {
             get { return carrera; }
             set { carrera = value; }

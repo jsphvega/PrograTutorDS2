@@ -47,7 +47,7 @@ namespace TutorCognitivoDS2.accesoADatos
                 comando.Parameters.AddWithValue("@Apellido1", usuario.Apellido1);
                 comando.Parameters.AddWithValue("@Apellido2", usuario.Apellido2);
                 comando.Parameters.AddWithValue("@Correo", usuario.Correo);
-                comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
+                comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña1);
                 comando.Parameters.AddWithValue("@Tipo", 3);
                 comando.ExecuteNonQuery();
                 conectar.Close();
