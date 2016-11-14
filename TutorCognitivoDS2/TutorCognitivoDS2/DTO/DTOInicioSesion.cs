@@ -26,5 +26,7 @@ namespace TutorCognitivoDS2.DTO
             get { return contraseña; }
             set { contraseña = value; }
         }
+
+
     }
 }

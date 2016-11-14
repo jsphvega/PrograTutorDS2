@@ -7,5 +7,19 @@ namespace TutorCognitivoDS2.DTO
 {
     public class DTOCurso
     {
+
+        private String nombre;
+
+        public DTOCurso(String pNombre)
+        {
+            nombre = pNombre;
+        }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+
     }
 }
