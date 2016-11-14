@@ -58,7 +58,6 @@ namespace logicaDeNegocios
                 bitacora.Rows.Add("Juanito", "Entrenamiento", 300);
                 //bitacora.Rows.Add(listaRegistro.getUsuario(), listaRegistro.getAccion(), DateTime.Now);
             }
-            
 
         }
         public override void actualizar()
