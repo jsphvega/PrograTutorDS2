@@ -15,10 +15,10 @@ namespace controlador
 
         public void insertarUsuarioFinal()
         {
-            DTOUsuario dto = new DTOUsuario("Joseph", "Vega", "Vargas", "j-vv01@hotmail.com", "12345", "12");
+            //DTOUsuario dto = new DTOUsuario("Joseph", "Vega", "Vargas", "j-vv01@hotmail.com", "12345", "12");
 
-            DatoUsuario DU = new DatoUsuario();
-            DU.registrarUsuario(dto);
+           // DatoUsuario DU = new DatoUsuario();
+           // DU.registrarUsuario(dto);
         }
     }
 }

@@ -17,18 +17,7 @@ namespace TutorCognitivoDS2
         private static MySqlConnection conectar;
         private MySqlCommand comando;
        
-        public void conectarBD()
-        {
-            try
-            {
-                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                conectar = new MySqlConnection(conection);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
+      
 
 
 
@@ -37,18 +26,21 @@ namespace TutorCognitivoDS2
           try
             {
 
-                //conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                //conectar = new MySqlConnection(conection);
-                conectarBD();
-
-                conectarBD();
+                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
+                conectar = new MySqlConnection(conection);
+                //conectarBD();
                 conectar.Open();
                 comando = new MySqlCommand();
                 comando.Connection = conectar;
-                comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(Joseph,Vega,Vargas,j-vv01@hotmail.com,12345,3)";
+                comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
+                comando.Parameters.AddWithValue("@Nombre", "maria");
+                comando.Parameters.AddWithValue("@Apellido1", "maria");
+                comando.Parameters.AddWithValue("@Apellido2", "maria");
+                comando.Parameters.AddWithValue("@Correo", "maria");
+                comando.Parameters.AddWithValue("@Contraseña", "maria");
+                comando.Parameters.AddWithValue("@Tipo", 3);
                 comando.ExecuteNonQuery();
                 conectar.Close();
-
 
                 // string tutores= "SELECT nombre FROM tutor Limit 0";
 
