@@ -36,14 +36,19 @@ namespace TutorCognitivoDS2.accesoADatos
             conectar.Open();
             comando = new MySqlCommand();
             comando.Connection = conectar;
-            comando.CommandText = "Select correo, contraseña from usuario";
+            comando.CommandText = "Select * from usuario";
             lectura = comando.ExecuteReader();
-            lectura.Read();
-            if(lectura.Read())
+            //lectura.Read();
+            while(lectura.Read())
             {
-                string correo = lectura.GetString(4);
-                string contraseña = lectura.GetString(5);
-                if (correo == pCorreo & contraseña == Pcontraseña)
+                string correo = "";
+
+                string contraseña = "";
+
+                correo= lectura["Correo"].ToString();
+                contraseña = lectura["Contraseña"].ToString();
+
+                if (correo == pCorreo & contraseña==Pcontraseña)
                 {
                  return true;  
                 }
