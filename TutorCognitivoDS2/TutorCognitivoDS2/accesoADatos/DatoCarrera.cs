@@ -38,7 +38,9 @@ namespace TutorCognitivoDS2.accesoADatos
             comando2.CommandText = "SELECT * From carrera";
             lectura = comando2.ExecuteReader();
             lectura.Read();
+            conectar.Close();
         }
 
+      
 }
 }
