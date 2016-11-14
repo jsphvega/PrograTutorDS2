@@ -12,12 +12,10 @@ namespace TutorCognitivoDS2.accesoADatos
 
     {
 
-        private MySqlCommand comando;
-        private MySqlCommand comando2;
+        private MySqlCommand comandoUsuario;
         private string conection;
-        private MySqlConnection conectar;
-        private String consulta;
-        MySqlDataReader lectura;
+        private MySqlConnection conectado;
+        private MySqlDataReader consulta;
 
 
         public void conectarBD()
@@ -25,7 +23,7 @@ namespace TutorCognitivoDS2.accesoADatos
             try
             {
                 conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                conectar = new MySqlConnection(conection);
+                conectado = new MySqlConnection(conection);
             }
             catch (Exception)
             {
@@ -39,18 +37,18 @@ namespace TutorCognitivoDS2.accesoADatos
             try
             {
                 conectarBD();
-                conectar.Open();
-                comando = new MySqlCommand();
-                comando.Connection = conectar;
-                comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
-                comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
-                comando.Parameters.AddWithValue("@Apellido1", usuario.Apellido1);
-                comando.Parameters.AddWithValue("@Apellido2", usuario.Apellido2);
-                comando.Parameters.AddWithValue("@Correo", usuario.Correo);
-                comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña1);
-                comando.Parameters.AddWithValue("@Tipo", 3);
-                comando.ExecuteNonQuery();
-                conectar.Close();
+                conectado.Open();
+                comandoUsuario = new MySqlCommand();
+                comandoUsuario.Connection = conectado;
+                comandoUsuario.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
+                comandoUsuario.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                comandoUsuario.Parameters.AddWithValue("@Apellido1", usuario.Apellido1);
+                comandoUsuario.Parameters.AddWithValue("@Apellido2", usuario.Apellido2);
+                comandoUsuario.Parameters.AddWithValue("@Correo", usuario.Correo);
+                comandoUsuario.Parameters.AddWithValue("@Contraseña", usuario.Contraseña1);
+                comandoUsuario.Parameters.AddWithValue("@Tipo", 3);
+                comandoUsuario.ExecuteNonQuery();
+                conectado.Close();
 
 
             }
@@ -61,27 +59,12 @@ namespace TutorCognitivoDS2.accesoADatos
 
         }
 
-        public void consultarUsuario(int rol)
+        public void consultarTutores()
         {
             try
             {
 
-                consulta = "SELECT * FROM usuario where Limit 0";
-
-                comando2 = new MySqlCommand(consulta, conectar);
-                lectura = comando2.ExecuteReader();
-
-                while (lectura.Read())
-                {
-                    string nombre = lectura.GetString(1);
-                    String apellido1 = lectura.GetString(2);
-                    String apellido2 = lectura.GetString(3);
-                    String correo = lectura.GetString(4);
-
-
-
-
-                }
+                
 
             }
             catch
@@ -90,6 +73,52 @@ namespace TutorCognitivoDS2.accesoADatos
 
 
         }
+
+        public void consultarFinales()
+        {
+            try
+            {
+
+
+
+            }
+            catch
+            {
+            }
+
+
+        }
+        public void consultarTutor(int ID)
+        {
+            try
+            {
+
+
+
+            }
+            catch
+            {
+            }
+
+
+        }
+
+        public void consultarFinal(int ID)
+        {
+            try
+            {
+
+
+
+            }
+            catch
+            {
+            }
+
+
+        }
+
+
 
     }
 }
