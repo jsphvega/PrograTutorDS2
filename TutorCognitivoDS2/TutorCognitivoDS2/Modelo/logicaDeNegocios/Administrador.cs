@@ -1,27 +1,62 @@
-namespace logicaDeNegocios
-{
-    public class Administrador
-    {
 
-        private AdapterAdministrador administrador;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-        public Administrador()
-        {
+namespace logicaDeNegocios{
+    /**
+     * 
+     */
+    public class Administrador : DecoradorAdministrador {
+
+        /**
+         * 
+         */
+        public Administrador() {
+        }
+
+        /**
+         * 
+         */
+        private DecoradorAdministrador administrador;
+
+        /**
+         * 
+         */
+        private DecoradorAdministrador decorador;
+
+        /**
+         * 
+         */
+        public void Administrador() {
             // TODO implement here
         }
 
-        public void registrarCurso(Curso pCurso)
-        {
+        /**
+         * @param pCurso 
+         * @return
+         */
+        public void registrarCurso(Curso pCurso) {
+            // TODO implement here
+            return null;
         }
 
-
-        public void registrarCategoria(Categoria pCategoria)
-        {
+        /**
+         * @param pCategoria 
+         * @return
+         */
+        public void registrarCategoria(Categoria pCategoria) {
+            // TODO implement here
+            return null;
         }
 
-
-        public void consultarBitacora()
-        {
+        /**
+         * @return
+         */
+        public void consultarBitacora() {
+            // TODO implement here
+            return null;
         }
 
     }
