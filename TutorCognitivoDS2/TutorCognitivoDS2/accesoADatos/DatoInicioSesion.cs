@@ -30,7 +30,7 @@ namespace TutorCognitivoDS2.accesoADatos
             }
         }
 
-        public bool verificarInicioSesion (DTOInicioSesion inicioSesion)
+        public bool verificarInicioSesion(String pCorreo, String Pcontraseña)
         {
             conectarBD();
             conectar.Open();
@@ -43,7 +43,7 @@ namespace TutorCognitivoDS2.accesoADatos
             {
                 string correo = lectura.GetString(4);
                 string contraseña = lectura.GetString(5);
-                if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña)
+                if (correo == pCorreo & contraseña == Pcontraseña)
                 {
                  return true;  
                 }

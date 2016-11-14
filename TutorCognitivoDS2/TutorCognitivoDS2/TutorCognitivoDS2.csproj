@@ -311,6 +311,7 @@
     <Content Include="obj\Debug\TutorCognitivoDS2.dll" />
     <Content Include="obj\Debug\TutorCognitivoDS2.pdb" />
     <Content Include="prueba.aspx" />
+    <Content Include="prueba2.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -577,6 +578,13 @@
     </Compile>
     <Compile Include="prueba.aspx.designer.cs">
       <DependentUpon>prueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="prueba2.aspx.cs">
+      <DependentUpon>prueba2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prueba2.aspx.designer.cs">
+      <DependentUpon>prueba2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
