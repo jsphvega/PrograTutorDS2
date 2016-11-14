@@ -152,3 +152,6 @@ C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivoDS2\Tutor
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\MySql.Data.dll
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\MySql.Data.xml
 C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\MySql.Data.xml
+C:\Users\majom\Downloads\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\obj\Debug\TutorCognitivoDS2.csprojResolveAssemblyReference.cache
+C:\Users\majom\Downloads\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\obj\Debug\TutorCognitivoDS2.dll
+C:\Users\majom\Downloads\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\obj\Debug\TutorCognitivoDS2.pdb
