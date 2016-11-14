@@ -1,6 +1,8 @@
 ﻿using controlador;
 using dto;
 using System;
+using System.Web.UI.WebControls;
+using TutorCognitivoDS2.accesoADatos;
 using TutorCognitivoDS2.validacion;
 
 namespace TutorCognitivoDS2.Vista
@@ -12,6 +14,11 @@ namespace TutorCognitivoDS2.Vista
             if (!IsPostBack)
             {
                 btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
+
+                DatoCarrera dc = new DatoCarrera();
+
+                ddlCarrera = dc.cargarListBox();
+                ddlCarrera.Items.Insert(0, new ListItem("(Seleccione el nombre del cliente)"));
             }
         }
 

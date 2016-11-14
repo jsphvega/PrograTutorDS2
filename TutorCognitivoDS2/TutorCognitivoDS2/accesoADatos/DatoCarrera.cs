@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MySql.Data.MySqlClient;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class ConsultaCarrera
+    public class DatoCarrera
     {
 
         private MySqlCommand comando;
@@ -29,7 +31,7 @@ namespace TutorCognitivoDS2.accesoADatos
             }
         }
          
-        public void cargarListBox()
+        public DropDownList cargarListBox()
         {
             conectarBD();
             conectar.Open();
@@ -37,7 +39,19 @@ namespace TutorCognitivoDS2.accesoADatos
             comando2.Connection = conectar;
             comando2.CommandText = "SELECT * From carrera";
             lectura = comando2.ExecuteReader();
-            lectura.Read();
+
+            DropDownList sCarrera = new DropDownList();
+
+            sCarrera.DataSource = lectura;
+            sCarrera.Items.Clear();
+            sCarrera.Items.Add("Seleccione un Cliente");
+            sCarrera.DataTextField = "NOMBRE_CLIENTE";
+            sCarrera.DataValueField = "NOMBRE_CLIENTE";
+            sCarrera.DataBind();
+
+            conectar.Close();
+
+            return sCarrera; 
         }
 
 }
