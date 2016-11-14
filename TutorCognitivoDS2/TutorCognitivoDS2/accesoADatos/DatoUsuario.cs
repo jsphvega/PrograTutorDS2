@@ -12,8 +12,11 @@ namespace TutorCognitivoDS2.accesoADatos
     {
    
     private MySqlCommand comando;
+        private MySqlCommand comando2;
     private string conection;
     private MySqlConnection conectar;
+    private String consulta;
+        MySqlDataReader lectura;
 
 
         public void conectarBD()
@@ -59,8 +62,24 @@ namespace TutorCognitivoDS2.accesoADatos
         {
             try
             {
-              
-             
+
+               consulta= "SELECT * FROM usuario where Limit 0";
+
+                comando2 = new MySqlCommand(consulta,conectar);
+                lectura = comando2.ExecuteReader();
+
+                while (lectura.Read())
+                 {
+                 string nombre = lectura.GetString(1);
+                    String apellido1 = lectura.GetString(2);
+                    String apellido2 = lectura.GetString(3);
+                    String correo = lectura.GetString(4);
+
+
+
+
+                }
+
             }
             catch
             {
