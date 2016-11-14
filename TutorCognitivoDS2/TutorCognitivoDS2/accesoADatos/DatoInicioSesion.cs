@@ -30,26 +30,29 @@ namespace TutorCognitivoDS2.accesoADatos
             }
         }
 
-        public bool verificarInicioSesion(String pCorreo, String Pcontraseña)
+        public bool verificarInicioSesion(String pCorreo, String Pcontraseña,String pTipo)
         {
             conectarBD();
             conectar.Open();
             comando = new MySqlCommand();
             comando.Connection = conectar;
-            comando.CommandText = "Select Correo,Contraseña from usuario";
+            comando.CommandText = "Select Correo,Contraseña,Tipo from usuario";
             lectura = comando.ExecuteReader();
-            //lectura.Read();
+            lectura.Read();
             while(lectura.Read())
            {
                 string correo = "";
 
                 string contraseña = "";
+                string tipo = "";
 
                correo= lectura.ToString();
 
                contraseña = lectura.ToString();
+               tipo = lectura.ToString();
 
-                if (correo == pCorreo & contraseña==Pcontraseña)
+              
+                if (correo == pCorreo & contraseña==Pcontraseña & tipo== pTipo)
                 {
                  return true;  
                }
@@ -59,5 +62,6 @@ namespace TutorCognitivoDS2.accesoADatos
             conectar.Close();
             return false;
         }
+
 }
 }

@@ -45,7 +45,7 @@ namespace TutorCognitivoDS2
 
                 DatoInicioSesion dato = new DatoInicioSesion();
 
-                if (dato.verificarInicioSesion("hola", "maria") == true)
+                if (dato.verificarInicioSesion("hola", "maria", "3") == true)
                 {
                     Response.Write("se encuentra en la base");
                 }

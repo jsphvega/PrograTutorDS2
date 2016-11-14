@@ -5,12 +5,12 @@ namespace logicaDeNegocios
 {
     public class DecoradorAdministrador : Usuario
     {
-        public DecoradorAdministrador(DTOUsuario pUsuario)
-            : base(pUsuario.Nombre, pUsuario.Apellido1, pUsuario.Apellido2, pUsuario.Correo,
-                  pUsuario.Contraseña1, pUsuario.Carrera)
-        {
+        //public DecoradorAdministrador(DTOUsuario pUsuario)
+            //: base(pUsuario.Nombre, pUsuario.Apellido1, pUsuario.Apellido2, pUsuario.Correo,
+                  //pUsuario.Contraseña1, pUsuario.Carrera)
+       // {
 
-        }
+       // }
 
         public void AdapterAdministrador()
         {
