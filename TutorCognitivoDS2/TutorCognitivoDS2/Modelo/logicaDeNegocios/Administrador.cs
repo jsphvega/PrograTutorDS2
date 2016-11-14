@@ -6,9 +6,9 @@ namespace logicaDeNegocios
     {
         private DecoradorAdministrador decorador;
 
-        public Administrador(DTOUsuario pUsuario)
+        public Administrador(DTOUsuario pUsuario) : base(pUsuario)
         {
-            decorador = new DecoradorAdministrador(DTOUsuario pUsuario);
+
         }
 
         public void registrarCurso(Curso pCurso)
