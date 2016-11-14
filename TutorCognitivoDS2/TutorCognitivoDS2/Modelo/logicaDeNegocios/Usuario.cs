@@ -11,10 +11,10 @@ namespace logicaDeNegocios
         String contraseña;
         int carrera;
 
-        public Usuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, int pCarrera)
+        /**public Usuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, int pCarrera)
         {
 
-        }
+        }*/
 
         public abstract void registrarUsuario();
 
