@@ -1,5 +1,6 @@
 using dto;
 using TutorCognitivoDS2.accesoADatos;
+using MySql.Data.MySqlClient;
 
 namespace controlador
 {

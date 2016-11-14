@@ -15,9 +15,21 @@ namespace TutorCognitivoDS2
 
         private static string conection;
         private static MySqlConnection conectar;
-
-        
+        private MySqlCommand comando;
        
+        public void conectarBD()
+        {
+            try
+            {
+                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
+                conectar = new MySqlConnection(conection);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,20 +37,17 @@ namespace TutorCognitivoDS2
           try
             {
 
-                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                conectar = new MySqlConnection(conection);
+                //conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
+                //conectar = new MySqlConnection(conection);
+                conectarBD();
+
+                conectarBD();
                 conectar.Open();
-                 MySqlCommand comando = new MySqlCommand();
+                comando = new MySqlCommand();
                 comando.Connection = conectar;
-                comando.CommandText = "INSERT INTO carrera(Nombre) VALUES(@Nombre)";
-                comando.Parameters.AddWithValue("@Nombre", "Mante");
-
-
-
-
-                //comando.CommandText = "INSERT INTO tutor(nombre) VALUES(@nombre)";
-                //comando.Parameters.AddWithValue("@nombre", "Maria Jose");
+                comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(Joseph,Vega,Vargas,j-vv01@hotmail.com,12345,3)";
                 comando.ExecuteNonQuery();
+                conectar.Close();
 
 
                 // string tutores= "SELECT nombre FROM tutor Limit 0";
@@ -53,7 +62,7 @@ namespace TutorCognitivoDS2
                 // }
 
                 Response.Write("'conexion exitosa' ");
-                conectar.Close();
+               
             }
            catch (Exception)
            {

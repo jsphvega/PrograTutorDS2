@@ -41,6 +41,7 @@ namespace TutorCognitivoDS2.accesoADatos
                 conectarBD();
                 conectar.Open();
                 comando = new MySqlCommand();
+                comando.Connection = conectar;
                 comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
                 comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
                 comando.Parameters.AddWithValue("@Apellido1", usuario.Apellido1);
@@ -48,7 +49,7 @@ namespace TutorCognitivoDS2.accesoADatos
                 comando.Parameters.AddWithValue("@Correo", usuario.Correo);
                 comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
                 comando.Parameters.AddWithValue("@Tipo", 3);
-
+                comando.ExecuteNonQuery();
                 conectar.Close();
 
 
