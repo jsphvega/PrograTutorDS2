@@ -10,12 +10,9 @@ namespace TutorCognitivoDS2.accesoADatos
 {
     public class DatoCarrera
     {
-
-        private MySqlCommand comando;
         private MySqlCommand comando2;
         private string conection;
         private MySqlConnection conectar;
-        private String consulta;
         MySqlDataReader lectura;
 
         public void conectarBD()

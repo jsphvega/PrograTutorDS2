@@ -26,7 +26,7 @@
             <nav id="nav">
                 <ul>
                     <li><a href="">Registro por Facebook</a></li>
-                    <li class="current"><a href="registro.aspx">Registro</a></li>
+                    <li class="current"><a href="RegistroUsuario.aspx">Registro</a></li>
                     <li><a href="">Registro por google</a></li>
                 </ul>
             </nav>

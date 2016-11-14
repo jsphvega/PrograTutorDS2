@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TutorCognitivoDS2.Vista {
+namespace TutorCognitivoDS2.vista {
     
     
-    public partial class registro {
+    public partial class RegistroUsuario {
         
         /// <summary>
         /// Control formRegistro.

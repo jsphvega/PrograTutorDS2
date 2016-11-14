@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registro.aspx.cs" Inherits="TutorCognitivoDS2.Vista.registro" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistroUsuario.aspx.cs" Inherits="TutorCognitivoDS2.vista.RegistroUsuario" %>
 
 <!DOCTYPE html>
 
@@ -105,13 +105,13 @@
 
                                     <div class="row">
                                         <div class="12u" style="text-align: center">
-                                            <asp:Label ID="lblError" runat="server" s></asp:Label>
+                                            <asp:Label ID="lblError" runat="server"></asp:Label>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="12u" style="text-align: center">
-                                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
+                                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" OnClientClick="return true;" />
                                             <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CausesValidation="true" />
                                         </div>
                                     </div>

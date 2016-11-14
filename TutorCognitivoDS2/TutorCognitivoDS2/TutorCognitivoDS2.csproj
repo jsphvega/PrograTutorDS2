@@ -376,7 +376,7 @@
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
     <Content Include="vista\login.aspx" />
-    <Content Include="vista\registro.aspx" />
+    <Content Include="vista\RegistroUsuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -551,7 +551,6 @@
     <Compile Include="integracion\Correo.cs" />
     <Compile Include="integracion\ICorreo.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Administrador.cs" />
-    <Compile Include="Modelo\logicaDeNegocios\Autenticacion.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Bitacora.cs" />
     <Compile Include="Modelo\logicaDeNegocios\Categoria.cs" />
     <Compile Include="Modelo\logicaDeNegocios\CSV.cs" />
@@ -593,6 +592,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="validacion\Validacion.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -607,12 +607,12 @@
     <Compile Include="vista\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vista\registro.aspx.cs">
-      <DependentUpon>registro.aspx</DependentUpon>
+    <Compile Include="vista\RegistroUsuario.aspx.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vista\registro.aspx.designer.cs">
-      <DependentUpon>registro.aspx</DependentUpon>
+    <Compile Include="vista\RegistroUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
