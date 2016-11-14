@@ -1,50 +1,21 @@
-
+using dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class fabricaUsuario {
-
-        /**
-         * 
-         */
-        public fabricaUsuario() {
-        }
-
-        /**
-         * 
-         */
+namespace logicaDeNegocios
+{
+    public class FabricaUsuario
+    {
         private String PAQUETE = "frameworkNet.logicaDeNegocio.";
+        private Object usuario;
 
-        /**
-         * 
-         */
-        private Class usuario;
+        public void crearUsuario(String pTipoUsuario, DTOUsuario pUsuario)
+        {
 
-        /**
-         * @param pTipoUsuario 
-         * @param pUsuario 
-         * @return
-         */
-        public void crearUsuario(String pTipoUsuario, DTOUsuario pUsuario) {
-            // TODO implement here
-            return null;
         }
 
-        /**
-         * @param pTipoUsuario 
-         * @param pUsuario 
-         * @param pVencimiento 
-         * @return
-         */
-        public void crearUsuario(String pTipoUsuario, DTOUsuario pUsuario, Date pVencimiento) {
-            // TODO implement here
-            return null;
+        public void crearUsuario(String pTipoUsuario, DTOUsuario pUsuario, DateTime pVencimiento)
+        {
+
         }
 
     }

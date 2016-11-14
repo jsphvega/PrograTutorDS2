@@ -1,14 +1,15 @@
 namespace logicaDeNegocios
 {
-    public class CSV : Bitacora
+    public class XLS : Bitacora
     {
 
-        public CSV()
+        public XLS()
         {
         }
 
         public override void actualizar()
         {
+
         }
 
     }

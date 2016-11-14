@@ -1,24 +1,11 @@
+namespace logicaIntegracion
+{
+    public interface Correo
+    {
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+        void configurarCorreo();
 
-namespace logicaIntegracion{
-    /**
-     * 
-     */
-    public interface Correo {
-
-        /**
-         * @return
-         */
-        public void configurarCorreo();
-
-        /**
-         * @return
-         */
-        public void enviarCorreo();
+        void enviarCorreo();
 
     }
 }

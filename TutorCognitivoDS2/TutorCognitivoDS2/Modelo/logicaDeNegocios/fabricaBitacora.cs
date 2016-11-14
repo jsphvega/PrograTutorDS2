@@ -1,30 +1,15 @@
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class fabricaBitacora {
-
-        /**
-         * 
-         */
-        public fabricaBitacora() {
-        }
-
-        /**
-         * 
-         */
+namespace logicaDeNegocios
+{
+    public class FabricaBitacora
+    {
         private String PAQUETE = "frameworkNet.logicaDeNegocio.";
+        private Object bitacora;
 
-        /**
-         * 
-         */
-        private Class bitacora;
+        public void crearBitacora(String pTipoBitacora)
+        {
 
+        }
     }
 }

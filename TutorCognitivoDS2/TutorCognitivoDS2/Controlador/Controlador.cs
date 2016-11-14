@@ -1,25 +1,12 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace controlador{
-    /**
-     * 
-     */
-    public class Controlador {
-
-        /**
-         * 
-         */
-        public Controlador() {
-        }
-
-        /**
-         * 
-         */
+namespace controlador
+{
+    public class Controlador
+    {
         private AdapterJava adaptador;
 
+        public Controlador()
+        {
+
+        }
     }
 }

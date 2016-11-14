@@ -1,45 +1,24 @@
-
+using dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class Tutor : Usuario {
+namespace logicaDeNegocios
+{
+    public class Tutor : Usuario
+    {
+        private DateTime vencimiento;
 
-        /**
-         * 
-         */
-        public Tutor() {
+        public Tutor(DTOUsuario pUsuario, DateTime pVencimiento) : base(pUsuario.Nombre, pUsuario.Correo, pUsuario.Contraseña, pUsuario.Carrera)
+        {
+
         }
 
-        /**
-         * 
-         */
-        private Date vencimiento;
-
-        /**
-         * @param pVencimiento
-         */
-        public void Tutor(Date pVencimiento) {
+        public override void registrarUsuario()
+        {
             // TODO implement here
         }
 
-        /**
-         * @return
-         */
-        public void registrarUsuario() {
-            // TODO implement here
-            return null;
-        }
-
-        /**
-         * @return
-         */
-        public String toString() {
+        public override String toString()
+        {
             // TODO implement here
             return null;
         }

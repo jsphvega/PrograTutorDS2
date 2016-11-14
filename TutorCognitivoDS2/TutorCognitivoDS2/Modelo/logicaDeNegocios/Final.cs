@@ -1,41 +1,23 @@
-
+using dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class Final : Usuario {
+namespace logicaDeNegocios
+{
+    public class Final : Usuario
+    {
 
-        /**
-         * 
-         */
-        public Final() {
+        public Final(DTOUsuario pUsuario) : base(pUsuario.Nombre, pUsuario.Correo, pUsuario.Contraseña, pUsuario.Carrera)
+        {
+
         }
 
-        /**
-         * 
-         */
-        public void Final() {
-            // TODO implement here
+        public override void registrarUsuario()
+        {
+
         }
 
-        /**
-         * @return
-         */
-        public void registrarUsuario() {
-            // TODO implement here
-            return null;
-        }
-
-        /**
-         * @return
-         */
-        public String toString() {
-            // TODO implement here
+        public override string toString()
+        {
             return null;
         }
 

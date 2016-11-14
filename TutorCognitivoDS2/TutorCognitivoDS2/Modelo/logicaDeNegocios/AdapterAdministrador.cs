@@ -1,44 +1,26 @@
 
+using dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class AdapterAdministrador : Usuario {
+namespace logicaDeNegocios
+{
+    public class AdapterAdministrador : Usuario
+    {
 
-        /**
-         * 
-         */
-        public AdapterAdministrador() {
+        public AdapterAdministrador(DTOUsuario pUsuario) : base(pUsuario.Nombre, pUsuario.Correo, pUsuario.Contraseña, pUsuario.Carrera)
+        {
+
         }
 
-
-        /**
-         * 
-         */
-        public void AdapterAdministrador() {
+        public override void registrarUsuario()
+        {
             // TODO implement here
         }
 
-        /**
-         * @return
-         */
-        public void registrarUsuario() {
+        public override String toString()
+        {
             // TODO implement here
             return null;
         }
-
-        /**
-         * @return
-         */
-        public String toString() {
-            // TODO implement here
-            return null;
-        }
-
     }
 }

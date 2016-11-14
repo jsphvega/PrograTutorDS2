@@ -1,29 +1,17 @@
-
-using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public abstract class Bitacora {
+namespace logicaDeNegocios
+{
+    public abstract class Bitacora
+    {
 
-        /**
-         * 
-         */
-        public Bitacora() {
+        public Bitacora()
+        {
         }
 
-        /**
-         * 
-         */
-        private HashSet<Registro> bitacoras;
+        private ArrayList bitacoras;
 
-        /**
-         * @return
-         */
         public abstract void actualizar();
 
     }

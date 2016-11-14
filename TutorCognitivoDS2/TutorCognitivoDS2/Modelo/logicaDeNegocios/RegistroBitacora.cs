@@ -1,45 +1,25 @@
+namespace logicaDeNegocios
+{
+    public class RegistroBitacora : Registro
+    {
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class RegistroBitacora : Registro {
-
-        /**
-         * 
-         */
-        public RegistroBitacora() {
+        public RegistroBitacora()
+        {
         }
 
-        /**
-         * @param Bitacora 
-         * @return
-         */
-        public void añadir(Bitacora Bitacora) {
-            // TODO implement here
-            return null;
+        public override void añadir(Bitacora Bitacora)
+        {
+
         }
 
-        /**
-         * @param Bitacora 
-         * @return
-         */
-        public void eliminar(Bitacora Bitacora) {
-            // TODO implement here
-            return null;
+        public override void eliminar(Bitacora Bitacora)
+        {
+
         }
 
-        /**
-         * @return
-         */
-        public void notificar() {
-            // TODO implement here
-            return null;
+        public void notificar()
+        {
+
         }
 
     }

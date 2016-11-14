@@ -1,29 +1,16 @@
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace logicaDeNegocios{
-    /**
-     * 
-     */
-    public class Autenticacion {
+namespace logicaDeNegocios
+{
+    public class Autenticacion
+    {
 
-        /**
-         * 
-         */
-        public Autenticacion() {
+        public Autenticacion()
+        {
         }
 
-        /**
-         * @param pUsuario 
-         * @param pContraseña 
-         * @param pTipo
-         */
-        public void autenticarUsuario(String pUsuario, String pContraseña, String pTipo) {
-            // TODO implement here
+        public void autenticarUsuario(String pUsuario, String pContraseña, String pTipo)
+        {
         }
-
     }
 }
