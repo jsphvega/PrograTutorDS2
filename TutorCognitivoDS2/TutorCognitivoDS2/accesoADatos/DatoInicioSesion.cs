@@ -29,14 +29,29 @@ namespace TutorCognitivoDS2.accesoADatos
 
             }
         }
-        public Boolean esRegistrado(DTOInicioSesion inicioSesion)
+
+        public bool verificarInicioSesion (DTOInicioSesion inicioSesion)
         {
             conectarBD();
             conectar.Open();
             comando = new MySqlCommand();
             comando.Connection = conectar;
-            comando.CommandText = "Select correo, contraseña from usuario where correo= ";
-            comando.ExecuteNonQuery();
+            comando.CommandText = "Select correo, contraseña from usuario";
+            lectura = comando.ExecuteReader();
+            lectura.Read();
+            if(lectura.Read())
+            {
+                string correo = lectura.GetString(4);
+                string contraseña = lectura.GetString(5);
+                if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña)
+                {
+                 return true;  
+                }
+
+            }
+          
             conectar.Close();
+            return false;
         }
+}
 }
