@@ -15,7 +15,7 @@ namespace logicaDeNegocios
             object objeto = Activator.CreateInstance(type1);
             object[] parametros = new object[] { pUsuario.getNombre(), pUsuario.getApellido() };
             type1.InvokeMember("registrarUsuario", BindingFlags.InvokeMethod,
-                                               null, obj, parametros);
+                                               null, objeto, parametros);
 
         }
 
