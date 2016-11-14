@@ -7,5 +7,6 @@ namespace TutorCognitivoDS2.accesoADatos
 {
     public class ConsultaCarrera
     {
+
     }
 }
