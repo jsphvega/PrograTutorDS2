@@ -36,11 +36,13 @@ namespace logicaDeDatos
             comandoCarrera.CommandText = "Select Nombre from carrera";
             consultaCarrera = comandoCarrera.ExecuteReader();
 
+            int i = 0;
             while (consultaCarrera.Read())
             {
                 string carrera = "";
-                carrera = consultaCarrera.ToString();
+                carrera = consultaCarrera.GetValue(i).ToString();
                 carreras.Add(carrera);
+                i++;
             }
 
             conectado.Close();
