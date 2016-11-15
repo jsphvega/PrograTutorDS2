@@ -92,7 +92,7 @@ public class Consulta implements IConsulta {
      * @param pRespuesta
      *            La nueva respuesta por almacenar
      */
-    private void agregarRespuesta(String pRespuesta) {
+    public void agregarRespuesta(String pRespuesta) {
 	respuestas.add(pRespuesta);
     }
 }
