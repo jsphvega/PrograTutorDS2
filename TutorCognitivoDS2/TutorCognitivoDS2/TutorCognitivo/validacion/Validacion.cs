@@ -12,11 +12,13 @@ namespace validacion
 
             if (!validarCampos(pUsuario))
                 Consulta = "No pueden haber datos vacíos";
-
-            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarContrasena(pUsuario);
-            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoExistente(pUsuario);
-            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarDigitosContrasena(pUsuario);
-            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoValido(pUsuario);
+            else
+            {
+                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarContrasena(pUsuario);
+                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoExistente(pUsuario);
+                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarDigitosContrasena(pUsuario);
+                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoValido(pUsuario);
+            }
 
             return Consulta;
         }
