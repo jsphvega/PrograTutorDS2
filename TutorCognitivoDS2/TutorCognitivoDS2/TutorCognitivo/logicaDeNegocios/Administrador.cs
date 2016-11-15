@@ -9,10 +9,9 @@ namespace logicaDeNegocios
         {
         }
 
-        public override String toString()
+        public override string toString()
         {
             return null;
         }
-
     }
 }

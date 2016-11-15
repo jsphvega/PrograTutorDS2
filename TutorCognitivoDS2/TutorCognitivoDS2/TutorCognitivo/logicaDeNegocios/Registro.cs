@@ -17,8 +17,8 @@ namespace logicaDeNegocios
         {
         }
 
-        public abstract void añadir(Bitacora Bitacora);
+        public abstract void añadir(Bitacora bitacora);
 
-        public abstract void eliminar(Bitacora Bitacora);
+        public abstract void eliminar(Bitacora bitacora);
     }
 }

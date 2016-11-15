@@ -8,9 +8,7 @@ namespace logicaDeNegocios
 
         public abstract void escribirArchivo();
 
-        public void crearArchivo()
-        {
-        }
+        public abstract void crearArchivo();
 
     }
 }

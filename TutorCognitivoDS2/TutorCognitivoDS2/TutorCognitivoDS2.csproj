@@ -528,9 +528,9 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="controlador\AdapterJava.cs" />
-    <Compile Include="controlador\Controlador.cs" />
-    <Compile Include="controlador\frameworkJava.cs" />
+    <Compile Include="Revisar\controlador\AdapterJava.cs" />
+    <Compile Include="Revisar\controlador\Controlador.cs" />
+    <Compile Include="Revisar\controlador\frameworkJava.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -538,37 +538,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dtoo\DTOBitacora.cs" />
-    <Compile Include="dtoo\DTOCategoria.cs" />
-    <Compile Include="dtoo\DTOCurso.cs" />
-    <Compile Include="dtoo\DTOInicioSesion.cs" />
-    <Compile Include="dtoo\DTOUsuario.cs" />
+    <Compile Include="Revisar\dto\DTOBitacora.cs" />
+    <Compile Include="Revisar\dto\DTOCategoria.cs" />
+    <Compile Include="Revisar\dto\DTOCurso.cs" />
+    <Compile Include="Revisar\dto\DTOInicioSesion.cs" />
+    <Compile Include="Revisar\dto\DTOUsuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="modelo\logicaAccesoDatos\ConexionBD.cs" />
-    <Compile Include="modelo\logicaAccesoDatos\DatoBitacora.cs" />
-    <Compile Include="modelo\logicaAccesoDatos\DatoCarrera.cs" />
-    <Compile Include="modelo\logicaAccesoDatos\DatoCategoria.cs" />
-    <Compile Include="modelo\logicaAccesoDatos\DatoUsuario.cs" />
-    <Compile Include="modelo\logicaAccesoDatos\VerificacionDatos.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Administrador.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Autenticacion.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Bitacora.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Categoria.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\CSV.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Curso.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\fabricaBitacora.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\fabricaUsuario.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Final.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\IAutenticacion.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Registro.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\RegistroBitacora.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Tutor.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\Usuario.cs" />
-    <Compile Include="modelo\logicaDeNegocioss\XLS.cs" />
-    <Compile Include="modelo\logicaIntegracion\Correo.cs" />
-    <Compile Include="modelo\logicaIntegracion\ICorreo.cs" />
+    <Compile Include="Revisar\modelo\logicaAccesoDatos\ConexionBD.cs" />
+    <Compile Include="Revisar\modelo\logicaAccesoDatos\DatoBitacora.cs" />
+    <Compile Include="Revisar\modelo\logicaAccesoDatos\DatoCarrera.cs" />
+    <Compile Include="Revisar\modelo\logicaAccesoDatos\DatoCategoria.cs" />
+    <Compile Include="Revisar\modelo\logicaAccesoDatos\DatoUsuario.cs" />
+    <Compile Include="Revisar\modelo\logicaAccesoDatos\VerificacionDatos.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -626,9 +609,9 @@
     <Compile Include="TutorCognitivo\logicaDeNegocios\RegistroBitacora.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Tutor.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Usuario.cs" />
-    <Compile Include="TutorCognitivo\logicaDeNegocios\XSL.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\XLS.cs" />
     <Compile Include="TutorCognitivo\validacion\Validacion.cs" />
-    <Compile Include="validacion\Validacion.cs" />
+    <Compile Include="Revisar\validacion\Validacion.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

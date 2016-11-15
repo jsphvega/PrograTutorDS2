@@ -1,5 +1,3 @@
-using System;
-
 namespace logicaDeNegocios
 {
     public class RegistroBitacora : Registro
@@ -8,15 +6,11 @@ namespace logicaDeNegocios
         {
         }
 
-        public override void añadir(Bitacora Bitacora)
+        public override void añadir(Bitacora bitacora)
         {
         }
 
-        public override void eliminar(Bitacora Bitacora)
-        {
-        }
-
-        public void eliminar(Bitacora Bitacora)
+        public override void eliminar(Bitacora bitacora)
         {
         }
     }
