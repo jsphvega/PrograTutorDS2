@@ -363,7 +363,6 @@
     <Content Include="vista\assets\js\skel-viewport.min.js" />
     <Content Include="vista\assets\js\skel.min.js" />
     <Content Include="vista\assets\js\util.js" />
-    <Content Include="vista\ConfirmarContraseña.aspx" />
     <Content Include="vista\Consultas.aspx" />
     <Content Include="vista\images\banner.jpg" />
     <Content Include="vista\images\pic01.jpg" />
@@ -613,13 +612,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="vista\ConfirmarContraseña.aspx.cs">
-      <DependentUpon>ConfirmarContraseña.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="vista\ConfirmarContraseña.aspx.designer.cs">
-      <DependentUpon>ConfirmarContraseña.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\Consultas.aspx.cs">
       <DependentUpon>Consultas.aspx</DependentUpon>

@@ -10,8 +10,7 @@
 namespace TutorCognitivoDS2.vista {
     
     
-    public partial class ConfirmarTutor
-    {
+    public partial class ConfirmarTutor {
         
         /// <summary>
         /// Control formRegistro.
@@ -23,51 +22,6 @@ namespace TutorCognitivoDS2.vista {
         protected global::System.Web.UI.HtmlControls.HtmlForm formRegistro;
         
         /// <summary>
-        /// Control txtNombre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
-        
-        /// <summary>
-        /// Control txtApellido1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido1;
-        
-        /// <summary>
-        /// Control txtApellido2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido2;
-        
-        /// <summary>
-        /// Control txtCorreo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
-        
-        /// <summary>
-        /// Control txtContraseña1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContraseña1;
-        
-        /// <summary>
         /// Control txtContraseña2.
         /// </summary>
         /// <remarks>
@@ -77,13 +31,13 @@ namespace TutorCognitivoDS2.vista {
         protected global::System.Web.UI.WebControls.TextBox txtContraseña2;
         
         /// <summary>
-        /// Control ddlCarrera.
+        /// Control txtContraseña1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
+        protected global::System.Web.UI.WebControls.TextBox txtContraseña1;
         
         /// <summary>
         /// Control lblError.

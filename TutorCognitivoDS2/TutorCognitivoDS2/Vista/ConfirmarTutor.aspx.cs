@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TutorCognitivoDS2.TutorCognitivo.dto;
 using validacion;
 
 namespace TutorCognitivoDS2.vista
@@ -16,42 +17,20 @@ namespace TutorCognitivoDS2.vista
         {
             if (!IsPostBack)
             {
-                try
-                {
-                    List<String[]> pLista = controlador.obtenerListaCarreras();
-
-                    for (int i = 0; i < pLista.Count; i++)
-                    {
-                        ListItem item = new ListItem(pLista[i][1].ToString(), pLista[i][0].ToString());
-                        ddlCarrera.Items.Add(item);
-                    }
-                }
-                catch
-                {
-                    ddlCarrera.Items.Clear();
-                }
-                btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
             }
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DTOUsuario sUsuario = new DTOUsuario(txtNombre.Text, txtApellido1.Text, txtApellido2.Text,
-                    txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.SelectedValue));
+            DTOConfirmacion sConfirmacion = new DTOConfirmacion(txtContraseña1.Text, txtContraseña2.Text);
 
-                lblError.Text = Validacion.validarUsuario(sUsuario);
+            lblError.Text = Validacion.validarConfirmacion(sConfirmacion);
 
-                if (lblError.Text == String.Empty)
-                {
-                    controlador.insertarUsuarioFinal(sUsuario);
-                    Response.Redirect("Login.aspx");
-                }
-            }
-            catch
+            if (lblError.Text == String.Empty)
             {
-                lblError.Text = "Error en la insersión de datos";
+                //Cambiar la contraseña
+                Response.Redirect("MainTutor.aspx");
+                controlador.mensajeInterfaz("Datos reemplazados correctamente");
             }
         }
 
