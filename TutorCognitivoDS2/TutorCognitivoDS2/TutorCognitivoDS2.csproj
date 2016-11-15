@@ -363,6 +363,8 @@
     <Content Include="vista\assets\js\skel-viewport.min.js" />
     <Content Include="vista\assets\js\skel.min.js" />
     <Content Include="vista\assets\js\util.js" />
+    <Content Include="vista\ConfirmarContraseña.aspx" />
+    <Content Include="vista\Consultas.aspx" />
     <Content Include="vista\images\banner.jpg" />
     <Content Include="vista\images\pic01.jpg" />
     <Content Include="vista\images\pic02.jpg" />
@@ -375,8 +377,8 @@
     <Content Include="vista\js\jquery.min.js" />
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
-    <Content Include="vista\login.aspx" />
-    <Content Include="vista\MainAdministrador.aspx" />
+    <Content Include="vista\Login.aspx" />
+    <Content Include="vista\MainAdmin.aspx" />
     <Content Include="vista\MainFinal.aspx" />
     <Content Include="vista\MainTutor.aspx" />
     <Content Include="vista\RegistroUsuario.aspx" />
@@ -575,6 +577,7 @@
     <Compile Include="TutorCognitivo\controlador\Controlador.cs" />
     <Compile Include="TutorCognitivo\dto\DTOBitacora.cs" />
     <Compile Include="TutorCognitivo\dto\DTOCategoria.cs" />
+    <Compile Include="TutorCognitivo\dto\DTOConfirmacion.cs" />
     <Compile Include="TutorCognitivo\dto\DTOCurso.cs" />
     <Compile Include="TutorCognitivo\dto\DTOInicioSesion.cs" />
     <Compile Include="TutorCognitivo\dto\DTOUsuario.cs" />
@@ -610,19 +613,33 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="vista\ConfirmarContraseña.aspx.cs">
+      <DependentUpon>ConfirmarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\ConfirmarContraseña.aspx.designer.cs">
+      <DependentUpon>ConfirmarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Consultas.aspx.cs">
+      <DependentUpon>Consultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\Consultas.aspx.designer.cs">
+      <DependentUpon>Consultas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vista\Login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="vista\Login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vista\MainAdministrador.aspx.cs">
-      <DependentUpon>MainAdministrador.aspx</DependentUpon>
+    <Compile Include="vista\MainAdmin.aspx.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vista\MainAdministrador.aspx.designer.cs">
-      <DependentUpon>MainAdministrador.aspx</DependentUpon>
+    <Compile Include="vista\MainAdmin.aspx.designer.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\MainFinal.aspx.cs">
       <DependentUpon>MainFinal.aspx</DependentUpon>

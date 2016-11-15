@@ -2,6 +2,7 @@ using dto;
 using logicaDeDatos;
 using System;
 using System.Collections.Generic;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace controlador
@@ -10,26 +11,41 @@ namespace controlador
     {
         private AdapterJava adaptador;
 
-        public DropDownList rellenarListaCarreras()
+        public void mensajeInterfaz(String pMensaje)
         {
-            DatoCarrera dc = new DatoCarrera();
-            List<String[]> lista = dc.Consulta();
+            string script = @"<script type='text/javascript'>alert('" + pMensaje + "');</script>";
 
-            DropDownList ddlLista = new DropDownList();
-            for (int i = 0; i < lista.Count; i++)
-            {
-                ListItem ld = new ListItem(lista[i][0].ToString(), lista[i][1].ToString());
-                ddlLista.Items.Add(ld);
-            }
-
-            return ddlLista;
+            ScriptManager.RegisterStartupScript(null, typeof(Page), "Alerta", script, false);
         }
 
-        public void insertarUsuarioFinal(DTOUsuario dto)
+        /*****************************************/
+        
+        public List<String[]> obtenerListaCarreras()
         {
-            DatoUsuario DU = new DatoUsuario();
-            DU.registrarUsuario(dto);
+            DatoCarrera sCarrera = new DatoCarrera();
+            List<String[]> lista = sCarrera.Consulta();
 
+            return lista;
+        }
+
+        public void insertarUsuarioFinal(DTOUsuario pUsuario)
+        {
+            try
+            {
+                DatoUsuario sUsuario = new DatoUsuario();
+                sUsuario.registrarUsuario(pUsuario);
+                mensajeInterfaz("Datos insertados correctamente");
+            }
+            catch
+            {
+                mensajeInterfaz("No se pudieron insertar los datos");
+            }
+        }
+
+        public bool verificarSesion(DTOInicioSesion pSesion)
+        {
+            VerificacionDeDatos sSesion = new VerificacionDeDatos();
+            return sSesion.verificarInicioSesion(pSesion);
         }
 
         public void enviarCorreoCategoria()

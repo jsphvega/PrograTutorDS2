@@ -1,6 +1,5 @@
 ﻿using controlador;
 using dto;
-using logicaDeDatos;
 using System;
 using System.Collections.Generic;
 using System.Web.UI;
@@ -17,33 +16,42 @@ namespace TutorCognitivoDS2.vista
         {
             if (!IsPostBack)
             {
-                //ddlCarrera = controlador.rellenarListaCarreras();
-
-                DatoCarrera dc = new DatoCarrera();
-                List<String[]> lista = dc.Consulta();
-                
-                for (int i = 0; i < lista.Count; i++)
+                try
                 {
-                    ListItem ld = new ListItem(lista[i][1].ToString(), lista[i][0].ToString());
-                    ddlCarrera.Items.Add(ld);
-                }
+                    List<String[]> pLista = controlador.obtenerListaCarreras();
 
+                    for (int i = 0; i < pLista.Count; i++)
+                    {
+                        ListItem item = new ListItem(pLista[i][1].ToString(), pLista[i][0].ToString());
+                        ddlCarrera.Items.Add(item);
+                    }
+                }
+                catch
+                {
+                    ddlCarrera.Items.Clear();
+                }
                 btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
             }
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            DTOUsuario sUsuario = new DTOUsuario(txtNombre.Text, txtApellido1.Text, txtApellido2.Text,
-                txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.DataValueField));
-
-            lblError.Text = Validacion.validarUsuario(sUsuario);
-
-            if (lblError.Text == String.Empty)
+            try
             {
-                Controlador controlador = new Controlador();
-                controlador.insertarUsuarioFinal(sUsuario);
-                Response.Redirect("Login.aspx");
+                DTOUsuario sUsuario = new DTOUsuario(txtNombre.Text, txtApellido1.Text, txtApellido2.Text,
+                    txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.SelectedValue));
+
+                lblError.Text = Validacion.validarUsuario(sUsuario);
+
+                if (lblError.Text == String.Empty)
+                {
+                    controlador.insertarUsuarioFinal(sUsuario);
+                    Response.Redirect("Login.aspx");
+                }
+            }
+            catch
+            {
+                lblError.Text = "Error en la insersión de datos";
             }
         }
 

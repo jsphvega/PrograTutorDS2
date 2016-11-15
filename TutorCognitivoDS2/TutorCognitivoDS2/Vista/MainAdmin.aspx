@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainAdministrador.aspx.cs" Inherits="TutorCognitivoDS2.vista.MainAdministrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainAdmin.aspx.cs" Inherits="MainAdmin" %>
 
 <!DOCTYPE html>
 

@@ -33,7 +33,7 @@ namespace logicaDeDatos
             conectado.Open();
             comandoCarrera = new MySqlCommand();
             comandoCarrera.Connection = conectado;
-            comandoCarrera.CommandText = "Select IDCarrera,Nombre from carrera";
+            comandoCarrera.CommandText = "Select idcarrera, nombrecarrera from carrera";
             consultaCarrera = comandoCarrera.ExecuteReader();
 
             while (consultaCarrera.Read())

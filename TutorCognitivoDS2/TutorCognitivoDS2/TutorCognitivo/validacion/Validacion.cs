@@ -1,45 +1,78 @@
 using dto;
 using System;
+using TutorCognitivoDS2.TutorCognitivo.dto;
 
 namespace validacion
 {
     public class Validacion
     {
+        /*****************************************/
 
-        private static Boolean esVacio(String pTexto)
+        public static String validarConfirmacion(DTOConfirmacion pConfirmacion)
         {
-            return pTexto.Equals(String.Empty);
-        }
+            if (!validarCamposConfirmacion(pConfirmacion))
+                return "No pueden haber datos vacíos";
+            else
+            {
+                String Consulta = String.Empty;
 
-        public static String validarUsuario(DTOUsuario pUsuario)
-        {
-            if (esVacio(pUsuario.Nombre))
-                return "El nombre no debe estar vacío";
+                Consulta += validarContrasena(pConfirmacion.Contraseña1, pConfirmacion.Contraseña2);
+                if (Consulta != String.Empty)
+                    return Consulta;
 
-
-            // validar contraseñas iguales
-            //Que correo no exista
-            //que este todo lleno
+                Consulta += validarDigitosContrasena(pConfirmacion.Contraseña1);
+                if (Consulta != String.Empty)
+                    return Consulta;
+            }
 
             return String.Empty;
         }
 
-        public static string validarContrasena(DTOUsuario pUsuario)
+        public static String validarSesion(DTOInicioSesion pSesion)
         {
-            if( string.Equals(pUsuario.Contraseña1, pUsuario.Contraseña2))
+            if (!validarCamposSesion(pSesion))
+                return "No pueden haber datos vacíos";
+            else
             {
-                return "Las contrasenas no coinciden";
+                String Consulta = String.Empty;
+
+                Consulta += validarCorreoValido(pSesion.Correo);
+                if (Consulta != String.Empty)
+                    return Consulta;
             }
-            return string.Empty;
+
+            return String.Empty;
         }
 
-        public static string validarCorreoExistente(DTOUsuario pUsuario)
+        public static String validarUsuario(DTOUsuario pUsuario)
         {
-            //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
-            return "Correo existente";
+            if (!validarCamposRegistro(pUsuario))
+                return "No pueden haber datos vacíos";
+            else
+            {
+                String Consulta = String.Empty;
+
+                Consulta += validarContrasena(pUsuario.Contraseña1, pUsuario.Contraseña2);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarCorreoExistente(pUsuario.Correo);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarDigitosContrasena(pUsuario.Contraseña1);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarCorreoValido(pUsuario.Correo);
+                if (Consulta != String.Empty)
+                    return Consulta;
+            }
+
+            return String.Empty;
         }
 
-        public static Boolean validarCampos(DTOUsuario pUsuario)
+        private static Boolean validarCamposRegistro(DTOUsuario pUsuario)
         {
             Boolean flag = true;
             if (pUsuario.Nombre.Equals(String.Empty))
@@ -82,20 +115,76 @@ namespace validacion
                 return flag;
             }
         }
-        public static string validarDigitosContrasena(DTOUsuario pUsuario)
+
+        private static Boolean validarCamposConfirmacion(DTOConfirmacion pConfirmacion)
         {
-            if (pUsuario.Contraseña1.Length < 8)
+            Boolean flag = true;
+
+            if (pConfirmacion.Contraseña1.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pConfirmacion.Contraseña2.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            else
+            {
+                return flag;
+            }
+        }
+
+        private static Boolean validarCamposSesion(DTOInicioSesion pSesion)
+        {
+            Boolean flag = true;
+            if (pSesion.Correo.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pSesion.Contraseña.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            else
+            {
+                return flag;
+            }
+        }
+
+        private static string validarContrasena(String contraseña1, String contraseña2)
+        {
+            if (string.Equals(contraseña1, contraseña2))
+            {
+                return "Las contrasenas no coinciden";
+            }
+
+            return string.Empty;
+        }
+
+        private static string validarCorreoExistente(String correo)
+        {
+            //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
+            return "Correo existente";
+        }
+
+        private static string validarDigitosContrasena(String contraseña)
+        {
+            if (contraseña.Length < 8)
                 return "Contrasena debe tener al menos 8 caracteres";
             return string.Empty;
         }
 
-        public static string validarCorreoValido(DTOUsuario pUsuario)
+        private static string validarCorreoValido(String correo)
         {
-            if (pUsuario.Correo.IndexOf("@") == -1)
+            if (correo.IndexOf("@") == -1)
             {
                 return "No corresponde a un correo";
             }
-            if (pUsuario.Correo.IndexOf(".com") == -1)
+            if (correo.IndexOf(".com") == -1 || correo.IndexOf(".es") == -1)
             {
                 return "No corresponde a un correo";
             }

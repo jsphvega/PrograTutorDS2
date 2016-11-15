@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TutorCognitivoDS2.Vista {
+namespace TutorCognitivoDS2.vista {
     
     
-    public partial class login {
+    public partial class ConfirmarContraseña {
         
         /// <summary>
         /// Control formLogin.
@@ -22,49 +22,22 @@ namespace TutorCognitivoDS2.Vista {
         protected global::System.Web.UI.HtmlControls.HtmlForm formLogin;
         
         /// <summary>
-        /// Control txtUsuario.
+        /// Control txtContraseña1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtContraseña1;
         
         /// <summary>
-        /// Control txtContraseña.
+        /// Control txtContraseña2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContraseña;
-        
-        /// <summary>
-        /// Control rdnTutor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdnTutor;
-        
-        /// <summary>
-        /// Control rdnAdmin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdnAdmin;
-        
-        /// <summary>
-        /// Control rdnFinal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rdnFinal;
+        protected global::System.Web.UI.WebControls.TextBox txtContraseña2;
         
         /// <summary>
         /// Control lblError.
@@ -76,30 +49,21 @@ namespace TutorCognitivoDS2.Vista {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// Control btnIniciar.
+        /// Control btnAceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIniciar;
+        protected global::System.Web.UI.WebControls.Button btnAceptar;
         
         /// <summary>
-        /// Control btnFacebook.
+        /// Control btnCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFacebook;
-        
-        /// <summary>
-        /// Control btnGoogle.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGoogle;
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
     }
 }

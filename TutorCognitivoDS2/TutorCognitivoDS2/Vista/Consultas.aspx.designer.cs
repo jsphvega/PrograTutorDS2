@@ -10,15 +10,15 @@
 namespace TutorCognitivoDS2.vista {
     
     
-    public partial class MainAdministrador {
+    public partial class Consultas {
         
         /// <summary>
-        /// Control formMenuAdmin.
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formMenuAdmin;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     }
 }
