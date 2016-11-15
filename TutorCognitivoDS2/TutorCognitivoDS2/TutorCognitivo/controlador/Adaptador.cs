@@ -5,7 +5,8 @@ using System.Web;
 
 namespace TutorCognitivoDS2.TutorCognitivo.controlador
 {
-    public class Adaptador
+    public class Adaptador:IAdaptador
     {
+     
     }
 }

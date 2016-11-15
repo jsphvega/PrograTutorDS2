@@ -573,7 +573,8 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="TutorCognitivo\controlador\AdapterJava.cs" />
+    <Compile Include="TutorCognitivo\controlador\Adaptador.cs" />
+    <Compile Include="TutorCognitivo\controlador\IAdaptador.cs" />
     <Compile Include="TutorCognitivo\controlador\Controlador.cs" />
     <Compile Include="TutorCognitivo\dto\DTOBitacora.cs" />
     <Compile Include="TutorCognitivo\dto\DTOCategoria.cs" />

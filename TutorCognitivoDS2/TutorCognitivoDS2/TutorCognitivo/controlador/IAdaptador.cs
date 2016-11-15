@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TutorCognitivoDS2.TutorCognitivo.controlador
 {
-    interface Adapter
+    interface IAdaptador
     {
+
     }
 }
