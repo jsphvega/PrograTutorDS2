@@ -535,11 +535,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DTOBitacora.cs" />
-    <Compile Include="DTO\DTOCategoria.cs" />
-    <Compile Include="DTO\DTOCurso.cs" />
-    <Compile Include="DTO\DTOInicioSesion.cs" />
-    <Compile Include="DTO\DTOUsuario.cs" />
+    <Compile Include="dto\DTOBitacora.cs" />
+    <Compile Include="dto\DTOCategoria.cs" />
+    <Compile Include="dto\DTOCurso.cs" />
+    <Compile Include="dto\DTOInicioSesion.cs" />
+    <Compile Include="dto\DTOUsuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
