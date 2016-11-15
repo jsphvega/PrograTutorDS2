@@ -598,7 +598,6 @@
     <Compile Include="TutorCognitivo\logicaDeNegocios\FabricaBitacora.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\FabricaUsuario.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Final.cs" />
-    <Compile Include="TutorCognitivo\logicaDeNegocios\IAutenticacion.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Registro.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\RegistroBitacora.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Tutor.cs" />
