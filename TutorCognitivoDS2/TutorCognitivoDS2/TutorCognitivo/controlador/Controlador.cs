@@ -1,6 +1,7 @@
 using dto;
 using logicaDeDatos;
 using System.Collections.Generic;
+using logicaDeIntegracion;
 
 namespace controlador
 {
@@ -15,5 +16,17 @@ namespace controlador
             
         }
 
-        public void 
-    }    
+        public void enviarCorreoCategoria()
+        {
+           
+
+        }
+
+        public void enviarCorreoConsulta()
+        {
+
+
+        }
+
+    }
+}
