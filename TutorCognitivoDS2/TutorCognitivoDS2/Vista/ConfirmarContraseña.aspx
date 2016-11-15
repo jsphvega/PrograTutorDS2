@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TutorCognitivoDS2.Vista.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfirmarContraseña.aspx.cs" Inherits="TutorCognitivoDS2.vista.ConfirmarContraseña" %>
 
 <!DOCTYPE html>
 
@@ -22,12 +22,10 @@
         <!--Contenedor principal-->
         <div id="page-wrapper">
 
-            <!-- Nav -->
+            <!--Menú principal-->
             <nav id="nav">
                 <ul>
-                    <li><a href="RegistroUsuario.aspx">Registro</a></li>
-                    <li><a href="">Registro por Facebook</a></li>
-                    <li><a href="">Registro por google</a></li>
+                    <li onclick="return confirmarSalida();"><a>Volver</a></li>
                 </ul>
             </nav>
 
@@ -35,56 +33,39 @@
             <div id="banner-wrapper">
                 <section id="banner">
                     <!--titulo-->
-                    <h2><a id="logo">Tutor Cognitivo</a></h2>
+                    <h2><a id="logo">Cambiar contraseña</a></h2>
 
                     <!--Correo-->
                     <div class="login">
-
-
                         <div class="row">
                             <div class="4u" style="text-align: center"></div>
                             <div class="4u" style="text-align: center">
                                 <!--Usuario-->
-                                <h3>Usuario</h3>
+                                <h3>Digite la contraseña</h3>
                                 <p style="text-align: center">
-                                    <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="input inputEmail" Width="400px"></asp:TextBox>
+                                    <asp:TextBox ID="txtContraseña1" placeholder="Contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
                                 </p>
 
                                 <!--Contraseña-->
-                                <h3>Contraseña</h3>
+                                <h3>Confirme la contraseña</h3>
                                 <p style="text-align: center">
-                                    <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
+                                    <asp:TextBox ID="txtContraseña2" placeholder="Confirmar contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
+                                </p>
+
+                                <p>
+                                    <asp:Label ID="lblError" runat="server"></asp:Label>
                                 </p>
                             </div>
                             <div class="4u" style="text-align: center"></div>
                         </div>
-
-                        <!--Tipo-->
-                        <div class="radioGroup">
-                            <label for="markTutor">
-                                <asp:RadioButton ID="rdnTutor" GroupName="rdnTipo" Text="Tutor" runat="server" />
-                            </label>
-                            <label for="markAdmin">
-                                <asp:RadioButton ID="rdnAdmin" GroupName="rdnTipo" Text="Administrador" runat="server" />
-                            </label>
-                            <label for="markFinal">
-                                <asp:RadioButton ID="rdnFinal" GroupName="rdnTipo" Text="Final" runat="server" Checked="true"/>
-                            </label>
-                        </div>
-
-                        <br />
                     </div>
 
                     <div class="row">
                         <div class="12u" style="text-align: center">
-                            <asp:Label ID="lblError" runat="server"></asp:Label>
+                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClientClick="return true;" OnClick="btnAceptar_Click" />
+                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" CausesValidation="true" OnClick="btnCancelar_Click" />
                         </div>
                     </div>
-
-                    <!--Botones de inicio-->
-                    <asp:Button ID="btnIniciar" CssClass="button" runat="server" Text="Iniciar Sesión" CausesValidation="true" OnClick="btnIniciar_Click" />
-                    <asp:Button ID="btnFacebook" CssClass="button buttonFacebook" runat="server" Text="Iniciar por Facebook" CausesValidation="true" />
-                    <asp:Button ID="btnGoogle" CssClass="button buttonGoogle" runat="server" Text="Iniciar por Google" CausesValidation="true" />
                 </section>
             </div>
 
@@ -111,4 +92,5 @@
 
     </form>
 </body>
+</html>
 </html>

@@ -1,10 +1,31 @@
 using dto;
 using System;
+using TutorCognitivoDS2.TutorCognitivo.dto;
 
 namespace validacion
 {
     public class Validacion
     {
+        public static String validarConfirmacion(DTOConfirmacion pConfirmacion)
+        {
+            if (!validarCamposConfirmacion(pConfirmacion))
+                return "No pueden haber datos vacíos";
+            else
+            {
+                String Consulta = String.Empty;
+
+                Consulta += validarContrasena(pConfirmacion.Contraseña1, pConfirmacion.Contraseña2);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarDigitosContrasena(pConfirmacion.Contraseña1);
+                if (Consulta != String.Empty)
+                    return Consulta;
+            }
+
+            return String.Empty;
+        }
+
         public static String validarSesion(DTOInicioSesion pSesion)
         {
             if (!validarCamposSesion(pSesion))
@@ -21,7 +42,6 @@ namespace validacion
             return String.Empty;
         }
 
-
         public static String validarUsuario(DTOUsuario pUsuario)
         {
             if (!validarCamposRegistro(pUsuario))
@@ -33,7 +53,6 @@ namespace validacion
                 Consulta += validarContrasena(pUsuario.Contraseña1, pUsuario.Contraseña2);
                 if (Consulta != String.Empty)
                     return Consulta;
-
 
                 Consulta += validarCorreoExistente(pUsuario.Correo);
                 if (Consulta != String.Empty)
@@ -95,6 +114,26 @@ namespace validacion
             }
         }
 
+        private static Boolean validarCamposConfirmacion(DTOConfirmacion pConfirmacion)
+        {
+            Boolean flag = true;
+
+            if (pConfirmacion.Contraseña1.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pConfirmacion.Contraseña2.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            else
+            {
+                return flag;
+            }
+        }
+
         private static Boolean validarCamposSesion(DTOInicioSesion pSesion)
         {
             Boolean flag = true;
@@ -143,7 +182,7 @@ namespace validacion
             {
                 return "No corresponde a un correo";
             }
-            if (correo.IndexOf(".com") == -1)
+            if (correo.IndexOf(".com") == -1 || correo.IndexOf(".es") == -1)
             {
                 return "No corresponde a un correo";
             }

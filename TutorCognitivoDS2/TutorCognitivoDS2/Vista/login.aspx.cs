@@ -31,7 +31,10 @@ namespace TutorCognitivoDS2.Vista
                     else if (rdnTutor.Checked)
                     {
                         Response.BufferOutput = true;
-                        Response.Redirect("MainTutor.aspx");
+                        if (sSesion.Contraseña.Equals("tutortutor"))
+                            Response.Redirect("ConfirmarContraseña.aspx");
+                        else
+                            Response.Redirect("MainTutor.aspx");
                     }
                     else
                     {
