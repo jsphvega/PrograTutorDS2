@@ -17,7 +17,13 @@ namespace logicaDeNegocios
 
         public override string toString()
         {
-            throw new NotImplementedException();
+            String datos;
+            datos = "Nombre";
+            datos += "Apellido1";
+            datos += "Apellido2";
+            datos += "Correo";
+            datos += "Fecha vencimiento contrato";
+            return datos;
         }
     }
 }
