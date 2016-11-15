@@ -3,12 +3,14 @@ using System.Net.Mail;
 
 namespace logicaDeIntegracion
 {
+    //clase para enviar correos
     public class Correo : ICorreo
     {
         private String asunto;
         private String cuerpoCorreo;
         private String correo;
 
+        
         public Correo(String pAsunto, String pCuerpoCorreo, String pCorreo)
         {
             asunto = pAsunto;
@@ -16,6 +18,7 @@ namespace logicaDeIntegracion
             correo = pCorreo;
         }
 
+        //metodo que permite enviar un correo.
         public void enviarCorreo()
         {
             if (String.IsNullOrEmpty(correo))
@@ -31,12 +34,11 @@ namespace logicaDeIntegracion
 
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+                smtp.Host = "smtp.gmail.com"; 
                 smtp.Credentials = new System.Net.NetworkCredential
-                     ("tutorcognitivo4@gmail.com", "chukyBueno4"); // ***use valid credentials***
+                     ("tutorcognitivo4@gmail.com", "chukyBueno4"); 
                 smtp.Port = 587;
-
-                //Or your Smtp Email ID and Password
+                
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
             }

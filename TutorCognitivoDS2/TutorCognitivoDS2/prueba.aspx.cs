@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using MySql.Data;
-using TutorCognitivoDS2.accesoADatos;
+using logicaDeDatos;
 
 namespace TutorCognitivoDS2
 {
@@ -27,6 +27,9 @@ namespace TutorCognitivoDS2
           try
             {
 
+                DatoCarrera carrera = new DatoCarrera();
+                carrera.Consulta();
+                
                 //conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
                 //conectar = new MySqlConnection(conection);
                 //conectarBD();
