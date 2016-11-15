@@ -48,6 +48,7 @@ public class ClienteHttp {
      * 
      * @return Las configuraciones del clente segun el servicio
      */
+    @SuppressWarnings("deprecation")
     public static HttpSolrClient getCliente(RetrieveAndRank pServicio) {
 	// Atributo que contiene la direccion del cluster
 	String pURL = pServicio.getSolrUrl(clusterID);

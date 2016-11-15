@@ -7,7 +7,7 @@
     <title>Inicio</title>
 
     <!--Configuraciones de la página-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--Archivos .js responsive-->
@@ -38,18 +38,18 @@
                     <h2><a id="logo">Tutor Cognitivo</a></h2>
 
                     <!--Correo-->
-                    <div class="login">
+                    <div class="login" style="text-align:center">
 
                         <!--Usuario-->
                         <h3>Usuario</h3>
-                        <p>
-                            <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="input inputEmail" Width="400px"></asp:TextBox>
+                        <p style="text-align:center">
+                            <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="" Width="400px"></asp:TextBox>
                         </p>
 
                         <!--Contraseña-->
                         <h3>Contraseña</h3>
-                        <p>
-                            <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server"  CssClass="input inputPassword" Width="400px"></asp:TextBox>
+                        <p style="text-align:center">
+                            <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
                         </p>
 
                         <!--Tipo-->
@@ -69,9 +69,9 @@
                     </div>
 
                     <!--Botones de inicio-->
-                    <a class="buttonFacebook">Iniciar por Facebook</a>
-                    <a class="button">Iniciar Sesión</a>
-                    <a class="buttonGoogle">Iniciar por Google</a>
+                    <asp:Button ID="btnFacebook" CssClass="button buttonFacebook" runat="server" Text="Iniciar por Facebook" CausesValidation="true" />
+                    <asp:Button ID="btnIniciar" CssClass="button" runat="server" Text="Iniciar Sesión" CausesValidation="true" />
+                    <asp:Button ID="btnGoogle" CssClass="button buttonGoogle" runat="server" Text="Iniciar por Google" CausesValidation="true" />
                 </section>
             </div>
 
