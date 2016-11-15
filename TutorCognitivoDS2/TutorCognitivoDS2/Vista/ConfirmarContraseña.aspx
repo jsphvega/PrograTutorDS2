@@ -51,19 +51,18 @@
                                 <p style="text-align: center">
                                     <asp:TextBox ID="txtContraseña2" placeholder="Confirmar contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
                                 </p>
-
-                                <p>
-                                    <asp:Label ID="lblError" runat="server"></asp:Label>
-                                </p>
                             </div>
                             <div class="4u" style="text-align: center"></div>
                         </div>
                     </div>
 
+                    <asp:Label ID="lblError" runat="server"></asp:Label>
+                    <br />
+
                     <div class="row">
                         <div class="12u" style="text-align: center">
-                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClientClick="return true;" OnClick="btnAceptar_Click" />
-                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" CausesValidation="true" OnClick="btnCancelar_Click" />
+                            <asp:Button ID="btnAceptar" CssClass="button big" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" OnClientClick="return true;" />
+                            <asp:Button ID="btnCancelar" CssClass="button alt big" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CausesValidation="true" />
                         </div>
                     </div>
                 </section>
