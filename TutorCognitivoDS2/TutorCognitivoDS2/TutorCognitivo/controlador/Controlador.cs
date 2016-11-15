@@ -9,7 +9,7 @@ namespace controlador
 {
     public class Controlador
     {
-        private AdapterJava adaptador;
+
 
         public void mensajeInterfaz(String pMensaje)
         {

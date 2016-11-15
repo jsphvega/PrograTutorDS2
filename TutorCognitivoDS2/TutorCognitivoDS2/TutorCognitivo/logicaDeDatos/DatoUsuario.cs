@@ -68,6 +68,7 @@ namespace logicaDeDatos
 
         public void consultarDatosFinal(int ID)
         {
+
         }
     }
 }

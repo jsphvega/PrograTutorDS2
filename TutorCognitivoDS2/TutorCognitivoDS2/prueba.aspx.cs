@@ -8,6 +8,8 @@ using MySql.Data.MySqlClient;
 using MySql.Data;
 using logicaDeDatos;
 
+
+
 namespace TutorCognitivoDS2
 {
     public partial class prueba : System.Web.UI.Page
@@ -31,13 +33,14 @@ namespace TutorCognitivoDS2
                 //DatoCarrera carrera = new DatoCarrera();
                 //carrera.Consulta();
                 
-                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                conectar = new MySqlConnection(conection);
+                //conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
+                //conectar = new MySqlConnection(conection);
                 
-               conectar.Open();
-                comando = new MySqlCommand();
-                comando.Connection = conectar;
-                comando.CommandText = "Select idcarrera, nombrecarrera from carrera";
+               //conectar.Open();
+                //comando = new MySqlCommand();
+                //comando.Connection = conectar;
+                //comando.CommandText = "Select idcarrera, nombrecarrera from carrera";
+                
                
 
                 // comando.CommandText = "INSERT INTO usuario(nombre,apellido1,apellido2,correo,contraseña,tipo,id_idcarrera) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
@@ -48,19 +51,19 @@ namespace TutorCognitivoDS2
                 //comando.Parameters.AddWithValue("@Contraseña", "maria");
                 //comando.Parameters.AddWithValue("@Tipo", 3);
                 //comando.Parameters.AddWithValue("@carrera", 32);
-                comando.ExecuteNonQuery();
-                conectar.Close();
+                //comando.ExecuteNonQuery();
+                //conectar.Close();
 
-               // VerificacionDatos dato = new VerificacionDatos();
+                VerificacionDeDatos dato = new VerificacionDeDatos();
 
-                //if (dato.verificarInicioSesion("hola", "maria", "3") == true)
-               /// {
-                   // Response.Write("se encuentra en la base");
-               // }
-                //else
-                //{
-                   // Response.Write("no se encuentra en la base");
-                //}
+                if (dato.verificarCorreo("maria") == true)
+               {
+                    Response.Write("se encuentra en la base");
+                }
+                else
+                {
+                    Response.Write("no se encuentra en la base");
+                }
 
 
                 // string tutores= "SELECT nombre FROM tutor Limit 0";
