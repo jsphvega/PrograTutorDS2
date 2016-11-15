@@ -1,11 +1,11 @@
 using dto;
+using logicaDeNegocios;
 
 namespace logicaDeNegocios
 {
-    public class Administrador : DecoradorAdministrador
+    public class Administrador:Usuario
     {
-        private DecoradorAdministrador decorador;
-
+        
         public Administrador(DTOUsuario pUsuario) : base(pUsuario)
         {
 
@@ -26,5 +26,12 @@ namespace logicaDeNegocios
             // TODO implement here
         }
 
-    }
-}
+        public string toString()
+        {
+            return "";
+        }
+
+        public void registrarUsuario()
+        {
+
+        }

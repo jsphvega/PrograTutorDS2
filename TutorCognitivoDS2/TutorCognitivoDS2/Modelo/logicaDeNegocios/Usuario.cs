@@ -1,16 +1,27 @@
 using System;
+using dto;
 
 namespace logicaDeNegocios
 {
     public abstract class Usuario
     {
-        String nombre;
-        String apellido1;
-        String apellido2;
-        String correo;
-        String contraseña;
-        int carrera;
+        private String nombre;
+        private String apellido1;
+        private String apellido2;
+        private String correo;
+        private String contraseña;
+        private int carrera;
 
+
+        public Usuario(String pNombre, String pCorreo, String pContraseña, String pCarrera,String pApellido1, String pApellido2)
+        {
+            nombre = pNombre;
+            apellido1 = pApellido1;
+            apellido2 = pApellido2;
+            correo = pCorreo;
+            contraseña = pContraseña;
+
+        }
         public string Nombre
         {
             get
@@ -89,13 +100,7 @@ namespace logicaDeNegocios
             }
         }
 
-        public Usuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, int pCarrera)
-        {
-
-        }
-
-        public abstract void registrarUsuario();
-
+      
         public abstract String toString();
 
     }

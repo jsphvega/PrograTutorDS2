@@ -543,20 +543,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="modelo\logicaAccesoDatos\ConexionBD.cs" />
     <Compile Include="modelo\logicaAccesoDatos\DatoBitacora.cs" />
     <Compile Include="modelo\logicaAccesoDatos\DatoCarrera.cs" />
     <Compile Include="modelo\logicaAccesoDatos\DatoCategoria.cs" />
     <Compile Include="modelo\logicaAccesoDatos\DatoUsuario.cs" />
     <Compile Include="modelo\logicaAccesoDatos\VerificacionDatos.cs" />
     <Compile Include="modelo\logicaDeNegocios\Administrador.cs" />
+    <Compile Include="modelo\logicaDeNegocios\Autenticacion.cs" />
     <Compile Include="modelo\logicaDeNegocios\Bitacora.cs" />
     <Compile Include="modelo\logicaDeNegocios\Categoria.cs" />
     <Compile Include="modelo\logicaDeNegocios\CSV.cs" />
     <Compile Include="modelo\logicaDeNegocios\Curso.cs" />
-    <Compile Include="modelo\logicaDeNegocios\DecoradorAdministrador.cs" />
     <Compile Include="modelo\logicaDeNegocios\fabricaBitacora.cs" />
     <Compile Include="modelo\logicaDeNegocios\fabricaUsuario.cs" />
     <Compile Include="modelo\logicaDeNegocios\Final.cs" />
+    <Compile Include="modelo\logicaDeNegocios\IAutenticacion.cs" />
     <Compile Include="modelo\logicaDeNegocios\Registro.cs" />
     <Compile Include="modelo\logicaDeNegocios\RegistroBitacora.cs" />
     <Compile Include="modelo\logicaDeNegocios\Tutor.cs" />
