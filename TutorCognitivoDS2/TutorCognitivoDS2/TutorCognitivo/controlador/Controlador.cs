@@ -2,6 +2,7 @@ using dto;
 using logicaDeDatos;
 using System;
 using System.Collections.Generic;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace controlador
@@ -10,19 +11,31 @@ namespace controlador
     {
         private AdapterJava adaptador;
 
+        public void mensaje(String error)
+        {
+            string script = @"<script type='text/javascript'>alert('" + error + "');</script>";
+            ScriptManager.RegisterStartupScript(null, typeof(Page), "alerta", script, false);
+        }
+
         public List<String[]> obtenerListaCarreras()
         {
-            DatoCarrera dc = new DatoCarrera();
-            List<String[]> lista = dc.Consulta();
+            DatoCarrera sCarrera = new DatoCarrera();
+            List<String[]> lista = sCarrera.Consulta();
 
             return lista;
         }
 
-        public void insertarUsuarioFinal(DTOUsuario dto)
+        public void insertarUsuarioFinal(DTOUsuario pUsuario)
         {
-            DatoUsuario DU = new DatoUsuario();
-            DU.registrarUsuario(dto);
+            DatoUsuario sUsuario = new DatoUsuario();
+            sUsuario.registrarUsuario(pUsuario);
 
+        }
+
+        public bool verificarSesion(DTOInicioSesion pSesion)
+        {
+            VerificacionDeDatos sSesion = new VerificacionDeDatos();
+            return sSesion.verificarInicioSesion(pSesion);
         }
 
         public void enviarCorreoCategoria()

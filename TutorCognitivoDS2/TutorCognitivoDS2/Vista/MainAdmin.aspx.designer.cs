@@ -10,7 +10,7 @@
 namespace TutorCognitivoDS2.vista {
     
     
-    public partial class MainAdministrador {
+    public partial class MainAdmin {
         
         /// <summary>
         /// Control formMenuAdmin.

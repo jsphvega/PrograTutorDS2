@@ -376,7 +376,7 @@
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
     <Content Include="vista\login.aspx" />
-    <Content Include="vista\MainAdministrador.aspx" />
+    <Content Include="vista\MainAdmin.aspx" />
     <Content Include="vista\MainFinal.aspx" />
     <Content Include="vista\MainTutor.aspx" />
     <Content Include="vista\RegistroUsuario.aspx" />
@@ -617,12 +617,12 @@
     <Compile Include="vista\Login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vista\MainAdministrador.aspx.cs">
-      <DependentUpon>MainAdministrador.aspx</DependentUpon>
+    <Compile Include="vista\MainAdmin.aspx.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vista\MainAdministrador.aspx.designer.cs">
-      <DependentUpon>MainAdministrador.aspx</DependentUpon>
+    <Compile Include="vista\MainAdmin.aspx.designer.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\MainFinal.aspx.cs">
       <DependentUpon>MainFinal.aspx</DependentUpon>

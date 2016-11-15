@@ -40,21 +40,26 @@
                     <!--Correo-->
                     <div class="login">
 
-                        <!--Usuario-->
+
                         <div class="row">
-                            <div class="12u" style="text-align: center">
+                            <div class="4u" style="text-align: center"></div>
+                            <div class="4u" style="text-align: center">
+                                <!--Usuario-->
                                 <h3>Usuario</h3>
                                 <p style="text-align: center">
                                     <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="input inputEmail" Width="400px"></asp:TextBox>
                                 </p>
+
+                                <!--Contraseña-->
+                                <h3>Contraseña</h3>
+                                <p style="text-align: center">
+                                    <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
+                                </p>
                             </div>
+                            <div class="4u" style="text-align: center"></div>
                         </div>
 
-                        <!--Contraseña-->
-                        <h3>Contraseña</h3>
-                        <p style="text-align: center">
-                            <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
-                        </p>
+
 
                         <!--Tipo-->
                         <div class="radioGroup">
@@ -72,9 +77,15 @@
                         <br />
                     </div>
 
+                    <div class="row">
+                        <div class="12u" style="text-align: center">
+                            <asp:Label ID="lblError" runat="server"></asp:Label>
+                        </div>
+                    </div>
+
                     <!--Botones de inicio-->
+                    <asp:Button ID="btnIniciar" CssClass="button" runat="server" Text="Iniciar Sesión" CausesValidation="true" OnClick="btnIniciar_Click" />
                     <asp:Button ID="btnFacebook" CssClass="button buttonFacebook" runat="server" Text="Iniciar por Facebook" CausesValidation="true" />
-                    <asp:Button ID="btnIniciar" CssClass="button" runat="server" Text="Iniciar Sesión" CausesValidation="true" />
                     <asp:Button ID="btnGoogle" CssClass="button buttonGoogle" runat="server" Text="Iniciar por Google" CausesValidation="true" />
                 </section>
             </div>

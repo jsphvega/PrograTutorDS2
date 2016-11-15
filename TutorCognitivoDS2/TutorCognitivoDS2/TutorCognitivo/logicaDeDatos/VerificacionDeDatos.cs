@@ -25,7 +25,7 @@ namespace logicaDeDatos
             }
         }
 
-        public bool verificarInicioSesion(DTOInicioSesion inicioSesion, String pTipo)
+        public bool verificarInicioSesion(DTOInicioSesion inicioSesion)
         {
             conectarBD();
             conectado.Open();
@@ -39,15 +39,15 @@ namespace logicaDeDatos
                 string correo = "";
 
                 string contraseña = "";
-                string tipo = "";
+                int tipo = 0;
 
                 correo = lectura.ToString();
 
                 contraseña = lectura.ToString();
-                tipo = lectura.ToString();
+                tipo = Int32.Parse(lectura.ToString());
 
 
-                if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña & tipo == pTipo)
+                if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña & tipo == inicioSesion.Tipo)
                 {
                     return true;
                 }
@@ -56,9 +56,9 @@ namespace logicaDeDatos
             conectado.Close();
             return false;
         }
-    
 
-     
+
+
 
         //verifica el correo del usuario en la BD 
         public bool verificarCorreo(String pCorreo)

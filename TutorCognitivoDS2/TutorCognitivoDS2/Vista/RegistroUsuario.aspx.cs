@@ -1,6 +1,5 @@
 ﻿using controlador;
 using dto;
-using logicaDeDatos;
 using System;
 using System.Collections.Generic;
 using System.Web.UI;
@@ -17,12 +16,12 @@ namespace TutorCognitivoDS2.vista
         {
             if (!IsPostBack)
             {
-                List<String[]> lista = controlador.obtenerListaCarreras();
+                List<String[]> pLista = controlador.obtenerListaCarreras();
 
-                for (int i = 0; i < lista.Count; i++)
+                for (int i = 0; i < pLista.Count; i++)
                 {
-                    ListItem ld = new ListItem(lista[i][1].ToString(), lista[i][0].ToString());
-                    ddlCarrera.Items.Add(ld);
+                    ListItem item = new ListItem(pLista[i][1].ToString(), pLista[i][0].ToString());
+                    ddlCarrera.Items.Add(item);
                 }
 
                 btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
@@ -38,9 +37,9 @@ namespace TutorCognitivoDS2.vista
 
             if (lblError.Text == String.Empty)
             {
-                Controlador controlador = new Controlador();
                 controlador.insertarUsuarioFinal(sUsuario);
                 Response.Redirect("Login.aspx");
+                controlador.mensaje("Datos insertados correctamente");
             }
         }
 
