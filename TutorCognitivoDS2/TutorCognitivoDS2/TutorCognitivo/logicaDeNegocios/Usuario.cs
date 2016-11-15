@@ -11,14 +11,77 @@ namespace logicaDeNegocios
         private String apellido1;
         private String apellido2;
 
-        public Usuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, int pCarrera)
+
+        public string Nombre
         {
-            this.nombre = pNombre;
-            this.correo = pCorreo;
-            this.contraseña = pContraseña;
-            this.carrera = pCarrera;
-            this.apellido2 = pApellido2;
-            this.apellido1 = pApellido1;
+            get { return nombre; }
+
+            set { nombre = value; }
+        }
+
+        public string Apellido1
+        {
+            get
+            {
+                return apellido1;
+            }
+
+            set
+            {
+                apellido1 = value;
+            }
+        }
+
+        public string Apellido2
+        {
+            get
+            {
+                return apellido2;
+            }
+
+            set
+            {
+                apellido2 = value;
+            }
+        }
+
+        public string Correo
+        {
+            get
+            {
+                return correo;
+            }
+
+            set
+            {
+                correo = value;
+            }
+        }
+
+        public string Contraseña
+        {
+            get
+            {
+                return contraseña;
+            }
+
+            set
+            {
+                contraseña = value;
+            }
+        }
+
+        public int Carrera
+        {
+            get
+            {
+                return carrera;
+            }
+
+            set
+            {
+                carrera = value;
+            }
         }
 
         public abstract String toString();
