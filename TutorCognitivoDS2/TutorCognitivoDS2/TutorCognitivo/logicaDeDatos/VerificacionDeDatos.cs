@@ -74,8 +74,9 @@ namespace logicaDeDatos
             while (lectura.Read())
             {
                 string Correo = lectura.GetValue(4).ToString();
+                int tipo = Int32.Parse(lectura.GetValue(6).ToString());
 
-                if (pCorreo == Correo)
+                if (pCorreo == Correo & tipo== 3)
                 {
                     return true;
                 }
