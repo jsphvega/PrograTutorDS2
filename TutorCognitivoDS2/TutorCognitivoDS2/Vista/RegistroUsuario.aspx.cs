@@ -1,12 +1,8 @@
 ﻿using controlador;
 using dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using TutorCognitivoDS2.validacion;
+using validacion;
 
 namespace TutorCognitivoDS2.vista
 {

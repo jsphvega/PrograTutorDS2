@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using MySql.Data.MySqlClient;
-using TutorCognitivoDS2.DTO;
 using TutorCognitivoDS2.modelo.logicaAccesoDatos;
+using dto;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoBitacora: ConexionBD
+    public class DatoBitacora : ConexionBD
     {
         private MySqlCommand comandoBitacora;
         private string conection;

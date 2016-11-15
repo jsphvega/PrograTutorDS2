@@ -528,9 +528,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Revisar\controlador\AdapterJava.cs" />
-    <Compile Include="Revisar\controlador\Controlador.cs" />
-    <Compile Include="Revisar\controlador\frameworkJava.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -538,11 +535,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Revisar\dto\DTOBitacora.cs" />
-    <Compile Include="Revisar\dto\DTOCategoria.cs" />
-    <Compile Include="Revisar\dto\DTOCurso.cs" />
-    <Compile Include="Revisar\dto\DTOInicioSesion.cs" />
-    <Compile Include="Revisar\dto\DTOUsuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -611,7 +603,6 @@
     <Compile Include="TutorCognitivo\logicaDeNegocios\Usuario.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\XLS.cs" />
     <Compile Include="TutorCognitivo\validacion\Validacion.cs" />
-    <Compile Include="Revisar\validacion\Validacion.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

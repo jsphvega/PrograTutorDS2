@@ -8,6 +8,13 @@ namespace dto
 
         public DTOCategoria(String pNombre)
         {
+            nombre = pNombre;
+        }
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
         }
     }
 }

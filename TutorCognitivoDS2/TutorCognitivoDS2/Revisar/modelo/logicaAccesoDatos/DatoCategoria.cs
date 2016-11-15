@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using MySql.Data.MySqlClient;
-using TutorCognitivoDS2.DTO;
 using TutorCognitivoDS2.modelo.logicaAccesoDatos;
+using dto;
 
 namespace TutorCognitivoDS2.accesoADatos
 {
-    public class DatoCategoria:ConexionBD
+    public class DatoCategoria : ConexionBD
     {
         private MySqlCommand comandoCategoria;
         private string coneccion;
@@ -56,5 +53,5 @@ namespace TutorCognitivoDS2.accesoADatos
 
 
         }
-}
+    }
 }
