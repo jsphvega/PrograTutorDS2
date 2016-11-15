@@ -24,17 +24,18 @@ namespace logicaDeDatos
             }
         }
 
-       
+
 
         public List<string> Consulta()
         {
             List<string> carreras = new List<string>();
             conectarBD();
             conectado.Open();
-            comandoCarrera= new MySqlCommand();
+            comandoCarrera = new MySqlCommand();
             comandoCarrera.Connection = conectado;
             comandoCarrera.CommandText = "Select Nombre from carrera";
             consultaCarrera = comandoCarrera.ExecuteReader();
+
             while (consultaCarrera.Read())
             {
                 string carrera = "";

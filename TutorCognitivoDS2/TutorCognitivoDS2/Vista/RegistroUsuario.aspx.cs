@@ -8,10 +8,13 @@ namespace TutorCognitivoDS2.vista
 {
     public partial class RegistroUsuario : System.Web.UI.Page
     {
+        Controlador controlador = new Controlador();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                ddlCarrera = controlador.rellenarListaCarreras();
                 btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
             }
         }
