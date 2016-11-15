@@ -26,31 +26,24 @@ namespace logicaDeDatos
 
 
 
-        public List<string> Consulta()
+        public List<String[]> Consulta()
         {
-            List<string> carreras = new List<string>();
+            List<String[]> carreras = new List<String[]>();
             conectarBD();
             conectado.Open();
             comandoCarrera = new MySqlCommand();
             comandoCarrera.Connection = conectado;
-            comandoCarrera.CommandText = "Select Nombre from carrera";
+            comandoCarrera.CommandText = "Select IDCarrera,Nombre from carrera";
             consultaCarrera = comandoCarrera.ExecuteReader();
 
-            int i = 0;
             while (consultaCarrera.Read())
             {
-                string carrera = "";
-                carrera = consultaCarrera.GetValue(i).ToString();
+                String[] carrera = { consultaCarrera.GetValue(0).ToString(), consultaCarrera.GetValue(1).ToString() };
                 carreras.Add(carrera);
-                i++;
             }
 
             conectado.Close();
             return carreras;
         }
-
     }
-
-
-
 }

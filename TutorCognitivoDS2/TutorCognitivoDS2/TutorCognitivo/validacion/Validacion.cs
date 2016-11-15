@@ -91,11 +91,11 @@ namespace validacion
 
         public static string validarCorreoValido(DTOUsuario pUsuario)
         {
-            if (pUsuario.IndexOf("@") == -1)
+            if (pUsuario.Correo.IndexOf("@") == -1)
             {
                 return "No corresponde a un correo";
             }
-            if (pUsuario.IndexOf(".com") == -1)
+            if (pUsuario.Correo.IndexOf(".com") == -1)
             {
                 return "No corresponde a un correo";
             }
