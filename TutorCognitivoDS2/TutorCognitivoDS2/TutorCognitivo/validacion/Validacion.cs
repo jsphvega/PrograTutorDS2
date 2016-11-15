@@ -14,10 +14,10 @@ namespace validacion
                 Consulta = "No pueden haber datos vacíos";
             else
             {
-                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarContrasena(pUsuario);
-                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoExistente(pUsuario);
-                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarDigitosContrasena(pUsuario);
-                Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoValido(pUsuario);
+                Consulta += validarContrasena(pUsuario) + (Consulta == String.Empty ? String.Empty : ", ");
+                Consulta += validarCorreoExistente(pUsuario) + (Consulta == String.Empty ? String.Empty : ", ");
+                Consulta += validarDigitosContrasena(pUsuario) + (Consulta == String.Empty ? String.Empty : ", ");
+                Consulta += validarCorreoValido(pUsuario);
             }
 
             return Consulta;
