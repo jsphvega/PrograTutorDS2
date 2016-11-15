@@ -31,7 +31,7 @@ namespace logicaDeDatos
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select Correo,Contraseña,Tipo from usuario";
+            comando.CommandText = "Select correo,contraseña,tipo from usuario";
             lectura = comando.ExecuteReader();
             lectura.Read();
             while (lectura.Read())
@@ -41,10 +41,11 @@ namespace logicaDeDatos
                 string contraseña = "";
                 int tipo = 0;
 
-                correo = lectura.ToString();
+                correo = lectura.GetValue(4).ToString();
 
-                contraseña = lectura.ToString();
-                tipo = Int32.Parse(lectura.ToString());
+                contraseña = lectura.GetValue(5).ToString();
+
+                tipo = Int32.Parse(lectura.GetValue(6).ToString());
 
 
                 if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña & tipo == inicioSesion.Tipo)
@@ -68,13 +69,13 @@ namespace logicaDeDatos
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select Correo from usuario";
+            comando.CommandText = "Select correo from usuario";
             lectura = comando.ExecuteReader();
             while (lectura.Read())
             {
 
                 string correo = "";
-                correo = lectura.ToString();
+                correo = lectura.GetValue(4).ToString();
 
                 if (pCorreo == correo)
                 {
@@ -94,7 +95,7 @@ namespace logicaDeDatos
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo from usuario";
+            comando.CommandText = "Select nombre,apellido1,apellido2,correo,contrasena,tipo from usuario";
             lectura = comando.ExecuteReader();
             lectura.Read();
             while (lectura.Read())
@@ -107,12 +108,13 @@ namespace logicaDeDatos
                 string contraseña = "";
                 string tipo = "";
 
-                nombre = lectura.ToString();
-                apellido1 = lectura.ToString();
-                apellido2 = lectura.ToString();
-                correo = lectura.ToString();
-                contraseña = lectura.ToString();
-                tipo = lectura.ToString();
+                nombre = lectura.GetValue(1).ToString();
+                apellido1 = lectura.GetValue(2).ToString();
+                apellido2 = lectura.GetValue(3).ToString();
+                correo = lectura.GetValue(4).ToString();
+                contraseña = lectura.GetValue(5).ToString();
+                tipo = lectura.GetValue(6).ToString();
+
                 if (nombre == usuario.Nombre & apellido1 == usuario.Apellido1 & apellido2 == usuario.Apellido2 & usuario.Correo == correo & contraseña == usuario.Contraseña1)
                 {
                     return true;
