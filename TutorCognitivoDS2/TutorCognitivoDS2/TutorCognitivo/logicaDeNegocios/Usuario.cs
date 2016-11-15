@@ -13,6 +13,12 @@ namespace logicaDeNegocios
 
         public Usuario(String pNombre, String pApellido1, String pApellido2, String pCorreo, String pContraseña, int pCarrera)
         {
+            this.nombre = pNombre;
+            this.correo = pCorreo;
+            this.contraseña = pContraseña;
+            this.carrera = pCarrera;
+            this.apellido2 = pApellido2;
+            this.apellido1 = pApellido1;
         }
 
         public abstract String toString();
