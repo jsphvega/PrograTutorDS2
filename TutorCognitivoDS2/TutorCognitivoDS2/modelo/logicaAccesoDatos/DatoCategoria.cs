@@ -11,7 +11,7 @@ namespace TutorCognitivoDS2.accesoADatos
     {
         private MySqlCommand comandoCategoria;
         private string coneccion;
-        private MySqlConnection comandoConectar;
+        private MySqlConnection conectado;
         private MySqlDataReader consultaCategoria;
 
         public void conectarBD()
@@ -19,7 +19,7 @@ namespace TutorCognitivoDS2.accesoADatos
             try
             {
                 coneccion = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                comandoConectar = new MySqlConnection(coneccion);
+                conectado = new MySqlConnection(coneccion);
             }
             catch (Exception)
             {
@@ -32,13 +32,13 @@ namespace TutorCognitivoDS2.accesoADatos
             try
             {
                 conectarBD();
-                comandoConectar.Open();
+                conectado.Open();
                 comandoCategoria = new MySqlCommand();
-                comandoCategoria.Connection = comandoConectar;
+                comandoCategoria.Connection = conectado;
                 comandoCategoria.CommandText = "INSERT INTO categoria(Nombre) VALUES(@Nombre)";
                 comandoCategoria.Parameters.AddWithValue("@Nombre", categoria.Nombre);
                 comandoCategoria.ExecuteNonQuery();
-                comandoConectar.Close();
+                conectado.Close();
 
 
             }
