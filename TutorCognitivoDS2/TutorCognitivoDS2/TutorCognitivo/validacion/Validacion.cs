@@ -77,6 +77,30 @@ namespace validacion
                 flag = false;
                 return flag;
             }
+            else
+            {
+                return flag;
+            }
+        }
+        public static string validarDigitosContrasena(DTOUsuario pUsuario)
+        {
+            if (pUsuario.Contraseña1.Length < 8)
+                return "Contrasena debe tener al menos 8 caracteres";
+            return string.Empty;
+        }
+
+        public static string validarCorreoValido(DTOUsuario pUsuario)
+        {
+            if (pUsuario.IndexOf("@") == -1)
+            {
+                return "No corresponde a un correo";
+            }
+            if (pUsuario.IndexOf(".com") == -1)
+            {
+                return "No corresponde a un correo";
+            }
+            return string.Empty;
+
         }
     }
 }
