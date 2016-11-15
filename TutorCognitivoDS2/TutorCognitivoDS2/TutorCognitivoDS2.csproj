@@ -376,6 +376,9 @@
     <Content Include="vista\js\skel-layers.min.js" />
     <Content Include="vista\js\skel.min.js" />
     <Content Include="vista\login.aspx" />
+    <Content Include="vista\MainAdministrador.aspx" />
+    <Content Include="vista\MainFinal.aspx" />
+    <Content Include="vista\MainTutor.aspx" />
     <Content Include="vista\RegistroUsuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -535,11 +538,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dto\DTOBitacora.cs" />
-    <Compile Include="dto\DTOCategoria.cs" />
-    <Compile Include="dto\DTOCurso.cs" />
-    <Compile Include="dto\DTOInicioSesion.cs" />
-    <Compile Include="dto\DTOUsuario.cs" />
+    <Compile Include="dtoo\DTOBitacora.cs" />
+    <Compile Include="dtoo\DTOCategoria.cs" />
+    <Compile Include="dtoo\DTOCurso.cs" />
+    <Compile Include="dtoo\DTOInicioSesion.cs" />
+    <Compile Include="dtoo\DTOUsuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -549,21 +552,21 @@
     <Compile Include="modelo\logicaAccesoDatos\DatoCategoria.cs" />
     <Compile Include="modelo\logicaAccesoDatos\DatoUsuario.cs" />
     <Compile Include="modelo\logicaAccesoDatos\VerificacionDatos.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Administrador.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Autenticacion.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Bitacora.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Categoria.cs" />
-    <Compile Include="modelo\logicaDeNegocios\CSV.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Curso.cs" />
-    <Compile Include="modelo\logicaDeNegocios\fabricaBitacora.cs" />
-    <Compile Include="modelo\logicaDeNegocios\fabricaUsuario.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Final.cs" />
-    <Compile Include="modelo\logicaDeNegocios\IAutenticacion.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Registro.cs" />
-    <Compile Include="modelo\logicaDeNegocios\RegistroBitacora.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Tutor.cs" />
-    <Compile Include="modelo\logicaDeNegocios\Usuario.cs" />
-    <Compile Include="modelo\logicaDeNegocios\XLS.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Administrador.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Autenticacion.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Bitacora.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Categoria.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\CSV.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Curso.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\fabricaBitacora.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\fabricaUsuario.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Final.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\IAutenticacion.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Registro.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\RegistroBitacora.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Tutor.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\Usuario.cs" />
+    <Compile Include="modelo\logicaDeNegocioss\XLS.cs" />
     <Compile Include="modelo\logicaIntegracion\Correo.cs" />
     <Compile Include="modelo\logicaIntegracion\ICorreo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -593,6 +596,38 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TutorCognitivo\controlador\AdapterJava.cs" />
+    <Compile Include="TutorCognitivo\controlador\Controlador.cs" />
+    <Compile Include="TutorCognitivo\dto\DTOBitacora.cs" />
+    <Compile Include="TutorCognitivo\dto\DTOCategoria.cs" />
+    <Compile Include="TutorCognitivo\dto\DTOCurso.cs" />
+    <Compile Include="TutorCognitivo\dto\DTOInicioSesion.cs" />
+    <Compile Include="TutorCognitivo\dto\DTOUsuario.cs" />
+    <Compile Include="TutorCognitivo\logicaDeDatos\ConexionBD.cs" />
+    <Compile Include="TutorCognitivo\logicaDeDatos\DatoBitacora.cs" />
+    <Compile Include="TutorCognitivo\logicaDeDatos\DatoCarrera.cs" />
+    <Compile Include="TutorCognitivo\logicaDeDatos\DatoCategoria.cs" />
+    <Compile Include="TutorCognitivo\logicaDeDatos\DatoUsuario.cs" />
+    <Compile Include="TutorCognitivo\logicaDeDatos\VerificacionDeDatos.cs" />
+    <Compile Include="TutorCognitivo\logicaDeIntegracion\Correo.cs" />
+    <Compile Include="TutorCognitivo\logicaDeIntegracion\ICorreo.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Administrador.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Autenticacion.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Bitacora.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Categoria.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\CSV.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Curso.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\DecoradorAdministrador.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\FabricaBitacora.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\FabricaUsuario.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Final.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\IAutenticacion.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Registro.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\RegistroBitacora.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Tutor.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\Usuario.cs" />
+    <Compile Include="TutorCognitivo\logicaDeNegocios\XSL.cs" />
+    <Compile Include="TutorCognitivo\validacion\Validacion.cs" />
     <Compile Include="validacion\Validacion.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -601,12 +636,33 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="vista\login.aspx.cs">
+    <Compile Include="vista\Login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vista\login.aspx.designer.cs">
+    <Compile Include="vista\Login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vista\MainAdministrador.aspx.cs">
+      <DependentUpon>MainAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\MainAdministrador.aspx.designer.cs">
+      <DependentUpon>MainAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vista\MainFinal.aspx.cs">
+      <DependentUpon>MainFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\MainFinal.aspx.designer.cs">
+      <DependentUpon>MainFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vista\MainTutor.aspx.cs">
+      <DependentUpon>MainTutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\MainTutor.aspx.designer.cs">
+      <DependentUpon>MainTutor.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>

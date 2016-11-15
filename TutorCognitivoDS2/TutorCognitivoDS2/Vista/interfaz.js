@@ -7,3 +7,13 @@
 
     return !ask;
 }
+
+function confirmarCierre() {
+    var ask = window.confirm("¿Está seguro de cerrar sesión?");
+
+    if (ask) {
+        document.location.href = "login.aspx";
+    }
+
+    return !ask;
+}

@@ -17,7 +17,6 @@
     <!--Archivos .css responsive-->
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <script src="interfaz.js"></script>
 </head>
 <body>
     <form id="formRegistro" runat="server">
@@ -39,7 +38,7 @@
             <!--Menú principal-->
             <nav id="nav">
                 <ul>
-                    <li class="current" onclick="return confirmarSalida();"><a>Volver</a></li>
+                    <li onclick="return confirmarSalida();"><a>Volver</a></li>
                 </ul>
             </nav>
 

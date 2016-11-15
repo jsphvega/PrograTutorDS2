@@ -25,8 +25,8 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
+                    <li><a href="RegistroUsuario.aspx">Registro</a></li>
                     <li><a href="">Registro por Facebook</a></li>
-                    <li class="current"><a href="RegistroUsuario.aspx">Registro</a></li>
                     <li><a href="">Registro por google</a></li>
                 </ul>
             </nav>
@@ -38,30 +38,34 @@
                     <h2><a id="logo">Tutor Cognitivo</a></h2>
 
                     <!--Correo-->
-                    <div class="login" style="text-align:center">
+                    <div class="login">
 
                         <!--Usuario-->
-                        <h3>Usuario</h3>
-                        <p style="text-align:center">
-                            <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="" Width="400px"></asp:TextBox>
-                        </p>
+                        <div class="row">
+                            <div class="12u" style="text-align: center">
+                                <h3>Usuario</h3>
+                                <p style="text-align: center">
+                                    <asp:TextBox ID="txtUsuario" placeholder="Correo electrónico" TextMode="Email" runat="server" CssClass="input inputEmail" Width="400px"></asp:TextBox>
+                                </p>
+                            </div>
+                        </div>
 
                         <!--Contraseña-->
                         <h3>Contraseña</h3>
-                        <p style="text-align:center">
+                        <p style="text-align: center">
                             <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server" CssClass="input inputPassword" Width="400px"></asp:TextBox>
                         </p>
 
                         <!--Tipo-->
                         <div class="radioGroup">
+                            <label for="markTutor">
+                                <asp:RadioButton ID="rdnTutor" GroupName="rdnTipo" Text="Tutor" runat="server" />
+                            </label>
                             <label for="markAdmin">
-                                <asp:RadioButton ID="rdnTutor" Text="Tutor" runat="server" />
+                                <asp:RadioButton ID="rdnAdmin" GroupName="rdnTipo" Text="Administrador" runat="server" />
                             </label>
-                            <label for="markStudent">
-                                <asp:RadioButton ID="rdnAdmin" Text="Administrador" runat="server" />
-                            </label>
-                            <label for="markService">
-                                <asp:RadioButton ID="rdnFinal" Text="Final" runat="server" />
+                            <label for="markFinal">
+                                <asp:RadioButton ID="rdnFinal" GroupName="rdnTipo" Text="Final" runat="server" />
                             </label>
                         </div>
 
