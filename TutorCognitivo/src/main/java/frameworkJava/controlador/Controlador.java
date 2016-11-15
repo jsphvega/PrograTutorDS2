@@ -16,14 +16,14 @@ public class Controlador {
     }
 
     private Consulta traducirRespuestas(Consulta pConsulta) {
-	/*Traductor sTraductor = new Traductor();
+	Traductor sTraductor = new Traductor();
 	Consulta sCambiada = new Consulta(sTraductor.traducirTexto(pConsulta.getPregunta()));
 	for (int i = 0; i < pConsulta.getRespuestas().size(); i++)
 	    sCambiada.agregarRespuesta(sTraductor.traducirTexto(pConsulta.getRespuestas().get(i)));
 
-	return sCambiada;*/
-	return null;
+	return sCambiada;
     }
+    
 
     private void agregarInformacion(DTOEntrenamiento pEntrenamiento) {
 	Conversacion cc = Conversacion.getInstance();
@@ -38,6 +38,9 @@ public class Controlador {
 
 	return sConversacion.consultarInformacion(pConsulta);
     }
+    
+    
+    
 
     public static void main(String[] args) {
 	Controlador SC = new Controlador();
