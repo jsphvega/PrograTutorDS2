@@ -32,5 +32,7 @@ namespace dto
             accion = pAccion;
             contraseña = pContraseña;
         }
+
+
     }
 }
