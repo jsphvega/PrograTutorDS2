@@ -590,7 +590,6 @@
     <Compile Include="TutorCognitivo\logicaDeIntegracion\Correo.cs" />
     <Compile Include="TutorCognitivo\logicaDeIntegracion\ICorreo.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Administrador.cs" />
-    <Compile Include="TutorCognitivo\logicaDeNegocios\Autenticacion.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Bitacora.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\Categoria.cs" />
     <Compile Include="TutorCognitivo\logicaDeNegocios\CSV.cs" />

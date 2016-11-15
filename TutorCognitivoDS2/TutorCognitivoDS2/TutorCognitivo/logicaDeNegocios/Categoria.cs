@@ -8,15 +8,17 @@ namespace logicaDeNegocios
 
         public Categoria(String pNombre)
         {
+            this.nombre = pNombre;
         }
 
         public void setCategoria(String pNombre)
         {
+            this.nombre = pNombre;
         }
 
         public String getCategoria()
         {
-            return null;
+            return nombre;
         }
 
     }

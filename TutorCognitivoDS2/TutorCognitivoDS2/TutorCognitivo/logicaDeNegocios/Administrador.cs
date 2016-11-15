@@ -11,7 +11,7 @@ namespace logicaDeNegocios
 
         public override string toString()
         {
-            return null;
+            
         }
     }
 }
