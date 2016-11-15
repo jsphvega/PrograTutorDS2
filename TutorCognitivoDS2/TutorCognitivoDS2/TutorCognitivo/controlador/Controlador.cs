@@ -1,5 +1,6 @@
 using dto;
 using logicaDeDatos;
+using System.Collections.Generic;
 
 namespace controlador
 {
@@ -11,6 +12,8 @@ namespace controlador
         {
             DatoUsuario DU = new DatoUsuario();
             DU.registrarUsuario(dto);
+            
         }
-    }
-}
+
+        public void 
+    }    
