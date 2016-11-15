@@ -14,11 +14,12 @@ namespace TutorCognitivoDS2
     {
        
 
-        //private static string conection;
-        //private static MySqlConnection conectar;
-        //private MySqlCommand comando;
-       
-      
+        private static string conection;
+        private static MySqlConnection conectar;
+        private MySqlCommand comando;
+        private MySqlDataReader consultaCategoria;
+
+
 
 
 
@@ -27,24 +28,28 @@ namespace TutorCognitivoDS2
           try
             {
 
-                DatoCarrera carrera = new DatoCarrera();
-                carrera.Consulta();
+                //DatoCarrera carrera = new DatoCarrera();
+                //carrera.Consulta();
                 
-                //conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
-                //conectar = new MySqlConnection(conection);
-                //conectarBD();
-                //conectar.Open();
-                //comando = new MySqlCommand();
-                //comando.Connection = conectar;
-                //comando.CommandText = "INSERT INTO usuario(Nombre,Apellido1,Apellido2,Correo,Contraseña,Tipo) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
+                conection = "Server = us-cdbr-iron-east-04.cleardb.net;database = ad_699a080b2007672;uid =b4d3a4bbc609bd;password =2b616b93;SslMode=None;";
+                conectar = new MySqlConnection(conection);
+                
+               conectar.Open();
+                comando = new MySqlCommand();
+                comando.Connection = conectar;
+                comando.CommandText = "Select idcarrera, nombrecarrera from carrera";
+               
+
+                // comando.CommandText = "INSERT INTO usuario(nombre,apellido1,apellido2,correo,contraseña,tipo,id_idcarrera) VALUES(@Nombre,@Apellido1,@Apellido2,@Correo,@Contraseña,@Tipo)";
                 //comando.Parameters.AddWithValue("@Nombre", "maria");
                 //comando.Parameters.AddWithValue("@Apellido1", "maria");
                 //comando.Parameters.AddWithValue("@Apellido2", "maria");
                 //comando.Parameters.AddWithValue("@Correo", "maria");
                 //comando.Parameters.AddWithValue("@Contraseña", "maria");
                 //comando.Parameters.AddWithValue("@Tipo", 3);
-                //comando.ExecuteNonQuery();
-                //conectar.Close();
+                //comando.Parameters.AddWithValue("@carrera", 32);
+                comando.ExecuteNonQuery();
+                conectar.Close();
 
                // VerificacionDatos dato = new VerificacionDatos();
 
