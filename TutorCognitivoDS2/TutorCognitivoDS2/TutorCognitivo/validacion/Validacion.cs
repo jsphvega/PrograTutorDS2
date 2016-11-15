@@ -6,40 +6,38 @@ namespace validacion
     public class Validacion
     {
 
-        private static Boolean esVacio(String pTexto)
-        {
-            return pTexto.Equals(String.Empty);
-        }
-
         public static String validarUsuario(DTOUsuario pUsuario)
         {
-            if (esVacio(pUsuario.Nombre))
-                return "El nombre no debe estar vacío";
+            String Consulta = String.Empty;
 
+            if (!validarCampos(pUsuario))
+                Consulta = "No pueden haber datos vacíos";
 
-            // validar contraseñas iguales
-            //Que correo no exista
-            //que este todo lleno
+            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarContrasena(pUsuario);
+            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoExistente(pUsuario);
+            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarDigitosContrasena(pUsuario);
+            Consulta += (Consulta == String.Empty ? String.Empty : ", ") + validarCorreoValido(pUsuario);
 
-            return String.Empty;
+            return Consulta;
         }
 
-        public static string validarContrasena(DTOUsuario pUsuario)
+        private static string validarContrasena(DTOUsuario pUsuario)
         {
-            if( string.Equals(pUsuario.Contraseña1, pUsuario.Contraseña2))
+            if (string.Equals(pUsuario.Contraseña1, pUsuario.Contraseña2))
             {
                 return "Las contrasenas no coinciden";
             }
+
             return string.Empty;
         }
 
-        public static string validarCorreoExistente(DTOUsuario pUsuario)
+        private static string validarCorreoExistente(DTOUsuario pUsuario)
         {
             //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
             return "Correo existente";
         }
 
-        public static Boolean validarCampos(DTOUsuario pUsuario)
+        private static Boolean validarCampos(DTOUsuario pUsuario)
         {
             Boolean flag = true;
             if (pUsuario.Nombre.Equals(String.Empty))
@@ -82,14 +80,14 @@ namespace validacion
                 return flag;
             }
         }
-        public static string validarDigitosContrasena(DTOUsuario pUsuario)
+        private static string validarDigitosContrasena(DTOUsuario pUsuario)
         {
             if (pUsuario.Contraseña1.Length < 8)
                 return "Contrasena debe tener al menos 8 caracteres";
             return string.Empty;
         }
 
-        public static string validarCorreoValido(DTOUsuario pUsuario)
+        private static string validarCorreoValido(DTOUsuario pUsuario)
         {
             if (pUsuario.Correo.IndexOf("@") == -1)
             {

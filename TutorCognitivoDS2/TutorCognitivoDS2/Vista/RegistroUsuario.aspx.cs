@@ -17,11 +17,8 @@ namespace TutorCognitivoDS2.vista
         {
             if (!IsPostBack)
             {
-                //ddlCarrera = controlador.rellenarListaCarreras();
+                List<String[]> lista = controlador.obtenerListaCarreras();
 
-                DatoCarrera dc = new DatoCarrera();
-                List<String[]> lista = dc.Consulta();
-                
                 for (int i = 0; i < lista.Count; i++)
                 {
                     ListItem ld = new ListItem(lista[i][1].ToString(), lista[i][0].ToString());
@@ -35,7 +32,7 @@ namespace TutorCognitivoDS2.vista
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
             DTOUsuario sUsuario = new DTOUsuario(txtNombre.Text, txtApellido1.Text, txtApellido2.Text,
-                txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.DataValueField));
+                txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.SelectedValue));
 
             lblError.Text = Validacion.validarUsuario(sUsuario);
 

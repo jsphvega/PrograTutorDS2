@@ -14,7 +14,6 @@ C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin
 C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\TutorCognitivoDS2.dll.config
 C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\TutorCognitivoDS2.dll
 C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\TutorCognitivoDS2.pdb
-C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\obj\Debug\TutorCognitivoDS2.csprojResolveAssemblyReference.cache
 C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\obj\Debug\TutorCognitivoDS2.dll
 C:\Users\jsphvega\Desktop\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\obj\Debug\TutorCognitivoDS2.pdb
 C:\Users\majom\OneDrive\Documentos\GitHub\PrograTutorDS2\TutorCognitivoDS2\TutorCognitivoDS2\bin\ApplicationInsights.config

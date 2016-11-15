@@ -10,19 +10,12 @@ namespace controlador
     {
         private AdapterJava adaptador;
 
-        public DropDownList rellenarListaCarreras()
+        public List<String[]> obtenerListaCarreras()
         {
             DatoCarrera dc = new DatoCarrera();
             List<String[]> lista = dc.Consulta();
 
-            DropDownList ddlLista = new DropDownList();
-            for (int i = 0; i < lista.Count; i++)
-            {
-                ListItem ld = new ListItem(lista[i][0].ToString(), lista[i][1].ToString());
-                ddlLista.Items.Add(ld);
-            }
-
-            return ddlLista;
+            return lista;
         }
 
         public void insertarUsuarioFinal(DTOUsuario dto)
