@@ -16,11 +16,67 @@ namespace validacion
             if (esVacio(pUsuario.Nombre))
                 return "El nombre no debe estar vacío";
 
+
             // validar contraseñas iguales
             //Que correo no exista
             //que este todo lleno
 
             return String.Empty;
+        }
+
+        public static string validarContrasena(DTOUsuario pUsuario)
+        {
+            if( string.Equals(pUsuario.Contraseña1, pUsuario.Contraseña2))
+            {
+                return "Las contrasenas no coinciden";
+            }
+            return string.Empty;
+        }
+
+        public static string validarCorreoExistente(DTOUsuario pUsuario)
+        {
+            //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
+            return "Correo existente";
+        }
+
+        public static Boolean validarCampos(DTOUsuario pUsuario)
+        {
+            Boolean flag = true;
+            if (pUsuario.Nombre.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pUsuario.Apellido1.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pUsuario.Apellido2.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pUsuario.Correo.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pUsuario.Carrera.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pUsuario.Contraseña1.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
+            if (pUsuario.Contraseña2.Equals(String.Empty))
+            {
+                flag = false;
+                return flag;
+            }
         }
     }
 }
