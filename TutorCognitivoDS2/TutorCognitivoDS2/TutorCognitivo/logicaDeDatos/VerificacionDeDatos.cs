@@ -31,21 +31,17 @@ namespace logicaDeDatos
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select correo,contraseña,tipo from usuario";
+            comando.CommandText = "Select * from usuario";
             lectura = comando.ExecuteReader();
             lectura.Read();
             while (lectura.Read())
             {
-                string correo = "";
 
-                string contraseña = "";
-                int tipo = 0;
+                string correo = lectura.GetValue(4).ToString();
 
-                correo = lectura.GetValue(4).ToString();
+                string contraseña = lectura.GetValue(5).ToString();
 
-                contraseña = lectura.GetValue(5).ToString();
-
-                tipo = Int32.Parse(lectura.GetValue(6).ToString());
+                int tipo = Int32.Parse(lectura.GetValue(6).ToString());
 
 
                 if (correo == inicioSesion.Correo & contraseña == inicioSesion.Contraseña & tipo == inicioSesion.Tipo)
@@ -88,33 +84,26 @@ namespace logicaDeDatos
 
 
         //metodo que verifica que existe un usuario en la BD
-        public bool verificarUsuarioExistente(DTOUsuario usuario)
+        public bool verificarUsuarioExistente(DTOUsuario usuario,int pTipo)
         {
             conectarBD();
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select nombre,apellido1,apellido2,correo,contrasena,tipo from usuario";
+            comando.CommandText = "Select * from usuario";
             lectura = comando.ExecuteReader();
             lectura.Read();
             while (lectura.Read())
             {
-                string nombre = "";
+                
+                string nombre = lectura.GetValue(1).ToString();
+                string apellido1 = lectura.GetValue(2).ToString();
+                string apellido2 = lectura.GetValue(3).ToString();
+                string correo = lectura.GetValue(4).ToString();
+                string contraseña = lectura.GetValue(5).ToString();
+                int tipo = Int32.Parse(lectura.GetValue(6).ToString());
 
-                string apellido1 = "";
-                string apellido2 = "";
-                string correo = "";
-                string contraseña = "";
-                string tipo = "";
-
-                nombre = lectura.GetValue(1).ToString();
-                apellido1 = lectura.GetValue(2).ToString();
-                apellido2 = lectura.GetValue(3).ToString();
-                correo = lectura.GetValue(4).ToString();
-                contraseña = lectura.GetValue(5).ToString();
-                tipo = lectura.GetValue(6).ToString();
-
-                if (nombre == usuario.Nombre & apellido1 == usuario.Apellido1 & apellido2 == usuario.Apellido2 & usuario.Correo == correo & contraseña == usuario.Contraseña1)
+                if (nombre == usuario.Nombre & apellido1 == usuario.Apellido1 & apellido2 == usuario.Apellido2 & usuario.Correo == correo & contraseña == usuario.Contraseña1 & tipo == pTipo)
                 {
                     return true;
                 }
