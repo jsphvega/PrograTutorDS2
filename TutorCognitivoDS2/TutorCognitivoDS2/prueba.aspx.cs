@@ -56,7 +56,7 @@ namespace TutorCognitivoDS2
 
                 VerificacionDeDatos dato = new VerificacionDeDatos();
 
-                if (dato.verificarCorreo("maria") == true)
+                if (dato.verificarCorreo("mami") == true)
                {
                     Response.Write("se encuentra en la base");
                 }
@@ -77,7 +77,7 @@ namespace TutorCognitivoDS2
 
                 // }
 
-                Response.Write("'conexion exitosa' ");
+                //Response.Write("'conexion exitosa' ");
                
             }
            catch (Exception)

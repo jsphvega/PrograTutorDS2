@@ -69,15 +69,13 @@ namespace logicaDeDatos
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select correo from usuario";
+            comando.CommandText = "Select * from usuario";
             lectura = comando.ExecuteReader();
             while (lectura.Read())
             {
+                string Correo = lectura.GetValue(4).ToString();
 
-                string correo = "";
-                correo = lectura.GetValue(4).ToString();
-
-                if (pCorreo == correo)
+                if (pCorreo == Correo)
                 {
                     return true;
                 }
