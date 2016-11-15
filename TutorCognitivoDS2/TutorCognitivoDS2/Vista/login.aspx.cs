@@ -44,7 +44,7 @@ namespace TutorCognitivoDS2.Vista
                 }
                 else
                 {
-                    controlador.mensaje("Usuario o contraseña incorrectos");
+                    controlador.mensajeInterfaz("Usuario o contraseña incorrectos");
                 }
         }
     }

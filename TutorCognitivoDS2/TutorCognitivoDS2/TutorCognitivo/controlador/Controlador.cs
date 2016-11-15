@@ -11,12 +11,15 @@ namespace controlador
     {
         private AdapterJava adaptador;
 
-        public void mensaje(String error)
+        public void mensajeInterfaz(String pMensaje)
         {
-            string script = @"<script type='text/javascript'>alert('" + error + "');</script>";
-            ScriptManager.RegisterStartupScript(null, typeof(Page), "alerta", script, false);
+            string script = @"<script type='text/javascript'>alert('" + pMensaje + "');</script>";
+
+            ScriptManager.RegisterStartupScript(null, typeof(Page), "Alerta", script, false);
         }
 
+        /*****************************************/
+        
         public List<String[]> obtenerListaCarreras()
         {
             DatoCarrera sCarrera = new DatoCarrera();
@@ -27,9 +30,16 @@ namespace controlador
 
         public void insertarUsuarioFinal(DTOUsuario pUsuario)
         {
-            DatoUsuario sUsuario = new DatoUsuario();
-            sUsuario.registrarUsuario(pUsuario);
-
+            try
+            {
+                DatoUsuario sUsuario = new DatoUsuario();
+                sUsuario.registrarUsuario(pUsuario);
+                mensajeInterfaz("Datos insertados correctamente");
+            }
+            catch
+            {
+                mensajeInterfaz("No se pudieron insertar los datos");
+            }
         }
 
         public bool verificarSesion(DTOInicioSesion pSesion)

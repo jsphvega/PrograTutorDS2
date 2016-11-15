@@ -6,6 +6,8 @@ namespace validacion
 {
     public class Validacion
     {
+        /*****************************************/
+
         public static String validarConfirmacion(DTOConfirmacion pConfirmacion)
         {
             if (!validarCamposConfirmacion(pConfirmacion))

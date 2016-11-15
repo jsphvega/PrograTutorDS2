@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Inicio</title>
+    <title>Confirmar Contraseña</title>
 
     <!--Configuraciones de la página-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

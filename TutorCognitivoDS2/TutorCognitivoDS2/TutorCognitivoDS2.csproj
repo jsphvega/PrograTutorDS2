@@ -364,6 +364,7 @@
     <Content Include="vista\assets\js\skel.min.js" />
     <Content Include="vista\assets\js\util.js" />
     <Content Include="vista\ConfirmarContraseña.aspx" />
+    <Content Include="vista\Consultas.aspx" />
     <Content Include="vista\images\banner.jpg" />
     <Content Include="vista\images\pic01.jpg" />
     <Content Include="vista\images\pic02.jpg" />
@@ -618,6 +619,13 @@
     </Compile>
     <Compile Include="vista\ConfirmarContraseña.aspx.designer.cs">
       <DependentUpon>ConfirmarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Consultas.aspx.cs">
+      <DependentUpon>Consultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\Consultas.aspx.designer.cs">
+      <DependentUpon>Consultas.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
