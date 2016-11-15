@@ -113,6 +113,26 @@ namespace logicaDeDatos
             conectado.Close();
             return false;
         }
+       
+        //metodo que cambia la contrasena
 
+        public void cambiarContrasena(String pContrasena)
+        {
+            conectarBD();
+            conectado.Open();
+            comando = new MySqlCommand();
+            comando.Connection = conectado;
+            comando.CommandText = "Select * from usuario";
+            lectura = comando.ExecuteReader();
+            while (lectura.Read())
+            {
+               string contraseña = lectura.GetValue(5).ToString();
+                contraseña = pContrasena;
+
+            }
+
+            conectado.Close();
+
+        }
     }
 }
