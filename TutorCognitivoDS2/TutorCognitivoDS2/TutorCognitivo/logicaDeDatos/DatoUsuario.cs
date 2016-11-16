@@ -1,9 +1,11 @@
 using dto;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace logicaDeDatos
 {
+    //clase que gestiona todo lo relacionado a lo de los usuarios en la BD 
     public class DatoUsuario : ConexionBD
     {
         private MySqlCommand comandoUsuario;
@@ -46,21 +48,55 @@ namespace logicaDeDatos
             }
         }
 
-        public void consultarTutores()
+        public List<String[]> consultarTutores()
         {
+            List<String[]> tutores = new List<String[]>();
+            conectarBD();
+            conectado.Open();
+            comandoUsuario = new MySqlCommand();
+            comandoUsuario.Connection = conectado;
+            comandoUsuario.CommandText = "select * from usuario where tipo=2";
+            consulta = comandoUsuario.ExecuteReader();
+
+            while (consulta.Read())
+            {
+                
+                String[] tutor = { consulta.GetValue(0).ToString(), consulta.GetValue(1).ToString(), consulta.GetValue(2).ToString(), consulta.GetValue(3).ToString(),
+           consulta.GetValue(4).ToString(),consulta.GetValue(5).ToString(),consulta.GetValue(6).ToString() };
+
+            tutores.Add(tutor);
+
+            }
+
+            conectado.Close();
+
+            return tutores;
         }
 
-        public void consultarFinales()
-        {
-        }
 
-        public void consultarDatosTutor(int ID)
+        public List<String[]> consultarFinales()
         {
-        }
+            List<String[]>  finales = new List<String[]>();
+            conectarBD();
+            conectado.Open();
+            comandoUsuario = new MySqlCommand();
+            comandoUsuario.Connection = conectado;
+            comandoUsuario.CommandText = "select * from usuario where tipo=3";
+            consulta = comandoUsuario.ExecuteReader();
 
-        public void consultarDatosFinal(int ID)
-        {
+            while (consulta.Read())
+            {
 
-        }
+                String[] tutor = { consulta.GetValue(0).ToString(), consulta.GetValue(1).ToString(), consulta.GetValue(2).ToString(), consulta.GetValue(3).ToString(),
+           consulta.GetValue(4).ToString(),consulta.GetValue(5).ToString(),consulta.GetValue(6).ToString() };
+
+              finales.Add(tutor);
+
+            }
+
+            conectado.Close();
+
+            return finales;
+        }    
     }
 }

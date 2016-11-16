@@ -4,11 +4,17 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TutorCognitivoDS2.TutorCognitivo.controlador;
+using logicaDeIntegracion;
+using logicaDeNegocios;
 
 namespace controlador
 {
     public class Controlador
+
     {
+        private Adaptador adaptador; 
+
         public List<String[]> obtenerListaCarreras()
         {
             DatoCarrera sCarrera = new DatoCarrera();
@@ -33,15 +39,23 @@ namespace controlador
 
         public void enviarCorreoCategoria()
         {
-
+            Correo correo = new Correo("Categoria", "categorias", "majomadrig5@gmail.com");
+            correo.enviarCorreo();
 
         }
 
-        public void enviarCorreoConsulta()
+       
+        public void crearBitacora()
         {
-
+            FabricaBitacora bitacora = new FabricaBitacora();
+        
 
         }
+        public void crearUsuario()
+        {
+            FabricaUsuario usuario = new FabricaUsuario();
+        }
+
 
     }
 }

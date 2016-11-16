@@ -1,3 +1,5 @@
+using System;
+
 namespace logicaDeNegocios
 {
     public class RegistroBitacora : Registro
@@ -6,12 +8,19 @@ namespace logicaDeNegocios
         {
         }
 
-        public override void añadir(Bitacora bitacora)
+        public void actualizarFecha(DateTime pFecha)
         {
+            Fecha = pFecha;
+
+        }
+        public void actualizarAccion(String accion)
+        {
+            Accion = accion;
         }
 
-        public override void eliminar(Bitacora bitacora)
-        {
-        }
+
+        
+
+        
     }
 }

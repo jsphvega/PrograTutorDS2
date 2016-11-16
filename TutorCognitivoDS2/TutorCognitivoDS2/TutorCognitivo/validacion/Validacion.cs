@@ -87,7 +87,7 @@ namespace validacion
                 if (Consulta != String.Empty)
                     return Consulta;
 
-                Consulta += validarCorreoExistente(pUsuario.Correo);
+               // Consulta += validarCorreoExistente(pUsuario.Correo);
                 if (Consulta != String.Empty)
                     return Consulta;
 
@@ -184,10 +184,9 @@ namespace validacion
             }
         }
 
-        private static string validarCorreoExistente(String correo)
+        public static void validarCorreoExistente(String pCorrreo)
         {
-            //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
-            return String.Empty;// "Correo existente";
+
         }
-    }
+}
 }
