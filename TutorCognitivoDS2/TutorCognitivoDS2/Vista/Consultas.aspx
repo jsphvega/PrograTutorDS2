@@ -30,6 +30,8 @@
             <!--Menú principal-->
             <nav id="nav">
                 <ul>
+                    <li><a href="MainAdmin.aspx">Menu principal</a></li>
+                    <li><a href="AdministrarDatos.aspx">Administrar Datos</a></li>
                     <li onclick="return confirmarCierre();"><a>Cerrar Sesión</a></li>
                 </ul>
             </nav>
@@ -78,7 +80,7 @@
                                     <div class="2u 12u(mobile)">
                                     </div>
                                     <div class="2u 12u(mobile)">
-                                        <asp:Button ID="btnConsultarBitacora" CssClass="button big" runat="server" Text="Consultar" />
+                                        <asp:Button ID="btnConsultarBitacora" CssClass="button big" runat="server" Text="Consultar" OnClick="btnConsultarBitacora_Click" />
                                     </div>
                                 </div>
 
@@ -86,7 +88,7 @@
                                     <div class="10u 12u(mobile)">
                                     </div>
                                     <div class="2u 12u(mobile)">
-                                        <asp:Button ID="btnConsultarTutorAporte" CssClass="button big" runat="server" Text="Consultar" />
+                                        <asp:Button ID="btnConsultarTutorAporte" CssClass="button big" runat="server" Text="Consultar" OnClick="btnConsultarTutorAporte_Click" />
                                     </div>
                                 </div>
 
@@ -106,7 +108,7 @@
                                     <div class="2u 12u(mobile)">
                                     </div>
                                     <div class="2u 12u(mobile)">
-                                        <asp:Button ID="btnConsultarTutorFecha" CssClass="button big" runat="server" Text="Consultar" />
+                                        <asp:Button ID="btnConsultarTutorFecha" CssClass="button big" runat="server" Text="Consultar" OnClick="btnConsultarTutorFecha_Click" />
                                     </div>
                                 </div>
 

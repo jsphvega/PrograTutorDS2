@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainAdmin.aspx.cs" Inherits="TutorCognitivoDS2.vista.MainAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdministrarDatos.aspx.cs" Inherits="TutorCognitivoDS2.vista.AdministrarDatos" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Menu Principal</title>
+    <title>Administrar Datos</title>
 
     <!--Configuraciones de la página-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,14 +38,15 @@
             <!--Menú principal-->
             <nav id="nav">
                 <ul>
+                    <li><a href="MainAdmin.aspx">Menu principal</a></li>
                     <li><a href="Consultas.aspx">Consultas</a></li>
-                    <li><a href="AdministrarDatos.aspx">Administrar Datos</a></li>
                     <li onclick="return confirmarCierre();"><a>Cerrar Sesión</a></li>
                 </ul>
             </nav>
 
             <!--Cuerpo-->
             <div id="main-wrapper">
+
             </div>
 
             <!-- Footer -->
