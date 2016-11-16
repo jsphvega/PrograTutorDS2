@@ -45,8 +45,6 @@ namespace logicaDeDatos
             }
         }
 
-        public void consultarCategoria(DTOCategoria categoria)
-        {
-        }
+      
     }
 }

@@ -68,8 +68,6 @@ namespace logicaDeDatos
                 conectado.Close();
                 return bitacoras;
 
-       
-
         }
     }
 }
