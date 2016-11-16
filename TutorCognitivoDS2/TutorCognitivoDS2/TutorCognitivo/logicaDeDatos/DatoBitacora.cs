@@ -61,7 +61,7 @@ namespace logicaDeDatos
 
                 while (consultaBitacora.Read())
                 {
-                    String[] bitacorita = { consultaBitacora.GetValue(0).ToString(), consultaBitacora.GetValue(1).ToString(), consultaBitacora.GetValue(2).ToString(), consultaBitacora.GetValue(0).ToString() };
+                    String[] bitacorita = { consultaBitacora.GetValue(0).ToString(), consultaBitacora.GetValue(1).ToString(), consultaBitacora.GetValue(2).ToString(), consultaBitacora.GetValue(3).ToString() };
                     bitacoras.Add(bitacorita);
                 }
 
