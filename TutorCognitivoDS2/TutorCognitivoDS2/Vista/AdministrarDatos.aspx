@@ -46,7 +46,67 @@
 
             <!--Cuerpo-->
             <div id="main-wrapper">
+                <!--Contenedor-->
+                <div id="main" class="container">
 
+                    <div class="row 200%">
+                        <div class="12u">
+
+                            <!-- Features -->
+                            <section class="box features">
+                                <div class="row">
+                                    <div class="3u 3u(mobile)" style="text-align: center">
+                                        <h3>Administrar cursos</h3>
+                                    </div>
+                                    <div class="3u 3u(mobile)" style="text-align: center">
+                                        <h3>Administrar Categorias</h3>
+                                    </div>
+                                    <div class="6u 3u(mobile)" style="text-align: center">
+                                        <h3>Administrar Tutores</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="3u 3u(mobile)">
+                                        Nombre del curso
+                                        <asp:TextBox ID="txtNombreCurso" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="3u 3u(mobile)">
+                                        Nombre de la categoria
+                                        <asp:TextBox ID="txtNombreCategoria" runat="server"></asp:TextBox>
+                                        Curso
+                                        <asp:DropDownList ID="ddlCurso" runat="server"></asp:DropDownList>
+                                    </div>
+                                    <div class="3u 3u(mobile)">
+                                        Nombre
+                                        <asp:TextBox ID="txtNombre" placeholder="Nombre" runat="server" CssClass="input inputText"></asp:TextBox>
+                                        1° Apellido
+                                        <asp:TextBox ID="txtApellido1" placeholder="1° Apellido" runat="server" CssClass="input inputText"></asp:TextBox>
+                                        2° Apellido
+                                        <asp:TextBox ID="txtApellido2" placeholder="2° Apellido" runat="server" CssClass="input inputText"></asp:TextBox>
+
+                                    </div>
+                                    <div class="3u 3u(mobile)">
+                                        Correo electrónico
+                                        <asp:TextBox ID="txtCorreo" placeholder="ejemplo@dominio.com" TextMode="Email" runat="server" CssClass="input inputEmail"></asp:TextBox>
+                                        Carrera
+                                        <asp:DropDownList ID="ddlCarrera" runat="server"></asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="3u 3u(mobile)" style="text-align: center">
+                                        <asp:Button ID="btnCurso" runat="server" Text="Aceptar"></asp:Button>
+                                    </div>
+                                    <div class="3u 3u(mobile)" style="text-align: center">
+                                        <asp:Button ID="btnCategoria" runat="server" Text="Aceptar"></asp:Button>
+                                    </div>
+                                    <div class="6u 3u(mobile)" style="text-align: center">
+                                        <asp:Button ID="btnTutor" runat="server" Text="Aceptar"></asp:Button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Footer -->
