@@ -5,7 +5,7 @@ namespace logicaDeNegocios
 {
     public class DecoradorAdministrador : Administrador
     {
-        public Administrador administrador;
+        private Administrador administrador;
 
         public DecoradorAdministrador(DTOUsuario pUsuario)
             : base(pUsuario)
