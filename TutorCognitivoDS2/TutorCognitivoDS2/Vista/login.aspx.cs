@@ -19,7 +19,9 @@ namespace TutorCognitivoDS2.Vista
         {
             try
             {
-                DTOInicioSesion sSesion = new DTOInicioSesion(txtUsuario.Text, txtContraseña.Text, 3);
+                int tipo = (rdnAdmin.Checked ? 1 : (rdnTutor.Checked ? 2 : 3));
+
+                DTOInicioSesion sSesion = new DTOInicioSesion(txtUsuario.Text, txtContraseña.Text, tipo);
                 lblError.Text = Validacion.validarSesion(sSesion);
 
                 if (lblError.Text == String.Empty)

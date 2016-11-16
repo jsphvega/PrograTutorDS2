@@ -13,5 +13,19 @@ namespace TutorCognitivoDS2.vista
         {
 
         }
+
+        protected void ddlConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            panelBitacora.Visible = false;
+            panelBitacora.Visible = false;
+            panelBitacora.Visible = false;
+
+            if (ddlConsulta.SelectedIndex == 1)
+                panelBitacora.Visible = true;
+            else if (ddlConsulta.SelectedIndex == 2)
+                panelBitacora.Visible = true;
+            if (ddlConsulta.SelectedIndex == 3)
+                panelBitacora.Visible = true;
+        }
     }
 }

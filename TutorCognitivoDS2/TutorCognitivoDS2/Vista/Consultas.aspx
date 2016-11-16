@@ -23,18 +23,6 @@
         <!--Contenedor principal-->
         <div id="page-wrapper">
 
-            <!--Encabezado-->
-            <header id="header">
-
-                <!--Nombre del proyecto-->
-                <div class="logo container">
-                    <div>
-                        <h1><a id="logo">Tutor Cognitivo</a></h1>
-                        <p>por ChuckyBueno</p>
-                    </div>
-                </div>
-            </header>
-
             <!--Menú principal-->
             <nav id="nav">
                 <ul>
@@ -44,17 +32,59 @@
 
             <!--Cuerpo-->
             <div id="main-wrapper">
-            </div>
 
-            <!-- Footer -->
-            <footer id="footer" class="container">
-                <!-- Copyright -->
-                <div id="copyright">
-                    <ul class="menu">
-                        Creado por <b>ChuckyBueno</b> / II semestre / <b>Noviembre 2016</b>
-                    </ul>
+                <!--Contenedor-->
+                <div id="main" class="container">
+
+                    <div class="row 200%">
+                        <div class="12u">
+
+                            <!-- Features -->
+                            <section class="box features">
+
+                                <div class="row">
+                                    <div class="4u 12u(mobile)">
+                                        <h3>Seleccione la consulta</h3>
+                                    </div>
+                                    <div class="4u 12u(mobile)">
+                                        <asp:DropDownList ID="ddlConsulta" runat="server" OnSelectedIndexChanged="ddlConsulta_SelectedIndexChanged">
+                                            <asp:ListItem Value="0">--Seleccione--</asp:ListItem>
+                                            <asp:ListItem Value="1">Bitacora entre dos fechas</asp:ListItem>
+                                            <asp:ListItem Value="2">Tutor con mas aportes</asp:ListItem>
+                                            <asp:ListItem>Tutor por fecha de vencimiento</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <asp:Panel ID="panelBitacora" runat="server">
+                                    </asp:Panel>
+                                </div>
+
+                                <div>
+                                    <!--Seccion del nombre y correo-->
+                                    <div class="row">
+                                        <!--Nombre-->
+                                        <div class="12u 12u(mobile)">
+                                            <asp:GridView ID="GridConsultas" runat="server" Width="100%"></asp:GridView>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-            </footer>
+
+                <!-- Footer -->
+                <footer id="footer" class="container">
+                    <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="menu">
+                            Creado por <b>ChuckyBueno</b> / II semestre / <b>Noviembre 2016</b>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
         </div>
 
         <!-- Scripts -->
