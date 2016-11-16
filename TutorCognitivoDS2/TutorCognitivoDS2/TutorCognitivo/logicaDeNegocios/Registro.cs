@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace logicaDeNegocios
 {
@@ -6,7 +7,8 @@ namespace logicaDeNegocios
     {
         private DateTime fecha;
         private String accion;
-        private Bitacora registro;
+
+        List<Bitacora[]> bitacora;
 
         public void RegistroBitacora(String tipoAccion, String accion)
         { 
@@ -30,13 +32,13 @@ namespace logicaDeNegocios
         }
 
 
-        public void notificarATodos()
+        private void notificarATodos()
         {
-
+         
         }
 
         public abstract void añadir(Bitacora bitacora);
 
-        public abstract void eliminar(Bitacora bitacora);
+       
     }
 }
