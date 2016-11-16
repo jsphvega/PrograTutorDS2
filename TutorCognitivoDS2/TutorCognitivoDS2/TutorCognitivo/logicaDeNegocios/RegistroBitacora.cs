@@ -11,6 +11,7 @@ namespace logicaDeNegocios
         public void actualizarFecha(DateTime pFecha)
         {
             Fecha = pFecha;
+
         }
         public void actualizarAccion(String accion)
         {
@@ -18,10 +19,7 @@ namespace logicaDeNegocios
         }
 
 
-        public override void añadir(Bitacora bitacora)
-        {
-
-        }
+        
 
         
     }
