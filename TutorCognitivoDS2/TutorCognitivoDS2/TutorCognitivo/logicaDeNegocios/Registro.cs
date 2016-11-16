@@ -40,7 +40,11 @@ namespace logicaDeNegocios
 
         private void notificarATodos()
         {
-         
+            foreach (Bitacora bitacora in bitacoras)
+            {
+                bitacora.actualizar();
+            }
+
         }
 
         private  void añadir(Bitacora bitacora)
