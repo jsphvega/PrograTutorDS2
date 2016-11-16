@@ -1,4 +1,5 @@
 using dto;
+using System.Collections.Generic;
 
 namespace logicaDeNegocios
 {
@@ -12,25 +13,13 @@ namespace logicaDeNegocios
             administrador = new Administrador(pUsuario);
         }
 
-        public void registrarCurso(Curso DTOCurso)
-        {
+       
+        public void registrarCategoria( DTOCategoria categoria)
+        { 
+            Categoria categoria2 = new Categoria(categoria.Nombre);
+
         }
 
-        public void registrarCategoria(Categoria DTOCategoria)
-        {
-        }
-
-        public void consultarBitacora()
-        {
-        }
-
-        public void consultarTutores()
-        {
-        }
-
-        public void consultarTutor(DTOUsuario usuario)
-        {
-        }
-
+       
     }
 }
