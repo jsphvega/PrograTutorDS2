@@ -18,11 +18,11 @@ namespace logicaDeNegocios
         public override string toString()
         {
             String datos;
-            datos = "Nombre";
-            datos += "Apellido1";
-            datos += "Apellido2";
-            datos += "Correo";
-            datos += "Fecha vencimiento contrato";
+            datos = "Nombre"+ Nombre;
+            datos += "Apellido1" + Apellido1;
+            datos += "Apellido2" + Apellido2;
+            datos += "Correo"+ Correo;
+            datos += "carrera"+ Carrera;
             return datos;
         }
     }
