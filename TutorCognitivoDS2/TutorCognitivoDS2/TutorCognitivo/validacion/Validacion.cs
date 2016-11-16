@@ -75,6 +75,19 @@ namespace validacion
             }
         }
 
+        public static string validarFechaInicioMenorFinal(DateTime pFechaInicio, DateTime pFechaFinal)
+        {
+            if (pFechaInicio > pFechaFinal)
+                return "Fecha inicio no puede ser mayor a fecha final";
+            return string.Empty;            
+        }
+        public static string validarFechaInicioFinalMenorHoy(DateTime pFechaInicio, DateTime pFechaFinal)
+        {
+            if ((pFechaInicio > DateTime.Now) || (pFechaFinal > DateTime.Now))
+                return "Fechas no pueden ser mayor a la fecha actual";
+            return string.Empty;
+        }
+
         public static String validarRegistro(DTOUsuario pUsuario)
         {
             if (!validarCamposRegistro(pUsuario))
