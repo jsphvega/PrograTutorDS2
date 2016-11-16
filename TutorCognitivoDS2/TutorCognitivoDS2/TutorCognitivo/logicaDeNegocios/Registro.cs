@@ -8,7 +8,7 @@ namespace logicaDeNegocios
         private DateTime fecha;
         private String accion;
 
-        List<Bitacora[]> bitacora;
+        private List<Bitacora> bitacoras;
 
         public void RegistroBitacora(String tipoAccion, String accion)
         { 
@@ -31,14 +31,22 @@ namespace logicaDeNegocios
             set { fecha = value; }
         }
 
+        public List<Bitacora> Bitacora
+        {
+            get { return bitacoras ; }
+            set { bitacoras = value; }
+        }
+
 
         private void notificarATodos()
         {
          
         }
 
-        public abstract void añadir(Bitacora bitacora);
+        private  void añadir(Bitacora bitacora)
+        {
+            bitacoras.Add(bitacora);
 
-       
-    }
+        }
+}
 }
