@@ -122,21 +122,11 @@ namespace logicaDeDatos
             conectado.Open();
             comando = new MySqlCommand();
             comando.Connection = conectado;
-            comando.CommandText = "Select * from usuario";
-            lectura = comando.ExecuteReader();
-            while (lectura.Read())
-            {
-               
-               string contraseña = lectura.GetValue(5).ToString();
-
-               string correo = lectura.GetValue(4).ToString();
-               int tipo = Int32.Parse(lectura.GetValue(6).ToString());
-
-                if (correo== pCorreo & tipo==2)
-                contraseña = pContrasena;
-
-            }
-
+            conectarBD();
+            conectado.Open();
+            comando = new MySqlCommand();
+            comando.Connection = conectado;
+            comando.CommandText = "UPDATE usuario SET contrasena='" + pContrasena + "' WHERE correo ='" + pCorreo + "'AND tipo='" + 2 + "';";
             conectado.Close();
 
         }
