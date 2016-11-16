@@ -22,22 +22,67 @@ namespace TutorCognitivoDS2.vista {
         protected global::System.Web.UI.HtmlControls.HtmlForm formMenuAdmin;
         
         /// <summary>
-        /// Control ddlConsulta.
+        /// Control txtInicioBitacora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlConsulta;
+        protected global::System.Web.UI.WebControls.TextBox txtInicioBitacora;
         
         /// <summary>
-        /// Control panelBitacora.
+        /// Control txtFinalBitacora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelBitacora;
+        protected global::System.Web.UI.WebControls.TextBox txtFinalBitacora;
+        
+        /// <summary>
+        /// Control btnConsultarBitacora.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConsultarBitacora;
+        
+        /// <summary>
+        /// Control btnConsultarTutorAporte.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConsultarTutorAporte;
+        
+        /// <summary>
+        /// Control txtInicioTutor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInicioTutor;
+        
+        /// <summary>
+        /// Control txtFinalTutor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFinalTutor;
+        
+        /// <summary>
+        /// Control btnConsultarTutorFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConsultarTutorFecha;
         
         /// <summary>
         /// Control GridConsultas.

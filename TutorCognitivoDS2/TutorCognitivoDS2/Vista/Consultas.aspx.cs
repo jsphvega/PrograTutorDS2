@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace TutorCognitivoDS2.vista
 {
@@ -14,18 +9,19 @@ namespace TutorCognitivoDS2.vista
 
         }
 
-        protected void ddlConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnConsultarBitacora_Click(object sender, EventArgs e)
         {
-            panelBitacora.Visible = false;
-            panelBitacora.Visible = false;
-            panelBitacora.Visible = false;
 
-            if (ddlConsulta.SelectedIndex == 1)
-                panelBitacora.Visible = true;
-            else if (ddlConsulta.SelectedIndex == 2)
-                panelBitacora.Visible = true;
-            if (ddlConsulta.SelectedIndex == 3)
-                panelBitacora.Visible = true;
+        }
+
+        protected void btnConsultarTutorFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnConsultarTutorAporte_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

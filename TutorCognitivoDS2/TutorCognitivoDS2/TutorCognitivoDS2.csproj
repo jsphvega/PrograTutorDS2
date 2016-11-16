@@ -347,6 +347,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="vista\AdministrarDatos.aspx" />
     <Content Include="vista\assets\css\font-awesome.min.css" />
     <Content Include="vista\assets\css\ie8.css" />
     <Content Include="vista\assets\css\images\highlight.png" />
@@ -611,6 +612,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="vista\AdministrarDatos.aspx.cs">
+      <DependentUpon>AdministrarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\AdministrarDatos.aspx.designer.cs">
+      <DependentUpon>AdministrarDatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\ConfirmarTutor.aspx.cs">
       <DependentUpon>ConfirmarTutor.aspx</DependentUpon>
