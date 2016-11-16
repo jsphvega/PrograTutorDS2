@@ -1,6 +1,7 @@
 using dto;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace logicaDeDatos
 {
@@ -48,17 +49,26 @@ namespace logicaDeDatos
             }
         }
 
-        public void consultarBitacora(DTOBitacora bitacora)
+        public List<String[]> consultarBitacora(DTOBitacora bitacora)
         {
-            try
-            {
+             List<String[]> bitacoras = new List<String[]>();
+                conectarBD();
+                conectado.Open();
+                comandoBitacora = new MySqlCommand();
+                comandoBitacora.Connection = conectado;
+                comandoBitacora.CommandText = "select * from bitacora";
+                consultaBitacora = comandoBitacora.ExecuteReader();
 
+                while (consultaBitacora.Read())
+                {
+                    String[] bitacorita = { consultaBitacora.GetValue(0).ToString(), consultaBitacora.GetValue(1).ToString(), consultaBitacora.GetValue(2).ToString(), consultaBitacora.GetValue(0).ToString() };
+                    bitacoras.Add(bitacorita);
+                }
 
+                conectado.Close();
+                return bitacoras;
 
-            }
-            catch
-            {
-            }
+       
 
         }
     }
