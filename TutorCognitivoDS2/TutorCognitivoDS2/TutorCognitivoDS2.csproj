@@ -363,6 +363,7 @@
     <Content Include="vista\assets\js\skel-viewport.min.js" />
     <Content Include="vista\assets\js\skel.min.js" />
     <Content Include="vista\assets\js\util.js" />
+    <Content Include="vista\ConfirmarTutor.aspx" />
     <Content Include="vista\Consultas.aspx" />
     <Content Include="vista\images\banner.jpg" />
     <Content Include="vista\images\pic01.jpg" />
@@ -380,7 +381,6 @@
     <Content Include="vista\MainAdmin.aspx" />
     <Content Include="vista\MainFinal.aspx" />
     <Content Include="vista\MainTutor.aspx" />
-    <Content Include="vista\ConfirmarTutor.aspx" />
     <Content Include="vista\RegistroUsuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -612,6 +612,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="vista\ConfirmarTutor.aspx.cs">
+      <DependentUpon>ConfirmarTutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista\ConfirmarTutor.aspx.designer.cs">
+      <DependentUpon>ConfirmarTutor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vista\Consultas.aspx.cs">
       <DependentUpon>Consultas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -646,13 +653,6 @@
     </Compile>
     <Compile Include="vista\MainTutor.aspx.designer.cs">
       <DependentUpon>MainTutor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="vista\ConfirmarTutor.aspx.cs">
-      <DependentUpon>ConfirmarTutor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="vista\ConfirmarTutor.aspx.designer.cs">
-      <DependentUpon>ConfirmarTutor.aspx</DependentUpon>
     </Compile>
     <Compile Include="vista\RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>

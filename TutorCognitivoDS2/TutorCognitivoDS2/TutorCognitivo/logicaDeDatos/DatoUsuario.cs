@@ -32,27 +32,19 @@ namespace logicaDeDatos
                 conectado.Open();
                 comandoUsuario = new MySqlCommand();
                 comandoUsuario.Connection = conectado;
-                comandoUsuario.CommandText = "INSERT INTO usuario(nombre,apellido1,apellido2,correo,contrasena,tipo,carrera_idcarrera) VALUES(@nombre,@apellido1,@apellido2,@correo,@contrasena,@tipo,@carrera)";
-                comandoUsuario.Parameters.AddWithValue("@Nombre", usuario.Nombre);
-                comandoUsuario.Parameters.AddWithValue("@Apellido1", usuario.Apellido1);
-                comandoUsuario.Parameters.AddWithValue("@Apellido2", usuario.Apellido2);
-                comandoUsuario.Parameters.AddWithValue("@Correo", usuario.Correo);
-                comandoUsuario.Parameters.AddWithValue("@Contraseña", usuario.Contraseña1);
-                comandoUsuario.Parameters.AddWithValue("@Tipo", 3);
-                comandoUsuario.Parameters.AddWithValue("@carrera", 3);
+
+                comandoUsuario.CommandText = "INSERT INTO usuario(nombre,apellido1,apellido2,correo,contrasena,tipo,carrera_idcarrera) "
+                       + "VALUES('" + usuario.Nombre + "','" + usuario.Apellido1 + "','" + usuario.Apellido2 + "','" + usuario.Correo
+                       + "','" + usuario.Contraseña1 + "',3," + usuario.Carrera + ")";
 
                 comandoUsuario.ExecuteNonQuery();
                 conectado.Close();
-
-
             }
             catch (Exception)
             {
 
             }
-
         }
-
 
         public void consultarTutores()
         {

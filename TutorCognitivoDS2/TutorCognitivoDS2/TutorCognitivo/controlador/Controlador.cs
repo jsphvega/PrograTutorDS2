@@ -9,17 +9,6 @@ namespace controlador
 {
     public class Controlador
     {
-
-
-        public void mensajeInterfaz(String pMensaje)
-        {
-            string script = @"<script type='text/javascript'>alert('" + pMensaje + "');</script>";
-
-            ScriptManager.RegisterStartupScript(null, typeof(Page), "Alerta", script, false);
-        }
-
-        /*****************************************/
-        
         public List<String[]> obtenerListaCarreras()
         {
             DatoCarrera sCarrera = new DatoCarrera();
@@ -30,17 +19,11 @@ namespace controlador
 
         public void insertarUsuarioFinal(DTOUsuario pUsuario)
         {
-            try
-            {
-                DatoUsuario sUsuario = new DatoUsuario();
-                sUsuario.registrarUsuario(pUsuario);
-                mensajeInterfaz("Datos insertados correctamente");
-            }
-            catch
-            {
-                mensajeInterfaz("No se pudieron insertar los datos");
-            }
+            DatoUsuario sUsuario = new DatoUsuario();
+            sUsuario.registrarUsuario(pUsuario);
         }
+
+        /*****************************************/
 
         public bool verificarSesion(DTOInicioSesion pSesion)
         {

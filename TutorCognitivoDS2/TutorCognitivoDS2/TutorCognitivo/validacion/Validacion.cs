@@ -6,70 +6,29 @@ namespace validacion
 {
     public class Validacion
     {
-        /*****************************************/
-
-        public static String validarConfirmacion(DTOConfirmacion pConfirmacion)
+        private static string validarContrasena(String contraseña1, String contraseña2)
         {
-            if (!validarCamposConfirmacion(pConfirmacion))
-                return "No pueden haber datos vacíos";
-            else
-            {
-                String Consulta = String.Empty;
-
-                Consulta += validarContrasena(pConfirmacion.Contraseña1, pConfirmacion.Contraseña2);
-                if (Consulta != String.Empty)
-                    return Consulta;
-
-                Consulta += validarDigitosContrasena(pConfirmacion.Contraseña1);
-                if (Consulta != String.Empty)
-                    return Consulta;
-            }
-
-            return String.Empty;
+            if (!string.Equals(contraseña1, contraseña2))
+                return "Las contrasenas no coinciden";
+            return string.Empty;
         }
 
-        public static String validarSesion(DTOInicioSesion pSesion)
+        private static string validarDigitosContrasena(String contraseña)
         {
-            if (!validarCamposSesion(pSesion))
-                return "No pueden haber datos vacíos";
-            else
-            {
-                String Consulta = String.Empty;
-
-                Consulta += validarCorreoValido(pSesion.Correo);
-                if (Consulta != String.Empty)
-                    return Consulta;
-            }
-
-            return String.Empty;
+            if (contraseña.Length < 8)
+                return "Contrasena debe tener al menos 8 caracteres";
+            return string.Empty;
         }
 
-        public static String validarUsuario(DTOUsuario pUsuario)
+        private static string validarCorreoValido(String correo)
         {
-            if (!validarCamposRegistro(pUsuario))
-                return "No pueden haber datos vacíos";
-            else
-            {
-                String Consulta = String.Empty;
+            if (correo.IndexOf("@") == -1)
+                return "No corresponde a un correo";
 
-                Consulta += validarContrasena(pUsuario.Contraseña1, pUsuario.Contraseña2);
-                if (Consulta != String.Empty)
-                    return Consulta;
+            else if (correo.IndexOf(".com") == -1 && correo.IndexOf(".es") == -1)
+                return "No corresponde a un correo";
 
-                Consulta += validarCorreoExistente(pUsuario.Correo);
-                if (Consulta != String.Empty)
-                    return Consulta;
-
-                Consulta += validarDigitosContrasena(pUsuario.Contraseña1);
-                if (Consulta != String.Empty)
-                    return Consulta;
-
-                Consulta += validarCorreoValido(pUsuario.Correo);
-                if (Consulta != String.Empty)
-                    return Consulta;
-            }
-
-            return String.Empty;
+            return string.Empty;
         }
 
         private static Boolean validarCamposRegistro(DTOUsuario pUsuario)
@@ -116,6 +75,76 @@ namespace validacion
             }
         }
 
+        public static String validarRegistro(DTOUsuario pUsuario)
+        {
+            if (!validarCamposRegistro(pUsuario))
+                return "No pueden haber datos vacíos";
+            else
+            {
+                String Consulta = String.Empty;
+
+                Consulta += validarContrasena(pUsuario.Contraseña1, pUsuario.Contraseña2);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarCorreoExistente(pUsuario.Correo);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarDigitosContrasena(pUsuario.Contraseña1);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarCorreoValido(pUsuario.Correo);
+                if (Consulta != String.Empty)
+                    return Consulta;
+            }
+
+            return String.Empty;
+        }
+
+        /*****************************************/
+
+        public static String validarConfirmacion(DTOConfirmacion pConfirmacion)
+        {
+            if (!validarCamposConfirmacion(pConfirmacion))
+                return "No pueden haber datos vacíos";
+            else
+            {
+                String Consulta = String.Empty;
+
+                Consulta += validarContrasena(pConfirmacion.Contraseña1, pConfirmacion.Contraseña2);
+                if (Consulta != String.Empty)
+                    return Consulta;
+
+                Consulta += validarDigitosContrasena(pConfirmacion.Contraseña1);
+                if (Consulta != String.Empty)
+                    return Consulta;
+            }
+
+            return String.Empty;
+        }
+
+        public static String validarSesion(DTOInicioSesion pSesion)
+        {
+            if (!validarCamposSesion(pSesion))
+                return "No pueden haber datos vacíos";
+            else
+            {
+                String Consulta = String.Empty;
+
+                Consulta += validarCorreoValido(pSesion.Correo);
+                if (Consulta != String.Empty)
+                    return Consulta;
+            }
+
+            return String.Empty;
+        }
+
+
+
+
+
         private static Boolean validarCamposConfirmacion(DTOConfirmacion pConfirmacion)
         {
             Boolean flag = true;
@@ -155,41 +184,10 @@ namespace validacion
             }
         }
 
-        private static string validarContrasena(String contraseña1, String contraseña2)
-        {
-            if (string.Equals(contraseña1, contraseña2))
-            {
-                return "Las contrasenas no coinciden";
-            }
-
-            return string.Empty;
-        }
-
         private static string validarCorreoExistente(String correo)
         {
             //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
-            return "Correo existente";
-        }
-
-        private static string validarDigitosContrasena(String contraseña)
-        {
-            if (contraseña.Length < 8)
-                return "Contrasena debe tener al menos 8 caracteres";
-            return string.Empty;
-        }
-
-        private static string validarCorreoValido(String correo)
-        {
-            if (correo.IndexOf("@") == -1)
-            {
-                return "No corresponde a un correo";
-            }
-            if (correo.IndexOf(".com") == -1 || correo.IndexOf(".es") == -1)
-            {
-                return "No corresponde a un correo";
-            }
-            return string.Empty;
-
+            return String.Empty;// "Correo existente";
         }
     }
 }

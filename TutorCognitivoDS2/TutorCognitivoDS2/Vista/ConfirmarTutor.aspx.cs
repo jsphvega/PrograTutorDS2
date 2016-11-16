@@ -30,7 +30,7 @@ namespace TutorCognitivoDS2.vista
             {
                 //Cambiar la contraseña
                 Response.Redirect("MainTutor.aspx");
-                controlador.mensajeInterfaz("Datos reemplazados correctamente");
+                //controlador.mensajeInterfaz("Datos reemplazados correctamente");
             }
         }
 

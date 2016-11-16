@@ -30,6 +30,9 @@ namespace TutorCognitivoDS2.vista
                 {
                     ddlCarrera.Items.Clear();
                 }
+
+                txtContraseña1.Attributes.Add("value", txtContraseña1.Text);
+                txtContraseña1.Attributes.Add("value", txtContraseña1.Text);
                 btnCancelar.Attributes["Onclick"] = "return confirm('¿Está seguro? Se perderán los datos')";
             }
         }
@@ -41,17 +44,18 @@ namespace TutorCognitivoDS2.vista
                 DTOUsuario sUsuario = new DTOUsuario(txtNombre.Text, txtApellido1.Text, txtApellido2.Text,
                     txtCorreo.Text, txtContraseña1.Text, txtContraseña2.Text, Int32.Parse(ddlCarrera.SelectedValue));
 
-                lblError.Text = Validacion.validarUsuario(sUsuario);
+                lblError.Text = Validacion.validarRegistro(sUsuario);
 
                 if (lblError.Text == String.Empty)
                 {
                     controlador.insertarUsuarioFinal(sUsuario);
+                    mensajeInterfaz("Usuario registrado correctamente");
                     Response.Redirect("Login.aspx");
                 }
             }
             catch
             {
-                lblError.Text = "Error en la insersión de datos";
+                mensajeInterfaz("Error al insertar el usuario");
             }
         }
 
@@ -63,6 +67,13 @@ namespace TutorCognitivoDS2.vista
                 Response.BufferOutput = true;
                 Response.Redirect("Login.aspx");
             }
+        }
+
+        public void mensajeInterfaz(String pMensaje)
+        {
+            string script = @"<script type='text/javascript'>alert('" + pMensaje + "');</script>";
+
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "Alerta", script, false);
         }
     }
 }
