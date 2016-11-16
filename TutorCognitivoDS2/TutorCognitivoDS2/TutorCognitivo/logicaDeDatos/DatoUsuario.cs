@@ -80,7 +80,7 @@ namespace logicaDeDatos
             conectado.Open();
             comandoUsuario = new MySqlCommand();
             comandoUsuario.Connection = conectado;
-            comandoUsuario.CommandText = "select * from usuario where tipo=2";
+            comandoUsuario.CommandText = "select * from usuario where tipo=3";
             consulta = comandoUsuario.ExecuteReader();
 
             while (consulta.Read())
