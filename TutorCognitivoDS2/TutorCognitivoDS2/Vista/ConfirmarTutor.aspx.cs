@@ -12,9 +12,18 @@ namespace TutorCognitivoDS2.vista
     public partial class ConfirmarTutor : System.Web.UI.Page
     {
         Controlador controlador = new Controlador();
+        String User;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            User = Request.QueryString["User"];
+
+            if (User == String.Empty)
+            {
+                Response.BufferOutput = true;
+                Response.Redirect("Login.aspx");
+            }
+
             if (!IsPostBack)
             {
             }
@@ -29,7 +38,7 @@ namespace TutorCognitivoDS2.vista
             if (lblError.Text == String.Empty)
             {
                 //Cambiar la contraseña
-                Response.Redirect("MainTutor.aspx");
+                Response.Redirect("MainTutor.aspx?User=" + User);
                 //controlador.mensajeInterfaz("Datos reemplazados correctamente");
             }
         }
@@ -42,6 +51,13 @@ namespace TutorCognitivoDS2.vista
                 Response.BufferOutput = true;
                 Response.Redirect("Login.aspx");
             }
+        }
+
+        public void mensajeInterfaz(String pMensaje)
+        {
+            string script = @"<script type='text/javascript'>alert('" + pMensaje + "');</script>";
+
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "Alerta", script, false);
         }
     }
 }

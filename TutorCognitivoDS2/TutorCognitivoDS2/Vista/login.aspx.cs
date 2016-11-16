@@ -17,8 +17,8 @@ namespace TutorCognitivoDS2.Vista
 
         protected void btnIniciar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 DTOInicioSesion sSesion = new DTOInicioSesion(txtUsuario.Text, txtContraseña.Text, 3);
                 lblError.Text = Validacion.validarSesion(sSesion);
 
@@ -29,20 +29,20 @@ namespace TutorCognitivoDS2.Vista
                         if (rdnAdmin.Checked)
                         {
                             Response.BufferOutput = true;
-                            Response.Redirect("MainAdmin.aspx");
+                            Response.Redirect("MainAdmin.aspx?User=" + sSesion.Correo);
                         }
                         else if (rdnTutor.Checked)
                         {
                             Response.BufferOutput = true;
                             if (sSesion.Contraseña.Equals("tutortutor"))
-                                Response.Redirect("ConfirmarTutor.aspx");
+                                Response.Redirect("ConfirmarTutor.aspx?User=" + sSesion.Correo);
                             else
-                                Response.Redirect("MainTutor.aspx");
+                                Response.Redirect("MainTutor.aspx?User=" + sSesion.Correo);
                         }
                         else
                         {
                             Response.BufferOutput = true;
-                            Response.Redirect("MainFinal.aspx");
+                            Response.Redirect("MainFinal.aspx?User = " + sSesion.Correo);
                         }
                     }
                     else
@@ -50,11 +50,11 @@ namespace TutorCognitivoDS2.Vista
                         mensajeInterfaz("Usuario o contraseña incorrectos");
                     }
                 }
-            //}
-            //catch
-            //{
-            //    mensajeInterfaz("Error al realizar la consulta");
-            //}
+            }
+            catch
+            {
+                mensajeInterfaz("Error al realizar la consulta");
+            }
         }
 
         public void mensajeInterfaz(String pMensaje)
