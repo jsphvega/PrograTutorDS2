@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace logicaDeDatos
 {
+    //clase que gestiona todo lo relacionado a lo de los usuarios en la BD 
     public class DatoUsuario : ConexionBD
     {
         private MySqlCommand comandoUsuario;
