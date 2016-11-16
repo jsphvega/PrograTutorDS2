@@ -46,5 +46,13 @@ namespace controlador
 
         }
 
+        public void crearBitacora()
+        {
+
+
+        }
+        public void crearUsuario()
+        {
+
+        }
     }
-}
