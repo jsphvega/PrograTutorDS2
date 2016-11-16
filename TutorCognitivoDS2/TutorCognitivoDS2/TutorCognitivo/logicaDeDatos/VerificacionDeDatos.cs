@@ -116,7 +116,7 @@ namespace logicaDeDatos
        
         //metodo que cambia la contrasena
 
-        public void cambiarContrasena(String pContrasena)
+        public void cambiarContrasena(String pContrasena,String pCorreo)
         {
             conectarBD();
             conectado.Open();
@@ -126,7 +126,13 @@ namespace logicaDeDatos
             lectura = comando.ExecuteReader();
             while (lectura.Read())
             {
+               
                string contraseña = lectura.GetValue(5).ToString();
+
+               string correo = lectura.GetValue(4).ToString();
+               int tipo = Int32.Parse(lectura.GetValue(6).ToString());
+
+                if (correo== pCorreo & tipo==2)
                 contraseña = pContrasena;
 
             }
