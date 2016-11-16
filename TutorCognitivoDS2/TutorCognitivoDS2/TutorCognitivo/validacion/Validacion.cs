@@ -184,10 +184,6 @@ namespace validacion
             }
         }
 
-        private static string validarCorreoExistente(String correo)
-        {
-            //if(CONSULTA A BASE DE DATOS A VER SI EXISTE)
-            return String.Empty;// "Correo existente";
-        }
+        
     }
 }
