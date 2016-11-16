@@ -4,6 +4,7 @@ using System;
 
 namespace logicaDeDatos
 {
+    //clase que gestiona todo lo relacionado con categoria
     public class DatoCategoria : ConexionBD
     {
         private MySqlCommand comandoCategoria;
