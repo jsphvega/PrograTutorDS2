@@ -73,7 +73,7 @@
 
                                         <!--Apellido 2-->
                                         <div class="4u 12u(mobile)">
-                                            <h3>1° Apellido</h3>
+                                            <h3>2° Apellido</h3>
                                             <asp:TextBox ID="txtApellido2" placeholder="2° Apellido" runat="server" CssClass="input inputText"></asp:TextBox>
                                         </div>
 
