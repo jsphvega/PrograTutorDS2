@@ -14,6 +14,7 @@ namespace controlador
 
     {
         private Adaptador adaptador; 
+
         public List<String[]> obtenerListaCarreras()
         {
             DatoCarrera sCarrera = new DatoCarrera();
